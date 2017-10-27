@@ -3,26 +3,33 @@ title: "Project Proposal Ian and Victoria"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+install.packages(c("httr", "jsonlite", "lubridate"))
+
+url <-  
 ```
 
-## R Markdown
+Proposal
+Prior to writing your initial proposal you should get together with your groupmate and brainstorm a half dozen or so ideas before coalescing around one idea. Be ambitious! Once you decide on a topic that interests you, think about what you would like to end up with as a final result—without worrying about how to get there. Try to visualize what your end product will look like. Will it be an interactive map? A predictive model? A mobile application? Don’t think about coding, or a particular data set, or what you know how to do now. If you come up with something ambitious and original, you’ll be more motivated to learn new things as you go in order to accomplish your goal.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Your initial and revised proposals should contain the following content (please use this structure):
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Group: List the members of your group
+Title: The title of your project
+Purpose: Describe the general topic/phenomenon you want to explore, as well some carefully considered questions that you hope to address. You should make an argument motivating your work. Why should someone be interested in what you are doing? What do you hope people will learn from your project?
+> Our project is an analysis of API data provided by Meetup. Meetup is a social networking app that engages people with organizations and events around them. Users search from over 12 categories . The question is what are the relations we share that bring each other together the most? We plan on merging this data with information 
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
 
-You can also embed plots, for example:
+Data: As best you can, describe where you will find your data, and what kind of data it is. Will you be working with spatial data in shapefiles? Will you be accessing an API to a live data source? Be as specific as you can, listing URLs and file formats if possible.
+ > Our data can be found be found on a live stream from Meetups webiste. It is a streaming list of RVSP's made per minute on the app. The stream contains and individuals username, the organization they are meeting up with, and what city the event takes place in. We think this is a json API so we plan on tranlating the data into R objects with jsonlite package. 
+ 
+ 
+ > Meetup RVSP Stream: <http://meetup.github.io/stream/rsvpTicker/>
+ > API Documentation <https://www.meetup.com/meetup_api/docs/stream/2/rsvps/?_cookie-check=weINBfhFXdo7jjrN#websockets>
+ 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Variables: List, and briefly describe, each variable that you plan to incorporate. If you can, be specific about units, scale, etc.
+End Product: Describe what you hope to deliver as a final product. Will it be a Shiny application that will be posted on the Internet (I anticipate that most groups will incorporate some form of dynamic visualization)? Will it be a GoogleMaps mash-up? Will it be an R package that provides an API to a live data source (e.g., twitteR)? Will it be a paper that draws some statistical conclusions? Will it be a predictive model that forecasts future values of some quantity?
+
