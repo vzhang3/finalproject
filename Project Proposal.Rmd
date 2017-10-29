@@ -1,35 +1,60 @@
 ---
-title: "Project Proposal Ian and Victoria"
-output: html_document
+title: "Final Project Proposal"
+author: "Victoria Zhang and Ian Fayorsey"
+date: "10/28/17"
+output:
+  pdf_document:
+    fig_height: 3
+    fig_width: 5
+  html_document:
+    fig_height: 3
+    fig_width: 5
+  word_document:
+    fig_height: 3
+    fig_width: 5
 ---
+```{r, include=FALSE}
+require(jsonlite)
+require(httr)
+require(devtools)
+devtools::install_github("rladies/meetupr")
+library(meetupr)
 
-```{r}
-install.packages(c("httr", "jsonlite", "lubridate"))
-
-url <-  
 ```
 
-Proposal
-Prior to writing your initial proposal you should get together with your groupmate and brainstorm a half dozen or so ideas before coalescing around one idea. Be ambitious! Once you decide on a topic that interests you, think about what you would like to end up with as a final result—without worrying about how to get there. Try to visualize what your end product will look like. Will it be an interactive map? A predictive model? A mobile application? Don’t think about coding, or a particular data set, or what you know how to do now. If you come up with something ambitious and original, you’ll be more motivated to learn new things as you go in order to accomplish your goal.
+#Meetup Map
 
-Your initial and revised proposals should contain the following content (please use this structure):
+> Purpose
 
-Group: List the members of your group
-Title: The title of your project
-Purpose: Describe the general topic/phenomenon you want to explore, as well some carefully considered questions that you hope to address. You should make an argument motivating your work. Why should someone be interested in what you are doing? What do you hope people will learn from your project?
-> Our project is an analysis of API data provided by Meetup. Meetup is a social networking app that engages people with organizations and events around them. Users search from over 12 categories . The question is what are the relations we share that bring each other together the most? We plan on merging this data with information 
+For our project we plan on analyzing RSVP data provided by Meetup. Meetup is a social networking app that engages people with organizations and events around them. The question is what are the relations we share that bring each other together the most? We plan on merging this data with information on population density to correct for population bias in the sample. Essentially, we think that meetup events and attendance correlates with population, so we want to normalize the population in different areas. Are certain places better for music meetups, dance meetups, board game meet ups?  How are strangers connecting in the 21st century? Does this depend on place?
 
 
+> Data 
 
-Data: As best you can, describe where you will find your data, and what kind of data it is. Will you be working with spatial data in shapefiles? Will you be accessing an API to a live data source? Be as specific as you can, listing URLs and file formats if possible.
- > Our data can be found be found on a live stream from Meetups webiste. It is a streaming list of RVSP's made per minute on the app. The stream contains and individuals username, the organization they are meeting up with, and what city the event takes place in. We think this is a json API so we plan on tranlating the data into R objects with jsonlite package. 
+Our raw data is a streaming list of RVSP's made per minute on the app. The stream contains and individuals username, the organization they are meeting up with, and what city the event takes place in. We plan on interacting with this stream through Meetup's API. Since this a json structured API, we plan on tranlating the data into R objects with jsonlite package. In our minds, the process is simliar to the sql workbench examples. We can use the API to generate a table as RSVP's are made, and "nest" that code into a jsonlite function like dbGetQuery so it runs in R. 
  
  
- > Meetup RVSP Stream: <http://meetup.github.io/stream/rsvpTicker/>
- > API Documentation <https://www.meetup.com/meetup_api/docs/stream/2/rsvps/?_cookie-check=weINBfhFXdo7jjrN#websockets>
- 
+* Meetup RVSP Stream: <http://meetup.github.io/stream/rsvpTicker/>
+* API Documentation <https://www.meetup.com/meetup_api/docs/stream/2/rsvps/?_cookie-check=weINBfhFXdo7jjrN#websockets>
 
 
-Variables: List, and briefly describe, each variable that you plan to incorporate. If you can, be specific about units, scale, etc.
-End Product: Describe what you hope to deliver as a final product. Will it be a Shiny application that will be posted on the Internet (I anticipate that most groups will incorporate some form of dynamic visualization)? Will it be a GoogleMaps mash-up? Will it be an R package that provides an API to a live data source (e.g., twitteR)? Will it be a paper that draws some statistical conclusions? Will it be a predictive model that forecasts future values of some quantity?
+> Variables: 
 
+The variables included in the API that we find interesting are as follows:
+
+* event_time: gives the time of the event
+* event_city: city name 
+* event_country:two-letter code of group's home country
+venue
+* lat: latitude of the venue
+* lon: longitude of the venue 
+* group_topics: topics associated with this group
+* guests: number of guests at the event
+* population of city: population of city (possibly with 10 mile radius)
+* percent population and /or standardized attendance: the percent of the city attendance of the event 
+
+The API that we can get these variables from includes "find groups" and then we can loop through all the groups to get the events that each group holds. 
+
+> End Product:
+
+We hope to deliver a Shiny application with a map of the US or of the world with interesting findings as to what type of meetups are most frequented in each place. This should provide a visual representation of the hubs for different meetups around the world by group topic.  We would like to see what types of activities most people like to meet up with strangers to do. 
