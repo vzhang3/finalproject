@@ -26,7 +26,7 @@ library(meetupr)
 
 > Purpose
 
-For our project we plan on analyzing RSVP data provided by Meetup. Meetup is a social networking app that engages people with organizations and events around them. The question is what are the relations we share that bring each other together the most? We plan on merging this data with information on population density to correct for population bias in the sample. Essentially, we think that meetup events and attendance correlates with population, so we want to normalize the population in different areas. Are certain places better for music meetups, dance meetups, board game meet ups?  How are strangers connecting in the 21st century? Does this depend on place?
+For our project we plan on analyzing RSVP data provided by Meetup. Meetup is a social networking app that engages people with organizations and events around them. The question is what are the activities or passions we share that bring each other together the most? We plan on merging this data with information on population density to correct for population bias in the sample. Essentially, we think that meetup events and attendance correlates with population, so we want to normalize the population in different areas. Are certain places better for music meetups, dance meetups, board game meet ups?  How are strangers connecting in the 21st century? Does this depend on place?
 
 
 > Data 
