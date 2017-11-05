@@ -1,0 +1,52 @@
+---
+title: "Le Proj"
+output: html_document
+---
+
+
+```{r}
+require(devtools)
+devtools::install_github("rladies/meetupr")
+library(jsonlite)
+```
+
+```{r}
+group_name <- "internationals-events-paris"
+api_key <- "62c15445c44f4e5473e7e3e164d7f"
+event_status <- 'past'
+
+#df 
+events <- get_events(urlname=group_name, api_key=api_key)
+df <- fromJSON(toJSON(events))
+```
+
+
+get_events
+# requires urlname, api_key, event_status
+group_name <- "internationals-events-paris"
+api_key <- "62c15445c44f4e5473e7e3e164d7f"
+event_status <- 'past'
+
+# result kinda look like what was returned from bitcoin api
+library(jsonlite)
+raw_api_result <- get_events(urlname=group_name, api_key=api_key)
+df <- fromJSON(toJSON(raw_api_result))
+
+```{r}
+#based on my account
+api_key <- "62c15445c44f4e5473e7e3e164d7f"
+group_name <- "internationals-events-paris"
+Sys.setenv(meetup_api_key = "62c15445c44f4e5473e7e3e164d7f")
+events <- get_events(group_name, api_key)
+#CREATES JSON events list!
+urlname <- "internationals-events-paris"
+api_key <- Sys.getenv("62c15445c44f4e5473e7e3e164d7f")
+past_events <- get_events(urlname = "https://api.meetup.com/self/events?&sign=true&photo-host=public&page=20",
+                     api_key = "62c15445c44f4e5473e7e3e164d7f",
+                     event_status = "past")
+#getting the same error in .quick_fetch
+event_id <- past_events[[1]]$id
+attendees <- get_meetup_attendees(urlname, api_key, event_id)
+#url <-
+```
+

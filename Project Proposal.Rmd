@@ -36,7 +36,7 @@ For our project we plan on analyzing RSVP data provided by Meetup. Meetup is a s
 
 > Data 
 
-Our raw data is a streaming list of RVSP's made per minute on the app. The stream contains and individuals username, the organization they are meeting up with, and what city the event takes place in. We plan on interacting with this stream through Meetup's API. Since this a json structured API, we plan on tranlating the data into R objects with jsonlite package. In our minds, the process is simliar to the sql workbench examples. We can use the API to generate a table as RSVP's are made, and "nest" that code into a jsonlite function like dbGetQuery so it runs in R. 
+Our raw data is a streaming list of RVSP's made per minute on the app. The stream is generated in real time and contains information such as a individual's username, the organization they are meeting up with, and what city the event takes place in. We plan on interacting with this stream through Meetup's API. Since this a json structured API, we plan on tranlating the data into R objects with jsonlite package. In our minds, the process is simliar to the sql workbench examples. We can use the API to generate a table as RSVP's are made, and "nest" that code into a jsonlite function like dbGetQuery so it runs in R. 
  
  
 * Meetup RVSP Stream: <http://meetup.github.io/stream/rsvpTicker/>
@@ -62,4 +62,6 @@ The API that we can get these variables from includes "find groups" and then we 
 
 > End Product:
 
-We hope to deliver a Shiny application with a map of the US or of the world with interesting findings as to what type of meetups are most frequented in each place. This should provide a visual representation of the hubs for different meetups around the world by group topic.  We would like to see what types of activities most people like to meet up with strangers to do. 
+We hope to deliver a Shiny application with a map of the US or of the world. *The purpose of this is to * with interesting findings as to what type of meetups are most frequented in each place. This should provide a visual representation of the hubs for different meetups around the world by group topic.  We would like to see what types of activities most people like to meet up with strangers to do. 
+
+* Right now we are pulling in two directions. The first is using the meetupr package to just create an informative shiny plot. The second is creating a package like meetupr that access meetup's rsvp data and generates a dataframe from the rsvp's as they appear. * 
