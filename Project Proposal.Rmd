@@ -92,7 +92,7 @@ paris <- df %>%
 
 ###Revised
 
-The paris data frame shows the number of rsvps made in two locations, Metro Anvers and brasserie lest andré. We plan on using the rsvpticker data to generates dataframes for different locations as they appear. We can select interesting places in Paris and New York City, and create a map of certain as they appear. In order to do this we have to generate more tables like paris, and add geographic information on them from google (latitude and longitude of Metro Anvers).This should provide a visual representation of different events, and may yield interesting findings as to what type of meetups are most frequented in each city. **Currently the problem with the df paris is that we cannot see it! In console the error message "could not find function "select" appeared.**
+The  paris data frame shows the number of rsvps made in two locations, Metro Anvers and brasserie lest andré. We plan on using the rsvpticker data to generates dataframes for different locations as they appear. We can select interesting places in Paris and New York City, and create a map of certain as they appear. In order to do this we have to generate more tables like paris, and add geographic information on them from google (latitude and longitude of Metro Anvers).This should provide a visual representation of different events, and may yield interesting findings as to what type of meetups are most frequented in each city. **Currently the problem with the df paris is that we cannot see it! In console the error message "could not find function "select" appeared.**
 
 
 
