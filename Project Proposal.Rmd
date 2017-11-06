@@ -25,6 +25,25 @@ group_name <- "internationals-events-paris"
 Sys.setenv(meetup_api_key = "62c15445c44f4e5473e7e3e164d7f")
 events <- get_events(group_name, api_key) 
 #CREATES JSON events list!
+?get_events
+# requires urlname, api_key, event_status
+group_name <- "internationals-events-paris"
+api_key <- "62c15445c44f4e5473e7e3e164d7f"
+event_status <- 'past'
+
+# result kinda look like what was returned from bitcoin api
+library(jsonlite)
+raw_api_result <- get_events(urlname=group_name, api_key=api_key)
+df <- fromJSON(toJSON(raw_api_result))
+
+#attempts at getting all events from meetup api
+data<-source("https://api.meetup.com/find/groups?zip=11211&radius=1&category=25&order=members")
+fromJSON('https://api.meetup.com/find/groups?zip=11211&radius=1&category=25&order=members')
+ library(RCurl)
+    eval( expr = 
+        parse( text = getURL("https://api.meetup.com/find/groups?zip=11211&radius=1&category=25&order=members",
+                       ssl.verifypeer=FALSE) ))
+??meetupr
 ```
 
 #Meetup Map
@@ -32,6 +51,8 @@ events <- get_events(group_name, api_key)
 > Purpose
 
 For our project we plan on analyzing RSVP data provided by Meetup. Meetup is a social networking app that engages people with organizations and events around them. The question is what are the activities or passions we share that bring each other together the most? We plan on merging this data with information on population density to correct for population bias in the sample. Essentially, we think that meetup events and attendance correlates with population, so we want to normalize the population in different areas. Are certain places better for music meetups, dance meetups, board game meet ups?  How are strangers connecting in the 21st century? Does this depend on place?
+
+REVISED: We are no longer certain that we can pull every group or every event from the last week because we are using another user's program to pull the data from the API into R. The user's package, meetupr, was installed, but only offers information on the events for a specific group. Perhaps we will have to take the most popular or least popular groups to make some generalization. 
 
 
 > Data 
@@ -62,6 +83,6 @@ The API that we can get these variables from includes "find groups" and then we 
 
 > End Product:
 
-We hope to deliver a Shiny application with a map of the US or of the world. *The purpose of this is to * with interesting findings as to what type of meetups are most frequented in each place. This should provide a visual representation of the hubs for different meetups around the world by group topic.  We would like to see what types of activities most people like to meet up with strangers to do. 
+We hope to deliver google maps mash up of meetup events. The purpose of this is to identify which places are the "greatest exporter" if you will, of meetup events. We think this will yield interesting findings as to what type of meetups are most frequented in each place. This should provide a visual representation of the hubs for different meetups around the world by group topic.  We would like to see what types of activities most people like to meet up with strangers to do. 
 
-* Right now we are pulling in two directions. The first is using the meetupr package to just create an informative shiny plot. The second is creating a package like meetupr that access meetup's rsvp data and generates a dataframe from the rsvp's as they appear. * 
+* Right now we are pulling in two directions. The first is using the meetupr package to identify . The second is creating a package like meetupr that access meetup's rsvpticker data and generates a dataframe from the rsvp's as they appear. * 
