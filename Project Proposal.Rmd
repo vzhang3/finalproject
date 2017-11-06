@@ -39,30 +39,18 @@ event_status <- 'past'
 
 raw_api_result <- get_events(urlname=group_name, api_key=api_key)
 df <- fromJSON(toJSON(raw_api_result))
-
-
-#Creates paris dataframe with 2 venues and count of rvsps made 
-paris <- df %>% 
-  select(group_name,venue.name, name) %>% 
-  group_by(group_name) %>% 
-  filter(venue.name =="Metro Anvers" | venue.name == "brasserie le st andré") %>% 
-  summarise(venue.name, count = n(name))
-
-
 ```
 
-The paris data frame shows the number of rsvps made in two locations, Metro Anvers and brasserie lest andré. 
 
 #Meetup Map
 
-> Purpose
+##Purpose
 
 For our project we plan on analyzing RSVP data provided by Meetup. Meetup is a social networking app that engages people with organizations and events around them. The question is what are the activities or passions we share that bring each other together the most? We plan on merging this data with information on population density to correct for population bias in the sample. Essentially, we think that meetup events and attendance correlates with population, so we want to normalize the population in different areas. Are certain places better for music meetups, dance meetups, board game meet ups?  How are strangers connecting in the 21st century? Does this depend on place?
 
-REVISED: We are no longer certain that we can pull every group or every event from the last week because we are using another user's program to pull the data from the API into R. The user's package, meetupr, was installed, but only offers information on the events for a specific group. Perhaps we will have to take the most popular or least popular groups to make some generalization. 
 
 
-> Data 
+## Data 
 
 Our raw data is a streaming list of RVSP's made per minute on the app. The stream is generated in real time and contains information such as a individual's username, the organization they are meeting up with, and what city the event takes place in. We plan on interacting with this stream through Meetup's API. Since this a json structured API, we plan on tranlating the data into R objects with jsonlite package. In our minds, the process is simliar to the sql workbench examples. We can use the API to generate a table as RSVP's are made, and "nest" that code into a jsonlite function like dbGetQuery so it runs in R. 
  
@@ -71,7 +59,7 @@ Our raw data is a streaming list of RVSP's made per minute on the app. The strea
 * API Documentation <https://www.meetup.com/meetup_api/docs/stream/2/rsvps/?_cookie-check=weINBfhFXdo7jjrN#websockets>
 
 
-> Variables: 
+###Variables: 
 
 The variables included in the API that we find interesting are as follows:
 
@@ -88,13 +76,27 @@ venue
 
 The API that we can get these variables from includes "find groups" and then we can loop through all the groups to get the events that each group holds. 
 
-> End Product:
+###Revised: Paris dataframe
 
-We hope to deliver google maps mash up of meetup events. The purpose of this is to identify which places are the "greatest exporter" if you will, of meetup events. We think this will yield interesting findings as to what type of meetups are most frequented in each place. This should provide a visual representation of the hubs for different meetups around the world by group topic.  We would like to see what types of activities most people like to meet up with strangers to do. 
+```{r, eval= FALSE}
+#Creates paris dataframe with 2 venues and count of rvsps made 
+paris <- df %>% 
+  select(group_name,venue.name, name) %>% 
+  group_by(group_name) %>% 
+  filter(venue.name =="Metro Anvers" | venue.name == "brasserie le st andré") %>% 
+  summarise(venue.name, count = n(name))
+```
 
-* Right now we are pulling in two directions. The first is using the meetupr package to identify . The second is creating a package like meetupr that access meetup's rsvpticker data and generates a dataframe from the rsvp's as they appear. * 
+##End Product:
 
-```{r}
+
+###Revised
+
+The paris data frame shows the number of rsvps made in two locations, Metro Anvers and brasserie lest andré. We plan on using the rsvpticker data to generates dataframes for different locations as they appear. We can select interesting places in Paris and New York City, and create a map of certain as they appear. In order to do this we have to generate more tables like paris, and add geographic information on them from google (latitude and longitude of Metro Anvers).This should provide a visual representation of different events, and may yield interesting findings as to what type of meetups are most frequented in each city. **Currently the problem with the df paris is that we cannot see it! In console the error message "could not find function "select" appeared.**
+
+
+
+```{r, eval =FALSE}
 #scrap code
 #attempts at getting all events from meetup api
 data<-source("https://api.meetup.com/find/groups?zip=11211&radius=1&category=25&order=members")
