@@ -17,26 +17,41 @@ output:
 require(jsonlite)
 require(httr)
 require(devtools)
+require(jsonlite)
 devtools::install_github("rladies/meetupr")
 library(meetupr)
 
+#Creating api key and group name objects
 api_key <- "62c15445c44f4e5473e7e3e164d7f"
 group_name <- "internationals-events-paris"
+
+
 Sys.setenv(meetup_api_key = "62c15445c44f4e5473e7e3e164d7f")
-events <- get_events(group_name, api_key) 
-#CREATES JSON events list!
-?get_events
+events <- get_events(group_name, api_key)
+
+
 # requires urlname, api_key, event_status
 group_name <- "internationals-events-paris"
 api_key <- "62c15445c44f4e5473e7e3e164d7f"
 event_status <- 'past'
 
-# result kinda look like what was returned from bitcoin api
-library(jsonlite)
+
+
 raw_api_result <- get_events(urlname=group_name, api_key=api_key)
 df <- fromJSON(toJSON(raw_api_result))
 
+
+#Creates paris dataframe with 2 venues and count of rvsps made 
+paris <- df %>% 
+  select(group_name,venue.name, name) %>% 
+  group_by(group_name) %>% 
+  filter(venue.name =="Metro Anvers" | venue.name == "brasserie le st andré") %>% 
+  summarise(venue.name, count = n(name))
+
+
 ```
+
+The paris data frame shows the number of rsvps made in two locations, Metro Anvers and brasserie lest andré. 
 
 #Meetup Map
 
