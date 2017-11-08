@@ -1,0 +1,31 @@
+---
+title: "Project Outline"
+output: html_document
+---
+
+```{r}
+require(jsonlite)
+require(httr)
+require(devtools)
+require(jsonlite)
+require(dplyr)
+require(readr)
+
+Boston <- read_csv("~/Data Science (231)/final project/meetup_groupsBoston.csv")
+
+#Renaming columns
+colnames(Boston)[1] <- "city"
+colnames(Boston)[2] <- "group_name"
+colnames(Boston)[3] <- "category"
+colnames(Boston)[6] <- "category"
+
+  
+```
+
+
+```{r}
+Boston %>% 
+  select(tech, )
+```
+
+
