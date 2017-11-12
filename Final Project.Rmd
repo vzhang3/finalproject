@@ -4,6 +4,7 @@ output: html_document
 ---
 
 ```{r}
+require(tidyverse)
 require(jsonlite)
 require(httr)
 require(devtools)
@@ -11,21 +12,50 @@ require(jsonlite)
 require(dplyr)
 require(readr)
 
-Boston <- read_csv("~/Data Science (231)/final project/meetup_groupsBoston.csv")
+ny <- read_csv("~/Data Science (231)/final project/meetup_groupsNYlocation.csv",  col_names = FALSE)
 
 #Renaming columns
-colnames(Boston)[1] <- "city"
-colnames(Boston)[2] <- "group_name"
-colnames(Boston)[3] <- "category"
-colnames(Boston)[6] <- "category"
-
-  
+colnames(ny)[1] <- "city"
+colnames(ny)[2] <- "group_name"
+colnames(ny)[3] <- "created"
+colnames(ny)[4] <- "category"
+colnames(ny)[5] <- "members"
+colnames(ny)[6] <- "details"
+colnames(ny)[7] <- "lat"
+colnames(ny)[8] <- "long"
 ```
 
 
 ```{r}
-Boston %>% 
-  select(tech, )
+#creates df topics with number of groups per topic
+topics <- ny %>% 
+  select(category, members) %>% 
+  group_by(category) %>% 
+  summarise(count = n(), total_members= sum(members)) %>% 
+  arrange(desc(count));topics
+
+topics10 <- topics %>% 
+  head(10)
+  
+#graph of densities of topics
+ggplot( data = topics, aes(x = count)) + geom_density(adjust = 0.29) + labs(title = "") 
+
+#graph of number of members in top 10 topics (stacked bargraph)
+
 ```
 
+As you can see, the category with the most groups is "socializing". Given how at it's core meetup is designed to bring people together over shared interests, it is no wonder that socializing has the highest volume of meetup groups. The majority of topics (approxiamately 30%) have between 5 and 25 dedicated groups.
+
+
+#Shiny Time
+```{r}
+library(shiny)
+library(leaflet)
+
+ui <- fluidPage()
+
+server <- function(input, ouput) {}
+
+ShinyApp(ui=ui, server=server)
+```
 
