@@ -13,9 +13,8 @@ y <- fromJSON(as.character(x))
 View(y)
 fields <- c('yes_rsvp_count','venue.lat', 'venue.lon')
 events_df <- y$results[,fields]
-head(events_df)
-groups_df<-filter(groups_df, visibility=='public')
-head(groups_df)
+head(y)
+
 str(y)
 
 # get groups
@@ -29,8 +28,8 @@ x <- GET(groups_url)
 y <- fromJSON(as.character(x))
 View(y)
 fields <- c('name','created', 'city', 'state', 'members','who')
-events_df <- y$results[,fields]
-head(events_df)
+groups_df <- y$results[,fields]
+head(groups_df)
 groups_df<-filter(groups_df, visibility=='public')
 head(groups_df)
 str(y)
