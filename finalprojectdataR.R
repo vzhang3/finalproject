@@ -11,9 +11,9 @@ events_url <- sprintf('https://api.meetup.com/2/open_events?key=62c15445c44f4e54
 x <- GET(events_url)
 y <- fromJSON(as.character(x))
 View(y)
-fields <- c('yes_rsvp_count','venue.lat', 'venue.lon')
+fields <- c('yes_rsvp_count','venue.lon','venue.lat')
 events_df <- y$results[,fields]
-head(y)
+head(events_df)
 
 str(y)
 
