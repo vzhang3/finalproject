@@ -24,9 +24,13 @@ groups_df$count <- y$results.yes_rvsp_count
 
 head(groups_df)
 
-fields <- c('yes_rsvp_count','venue.lon','venue.lat')
-events_df <- y$results[,fields]
-head(events_df)
+events_df <- y$results %>%
+  select(name,yes_rsvp_count,id)
+events_df2 <- y$results$venue %>%
+  select(lat,lon) %>%
+  mutate(id = y$results$id)
+events_df <- events_df %>%
+  full_join(events_df2,by="id")
 
 str(y)
 
