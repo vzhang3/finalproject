@@ -14,17 +14,8 @@ x <- GET(events_url)
 y <- fromJSON(as.character(x))
 View(y)
 
-events_df <- y %>% 
-  select(results.category.name, results.venue.lon, results.venue.lat, results.yes_rvsp_count)
-  
 
-fields <- c('category.name')
-groups_df <- y$results.category.name
-groups_df$venue.lon <- y$results.venue.lon
-groups_df$venue.lat <- y$results.venue.lat
-groups_df$count <- y$results.yes_rvsp_count
 
-head(groups_df)
 
 #get events
 events_df <- y$results %>%
@@ -46,6 +37,8 @@ grandevents <-  events_df1 %>%
   full_join(events_df, by="id")
 
 
+grandevents %>% 
+  group_by(gid)
 str(y)
 
 # get groups
@@ -58,14 +51,17 @@ groups_url <- sprintf('https://api.meetup.com/2/groups?key=62c15445c44f4e5473e7e
 
 
 x <- GET(groups_url)
-y <- fromJSON(as.character(x))
-View(y)
-fields <- c('name','created', 'city', 'state', 'members','who')
-groups_df <- y$results[,fields]
-head(groups_df)
-groups_df<-filter(groups_df, visibility=='public')
-head(groups_df)
-str(y)
+z <- fromJSON(as.character(x))
+#View(z)
+fields <- c('name','created', 'city', 'state', 'members','who', 'id')
+groups_df <- z$results[,fields] %>% 
+  mutate(cat=z$results$category)
+colnames(groups_df)[7]<-'gid'
+groups_df<-z
+names(groups_df)
+finalHartford<-groups_df %>% 
+full_join(grandevents, by='gid')
+finalHartford %>% na.omit
 
 #get events
 events_url<-'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&rsvp=yes&group_id=145906&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=189051097&sig=78e045a9dd044ab8484a1557874967e3239db6ab'
