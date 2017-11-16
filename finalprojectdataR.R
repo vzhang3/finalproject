@@ -65,10 +65,9 @@ x <- GET(groups_url)
 z <- fromJSON(as.character(x))
 #View(z)
 #change the column name to category
-colnames(finalHartford)[8]<-'category'
 fields <- c('name','created', 'city', 'state', 'members','who', 'id')
 groups_df <- z$results[,fields] %>% 
-  mutate(cat=z$results$category)
+  mutate(gid= z$results$id)
 groups_df2 <- z$results$category %>% 
   select(name) %>% 
   mutate(gid=z$results$id)
@@ -76,7 +75,8 @@ groups_df3 <- groups_df %>%
   full_join(groups_df2, by='gid')
 finalHartford<-groups_df3 %>% 
   full_join(grandevents, by='gid')
-
+View(finalHartford)
+colnames(finalHartford)[8]<-'category'
 
 summary(finalHartford$yes_rsvp_count)
 events_hart<-finalHartford %>% 
@@ -84,26 +84,5 @@ events_hart<-finalHartford %>%
   summarise(rsvp=sum(yes_rsvp_count, na.rm=TRUE)) %>% 
   arrange(desc(rsvp))
 dim(finalHartford)
+View(final)
 View(events_hart)
-#Need to make a function 
-events_url<-'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&rsvp=yes&group_id=145906&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=189051097&sig=78e045a9dd044ab8484a1557874967e3239db6ab'
-group_id <- '145906'
-# events_url<-sprintf('https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&rsvp=yes&group_id=%s&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=189051097&sig=78e045a9dd044ab8484a1557874967e3239db6ab', group_id)
-
-get_events <- function(group_id){
-  
-  i <- 1
-  group_id <- groups_df$id[i]
-  group_id
-  #https://api.meetup.com/2/events?key=62c15445c44f4e5473e7e3e164d7f&group_id=145906&rsvp=yes&sign=true
-  events_url <- sprintf('https://api.meetup.com/2/events?key=62c15445c44f4e5473e7e3e164d7f&group_id=%s&rsvp=yes&sign=true', group_id)
-  z <- GET(events_url)
-  z1 <- fromJSON(as.character(z))
-  events_df<-z1$meta
-  return(events_df)
-}
-
-i <- 1
-get_events(groups_df$id[i])
-
-
