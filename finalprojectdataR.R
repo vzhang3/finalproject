@@ -8,29 +8,17 @@ library(dplyr)
 cities <- c('Hartford', 'Boston')
 states <- c('CT', 'MA')
 
-for(i in i:length(cities)){
-  
 i <- 1
 city <- cities[i]
 state <- states[i]
 
-# pul event data
+for(i in i:length(cities)){
+
+# pull event data
 events_url <- sprintf('https://api.meetup.com/2/open_events?key=62c15445c44f4e5473e7e3e164d7f&country=us&offset=0&city=%s&state=%s&radius=10.0&sign=true', 
                       city, state)
 x <- GET(events_url)
 y <- fromJSON(as.character(x))
-
-# pull group data
-
-# clean up
-
-# join
-
-# write result to disk
-filepath <- sprintf('data/%s_%s.csv', city, state)
-write.csv(finalCity, filepath)
-
-}
 
 #get events
 events_df <- y$results %>%
@@ -51,8 +39,8 @@ grandevents <-  events_df1 %>%
   select(gid, id) %>% 
   full_join(events_df, by="id")
 
+# pull group data
 
-# get groups
 # group_url <- 'https://api.meetup.com/2/groups?country=us&offset=0&city=Hartford&format=json&lon=-72.6699981689&photo-host=public&state=ct&page=20&radius=10.0&fields=&lat=41.7900009155&order=id&desc=false&sig_id=189051097&sig=a352c27062e37a18215697e5a612194d7de67dba'
 
 cities <- c('Hartford', 'Boston')
@@ -63,20 +51,30 @@ groups_url <- sprintf('https://api.meetup.com/2/groups?key=62c15445c44f4e5473e7e
 
 x <- GET(groups_url)
 z <- fromJSON(as.character(x))
-#View(z)
+
+# clean up
+
 #change the column name to category
 fields <- c('name','created', 'city', 'state', 'members','who', 'id')
 groups_df <- z$results[,fields] %>% 
   mutate(gid= z$results$id)
+
 groups_df2 <- z$results$category %>% 
   select(name) %>% 
   mutate(gid=z$results$id)
+
 groups_df3 <- groups_df %>% 
   full_join(groups_df2, by='gid')
+
+#join events, groups
 finalHartford<-groups_df3 %>% 
   full_join(grandevents, by='gid')
 View(finalHartford)
 colnames(finalHartford)[8]<-'category'
+
+# join
+
+
 
 summary(finalHartford$yes_rsvp_count)
 events_hart<-finalHartford %>% 
@@ -86,3 +84,16 @@ events_hart<-finalHartford %>%
 dim(finalHartford)
 View(final)
 View(events_hart)
+
+# write result to disk
+filepath <- sprintf('data/%s_%s.csv', city, state)
+write.csv(finalCity, filepath)
+
+}
+
+
+
+
+
+#View(z)
+
