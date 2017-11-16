@@ -44,15 +44,44 @@ ggplot( data = topics, aes(x = count)) + geom_density(adjust = 0.29) + labs(titl
 
 ```
 
+```{r}
+socializing <- finalHartford %>% 
+  filter(category == "socializing")
+
+language <- finalHartford %>% 
+  filter(category == "language/ethnic identity")
+
+tech <- finalHartford %>% 
+  filter(category == "tech")
+
+sports <- finalHartford %>% 
+  filter(category == "sports/recreation")
+```
+
+
 As you can see, the category with the most groups is "socializing". Given how at it's core meetup is designed to bring people together over shared interests, it is no wonder that socializing has the highest volume of meetup groups. The majority of topics (approxiamately 30%) have between 5 and 25 dedicated groups.
 
 
 #Shiny Time
 ```{r}
 library(shiny)
+library(shinyjs)
 library(leaflet)
+```
 
+```{r}
+# map of hartford which "social" events as category
+Hartford  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=socializing, popup="social") %>% 
+  addMarkers(data=language, popup="language") %>% 
+  addMarkers(data=sports, popup="sports") %>% 
+  addMarkers(data=tech, popup="tech")
 
+```
+
+```{r}
 ui <- fluidPage()
 
 server <- function(input, ouput) {}
@@ -60,46 +89,22 @@ server <- function(input, ouput) {}
 ShinyApp(ui=ui, server=server)
 ```
 
+
 ```{r}
-Hartford  <- leaflet() %>%
-  addTiles() %>%  
-  markers(hartford)# Add default OpenStreetMap map tiles
-  addMarkers(lng=-72.6851, lat=41.7637, popup="The birthplace of R")
-Hartford  # Print the map
+shinyServer(function(input, output, session){
+    output$mymap <- renderLeaflet({
+      leaflet() %>% 
+        addTiles() %>% 
+        setView(lng =-72.6851, lat =41.7637) %>% 
+        addMarkers(data = socializing, lat =, group = "socializing")
+    })
+})
 
-Hartford  <- leaflet() %>%
-  addTiles() %>%  
-  markers(hartford) %>% # Add default OpenStreetMap map tiles
-  addMarkers(lng=c(-72.6851, 72), lat=c(41.7637, 41), popup="The birthplace of R")
-Hartford  # Print the map
 
-```
-
-```{javascript}
-
-var array = [];
-
-for (var i = 0; i < myItems.length; i++) {
-    var item = myItems[i];
-
-    marker = new L.marker([item[2],item[3]], {
-        icon: mapOpts.myIcon
-    }).bindPopup(item[1]);
-
-    array.push(marker);
-}
-
-markers.addLayers(array);
+addMarkers(data = coffee_shops, group = "Food & Drink")
 ```
 
 
 
-markers 
-```{r}
-markers <- function(x) {
-  $
-  x <- finalHartford
-  return addMarkers(lng= x, lat= y)
-}
-```
+
 
