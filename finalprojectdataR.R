@@ -93,6 +93,7 @@ write.csv(finalCity, filepath)
 
 }
 
+finalHartford
 
 
 
