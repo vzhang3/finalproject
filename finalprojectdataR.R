@@ -63,9 +63,11 @@ head(grandevents)
 finalHartford<-groups_df3 %>% 
 full_join(grandevents, by='gid')
 
+colnames(finalHartford)[8]<-'category'
+names(finalHartford)
 
 eventshart<-finalHartford %>% 
-  group_by(name.y) %>% 
+  group_by(category) %>% 
   summarise(rsvp=sum(yes_rsvp_count)) 
 View(eventshart)
 #get events
