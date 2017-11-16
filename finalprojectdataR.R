@@ -65,10 +65,13 @@ full_join(grandevents, by='gid')
 
 colnames(finalHartford)[8]<-'category'
 names(finalHartford)
-
+head(finalHartford)
+summary(finalHartford$yes_rsvp_count)
 eventshart<-finalHartford %>% 
   group_by(category) %>% 
-  summarise(rsvp=sum(yes_rsvp_count)) 
+  summarise(rsvp=sum(yes_rsvp_count, na.rm=TRUE)) %>% 
+  arrange(desc(rsvp))
+dim(finalHartford)
 View(eventshart)
 #get events
 events_url<-'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&rsvp=yes&group_id=145906&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=189051097&sig=78e045a9dd044ab8484a1557874967e3239db6ab'
