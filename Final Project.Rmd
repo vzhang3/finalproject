@@ -52,10 +52,20 @@ As you can see, the category with the most groups is "socializing". Given how at
 library(shiny)
 library(leaflet)
 
+
 ui <- fluidPage()
 
 server <- function(input, ouput) {}
 
 ShinyApp(ui=ui, server=server)
 ```
+
+```{r}
+Hartford  <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=-72.6851, lat=41.7637, popup="The birthplace of R")
+Hartford  # Print the map
+```
+
+
 

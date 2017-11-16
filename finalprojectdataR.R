@@ -9,7 +9,7 @@ cities <- c('Hartford', 'Boston')
 states <- c('CT', 'MA')
 
 events_url <- sprintf('https://api.meetup.com/2/open_events?key=62c15445c44f4e5473e7e3e164d7f&country=us&offset=0&city=%s&state=%s&radius=10.0&sign=true', 
-                     cities[1], states[1])
+                      cities[1], states[1])
 x <- GET(events_url)
 y <- fromJSON(as.character(x))
 
@@ -55,7 +55,7 @@ groups_df2 <- z$results$category %>%
 groups_df3 <- groups_df %>% 
   full_join(groups_df2, by='gid')
 finalHartford<-groups_df3 %>% 
-full_join(grandevents, by='gid')
+  full_join(grandevents, by='gid')
 #change the column name to category
 colnames(finalHartford)[8]<-'category'
 
