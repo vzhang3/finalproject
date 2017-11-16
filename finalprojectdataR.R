@@ -26,6 +26,8 @@ events_df <- y$results %>%
 events_df2 <- y$results$venue %>%
   select(lat,lon) %>%
   mutate(id = y$results$id)
+
+#Events with latitude and longitude
 events_df <- events_df %>%
   full_join(events_df2,by="id")
 
@@ -34,7 +36,7 @@ events_df1 <- y$results$group
 colnames(events_df1)[5] <- "gid"
 
 #create an events data fram with group_id to join to groups
-grandevents <-  events_df1 %>%
+events_df <-  events_df1 %>%
   mutate(id = y$results$id) %>% 
   select(gid, id) %>% 
   full_join(events_df, by="id")
@@ -62,15 +64,15 @@ groups_df <- z$results[,fields] %>%
 groups_df2 <- z$results$category %>% 
   select(name) %>% 
   mutate(gid=z$results$id)
+colnames(groups_df2)[1] <- "category"
 
 groups_df3 <- groups_df %>% 
   full_join(groups_df2, by='gid')
 
 #join events, groups
 finalHartford<-groups_df3 %>% 
-  full_join(grandevents, by='gid')
+  full_join(events_df, by='gid')
 View(finalHartford)
-colnames(finalHartford)[8]<-'category'
 
 # join
 
