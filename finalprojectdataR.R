@@ -8,11 +8,29 @@ library(dplyr)
 cities <- c('Hartford', 'Boston')
 states <- c('CT', 'MA')
 
+for(i in i:length(cities)){
+  
+i <- 1
+city <- cities[i]
+state <- states[i]
+
+# pul event data
 events_url <- sprintf('https://api.meetup.com/2/open_events?key=62c15445c44f4e5473e7e3e164d7f&country=us&offset=0&city=%s&state=%s&radius=10.0&sign=true', 
-                      cities[1], states[1])
+                      city, state)
 x <- GET(events_url)
 y <- fromJSON(as.character(x))
 
+# pull group data
+
+# clean up
+
+# join
+
+# write result to disk
+filepath <- sprintf('data/%s_%s.csv', city, state)
+write.csv(finalCity, filepath)
+
+}
 
 #get events
 events_df <- y$results %>%
@@ -87,4 +105,5 @@ get_events <- function(group_id){
 
 i <- 1
 get_events(groups_df$id[i])
+
 
