@@ -46,6 +46,8 @@ groups_url <- sprintf('https://api.meetup.com/2/groups?key=62c15445c44f4e5473e7e
 x <- GET(groups_url)
 z <- fromJSON(as.character(x))
 #View(z)
+#change the column name to category
+colnames(finalHartford)[8]<-'category'
 fields <- c('name','created', 'city', 'state', 'members','who', 'id')
 groups_df <- z$results[,fields] %>% 
   mutate(cat=z$results$category)
@@ -56,8 +58,7 @@ groups_df3 <- groups_df %>%
   full_join(groups_df2, by='gid')
 finalHartford<-groups_df3 %>% 
   full_join(grandevents, by='gid')
-#change the column name to category
-colnames(finalHartford)[8]<-'category'
+
 
 summary(finalHartford$yes_rsvp_count)
 events_hart<-finalHartford %>% 
@@ -86,3 +87,4 @@ get_events <- function(group_id){
 
 i <- 1
 get_events(groups_df$id[i])
+

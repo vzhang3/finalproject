@@ -62,10 +62,37 @@ ShinyApp(ui=ui, server=server)
 
 ```{r}
 Hartford  <- leaflet() %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addTiles() %>%  
+  markers(hartford)# Add default OpenStreetMap map tiles
   addMarkers(lng=-72.6851, lat=41.7637, popup="The birthplace of R")
 Hartford  # Print the map
 ```
 
+```{r}
 
+var array = [];
+
+for (var i = 0; i < myItems.length; i++) {
+    var item = myItems[i];
+
+    marker = new L.marker([item[2],item[3]], {
+        icon: mapOpts.myIcon
+    }).bindPopup(item[1]);
+
+    array.push(marker);
+}
+
+markers.addLayers(array);
+```
+
+
+
+markers 
+```{r}
+markers <- function(x) {
+  $
+  x <- finalHartford
+  return addMarkers(lng= x, lat= y)
+}
+```
 
