@@ -66,9 +66,16 @@ Hartford  <- leaflet() %>%
   markers(hartford)# Add default OpenStreetMap map tiles
   addMarkers(lng=-72.6851, lat=41.7637, popup="The birthplace of R")
 Hartford  # Print the map
+
+Hartford  <- leaflet() %>%
+  addTiles() %>%  
+  markers(hartford) %>% # Add default OpenStreetMap map tiles
+  addMarkers(lng=c(-72.6851, 72), lat=c(41.7637, 41), popup="The birthplace of R")
+Hartford  # Print the map
+
 ```
 
-```{r}
+```{javascript}
 
 var array = [];
 
