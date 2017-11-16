@@ -27,16 +27,12 @@ events_df <- events_df %>%
 events_df1 <- y$results$group
 colnames(events_df1)[5] <- "gid"
 
-
+#create an events data fram with group_id to join to groups
 grandevents <-  events_df1 %>%
   mutate(id = y$results$id) %>% 
   select(gid, id) %>% 
   full_join(events_df, by="id")
 
-head(grandevents)
-grandevents %>% 
-  group_by(gid)
-str(y)
 
 # get groups
 # group_url <- 'https://api.meetup.com/2/groups?country=us&offset=0&city=Hartford&format=json&lon=-72.6699981689&photo-host=public&state=ct&page=20&radius=10.0&fields=&lat=41.7900009155&order=id&desc=false&sig_id=189051097&sig=a352c27062e37a18215697e5a612194d7de67dba'
@@ -58,22 +54,19 @@ groups_df2 <- z$results$category %>%
   mutate(gid=z$results$id)
 groups_df3 <- groups_df %>% 
   full_join(groups_df2, by='gid')
-head(groups_df3)
-head(grandevents)
 finalHartford<-groups_df3 %>% 
 full_join(grandevents, by='gid')
-
+#change the column name to category
 colnames(finalHartford)[8]<-'category'
-names(finalHartford)
-head(finalHartford)
+
 summary(finalHartford$yes_rsvp_count)
-eventshart<-finalHartford %>% 
+events_hart<-finalHartford %>% 
   group_by(category) %>% 
   summarise(rsvp=sum(yes_rsvp_count, na.rm=TRUE)) %>% 
   arrange(desc(rsvp))
 dim(finalHartford)
-View(eventshart)
-#get events
+View(events_hart)
+#Need to make a function 
 events_url<-'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&rsvp=yes&group_id=145906&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=189051097&sig=78e045a9dd044ab8484a1557874967e3239db6ab'
 group_id <- '145906'
 # events_url<-sprintf('https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&rsvp=yes&group_id=%s&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=189051097&sig=78e045a9dd044ab8484a1557874967e3239db6ab', group_id)
