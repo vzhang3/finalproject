@@ -45,22 +45,40 @@ ggplot( data = topics, aes(x = count)) + geom_density(adjust = 0.29) + labs(titl
 ```
 
 ```{r}
-socializing <- finalHartford %>% 
+socializing <- ny %>% 
   filter(category == "socializing")
 
-language <- finalHartford %>% 
+language <- ny %>% 
   filter(category == "language/ethnic identity")
 
-tech <- finalHartford %>% 
+tech <- ny %>% 
   filter(category == "tech")
 
-sports <- finalHartford %>% 
+sports <- ny %>% 
   filter(category == "sports/recreation")
 ```
 
 
 As you can see, the category with the most groups is "socializing". Given how at it's core meetup is designed to bring people together over shared interests, it is no wonder that socializing has the highest volume of meetup groups. The majority of topics (approxiamately 30%) have between 5 and 25 dedicated groups.
 
+
+```{r}
+smallCT <- Hartford_CT %>% 
+  select(category, lat, lon)
+smallCT <- na.omit(smallCT)
+```
+
+```{r}
+smallMA <- Boston_MA %>% 
+  select(category, lat, lon)
+smallMA <- na.omit(smallMA)
+```
+
+```{r}
+smallNC <- Charlotte_NC %>% 
+  select(category, lat, lon)
+smallNC <- na.omit(smallNC)
+```
 
 #Shiny Time
 ```{r}
