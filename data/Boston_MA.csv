@@ -3,7 +3,11 @@
 "2","The Boston Bookcrossing Meetup Group",1034097745000,"Cambridge","MA",511,"BookCrossers",23495,23495,"book clubs",NA,NA,NA,NA,NA
 "3","The Boston Atheists Meetup Group",1035261083000,"Boston","MA",1508,"Freethinkers",12763,12763,"religion/beliefs",NA,NA,NA,NA,NA
 "4","The Boston Java Meetup Group",1037127220000,"Cambridge","MA",2643,"Java Developers",87071,87071,"tech",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "5","The Boston French Language Meetup Group",1037728347000,"Cambridge","MA",2835,"French Speakers",63770,63770,"language/ethnic identity",NA,NA,NA,NA,NA
+=======
+"5","The Boston French Language Meetup Group",1037728347000,"Cambridge","MA",2834,"French Speakers",63770,63770,"language/ethnic identity",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "6","Boston Writers' Workshop",1038445733000,"Boston","MA",790,"Writers",122206,122206,"writing",NA,NA,NA,NA,NA
 "7","The Boston Pug Meetup Group",1039143409000,"Boston","MA",1006,"Pug Devotee Extraordinaires",126274,126274,"pets/animals",NA,NA,NA,NA,NA
 "8","Boston Vegan Meetup Group",1039719611000,"Boston","MA",664,"Boston Area Vegans",160867,160867,"health/wellbeing",NA,NA,NA,NA,NA
@@ -11,6 +15,7 @@
 "10","Boston Design Talks",1040699604000,"Boston","MA",983,"Designers",71144,71144,"career/business",NA,NA,NA,NA,NA
 "11","Boston PHP",1041130024000,"Boston","MA",3753,"Members",120818,120818,"tech",NA,NA,NA,NA,NA
 "12","Boston Republican Meetup Group",1041604037000,"Boston","MA",628,"Boston Republicans",131129,131129,"movements/politics",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "13","The Boston Spanish Language Meetup Group",1042056761000,"Cambridge","MA",5112,"Spanish Speakers",145862,145862,"language/ethnic identity",NA,NA,NA,NA,NA
 "14","Boston Japanese & English Language Club",1042101769000,"Cambridge","MA",2386,"Japanese/English Speakers",86694,86694,"language/ethnic identity","fddkhnywpblc","Tuesday Night Conversation Group @ Super 88",6,42.352218,-71.124109
 "15","Boston Web Design (and Dev) Meetup Group",1042827112000,"Boston","MA",1667,"Web Professionals",163691,163691,"tech",NA,NA,NA,NA,NA
@@ -376,3 +381,366 @@
 "375",NA,NA,NA,NA,NA,NA,NA,25427937,NA,"244928705","🎄Tree Lighting",7,42.35685,-71.06202
 "376",NA,NA,NA,NA,NA,NA,NA,3093352,NA,"244928680","🎄Tree Lighting ",8,42.35685,-71.06202
 "377",NA,NA,NA,NA,NA,NA,NA,15549272,NA,"244249764","Steps to Start a Business",5,NA,NA
+=======
+"13","The Boston Spanish Language Meetup Group",1042056761000,"Cambridge","MA",5114,"Spanish Speakers",145862,145862,"language/ethnic identity",NA,NA,NA,NA,NA
+"14","Boston Japanese & English Language Club",1042101769000,"Cambridge","MA",2386,"Japanese/English Speakers",86694,86694,"language/ethnic identity","245223150","N1 Study Group for the JLPT(日本語能力試験) - natives invited and welcomed!",6,42.388683,-71.118843
+"15","Boston Japanese & English Language Club",1042101769000,"Cambridge","MA",2386,"Japanese/English Speakers",86694,86694,"language/ethnic identity","243302630","N3/N4/N5 Study Group for the JLPT (Japanese Language Proficiency Test) !日本語能力試験",3,42.278763,-71.031387
+"16","Boston Japanese & English Language Club",1042101769000,"Cambridge","MA",2386,"Japanese/English Speakers",86694,86694,"language/ethnic identity","fddkhnywpblc","Tuesday Night Conversation Group @ Super 88",5,42.352218,-71.124109
+"17","Boston Web Design (and Dev) Meetup Group",1042827112000,"Boston","MA",1667,"Web Professionals",163691,163691,"tech",NA,NA,NA,NA,NA
+"18","Boston Integral Commons (Ken Wilber group)",1043464256000,"Newton Center","MA",289,"members",91062,91062,"new age/spirituality",NA,NA,NA,NA,NA
+"19","Democracy for America: Massachusetts",1043936393000,"Boston","MA",890,"Activists",171526,171526,"movements/politics",NA,NA,NA,NA,NA
+"20","Boston Photo Center",1044805481000,"Boston","MA",2,"BPC Members",120095,120095,"photography",NA,NA,NA,NA,NA
+"21","The Boston English as a Second Language (ESL) Meetup Group",1044916688000,"Boston","MA",3252,"English Learners",55264,55264,"language/ethnic identity",NA,NA,NA,NA,NA
+"22","German Expatriates in Boston  Meetup",1046997673000,"Boston","MA",712,"German expatriates",57664,57664,"language/ethnic identity","kzzpmlywpbdc","German Expatriates in Boston  Meetup Monthly Meetup",17,NA,NA
+"23","The Boston Science Fiction & Fantasy Writers Meetup Group",1048446038000,"Newton Center","MA",636,"SF Writers",137807,137807,"writing",NA,NA,NA,NA,NA
+"24","The Boston Jazz Meetup Group",1048870241000,"Boston","MA",970,"Jazz Fans",87187,87187,"music",NA,NA,NA,NA,NA
+"25","MA Korean Language & Culture Group",1050960924000,"Boston","MA",712,"members",92243,92243,"language/ethnic identity",NA,NA,NA,NA,NA
+"26","The Boston Democratic Party Meetup Group",1051303643000,"Boston","MA",244,"Democrats",171097,171097,"movements/politics",NA,NA,NA,NA,NA
+"27","The Boston Mandarin Chinese Language Meetup Group",1052156228000,"Boston","MA",1917,"Boston Mandarin Meetup Members",33097,33097,"language/ethnic identity",NA,NA,NA,NA,NA
+"28","Boston Thoughtful World-Transforming Abolitionist Vegans",1063859039000,"Boston","MA",77,"Keen World-Transforming Vegans",161350,161350,"food/drink",NA,NA,NA,NA,NA
+"29","Boston Investor's Group",1063864734000,"Cambridge","MA",2916,"Investor$ who think 4 themselve$",81154,81154,"career/business","245256194","Special Speakers Meeting: Robert Sherfke of Wellington Management",56,42.360073,-71.08471
+"30","Boston Civil Liberties Task Force",1066858789000,"Boston","MA",75,"civil liberties supporters",2348,2348,"socializing",NA,NA,NA,NA,NA
+"31","The Boston Expat Canadian Meetup Group",1066858789000,"Boston","MA",1182,"Expat Canadians",29048,29048,"language/ethnic identity","245291651","Nova Scotia/Boston Christmas Tree Lighting Pre-Party",14,42.350037,-71.130592
+"32","Boston Skype Philosophy Meetup Group",1066858789000,"Cambridge","MA",569,"Philosophers",119696,119696,"education/learning",NA,NA,NA,NA,NA
+"33","The Boston Wine Meetup Group",1066858789000,"Boston","MA",1632,"Wine Enthusiasts",166097,166097,"food/drink",NA,NA,NA,NA,NA
+"34","The Boston Black Professionals Meetup Group",1068227877000,"Boston","MA",282,"MA Professionals",21248,21248,"career/business",NA,NA,NA,NA,NA
+"35","The Boston Attention Deficit Disorder Meetup Group",1071173171000,"Allston","MA",618,"ADDers",3092,3092,"support",NA,NA,NA,NA,NA
+"36","The Boston Fashion Meetup Group",1072705527000,"Boston","MA",1430,"Fashion Entrepreneurs",59186,59186,"career/business","245170011","FGI'S WINTER 2018 READY TO WEAR TREND REPORT & NETWORKING MIXER",15,42.350948,-71.04364
+"37","The Boston Sailing Meetup Group",1080337893000,"Jamaica Plain","MA",1925,"Boston Sailing Meetup Members",135687,135687,"outdoors/adventure",NA,NA,NA,NA,NA
+"38","Boston Nightlife",1080876025000,"Boston","MA",7014,"Friends",111392,111392,"socializing",NA,NA,NA,NA,NA
+"39","Boston Biotech",1097368029000,"Boston","MA",3566,"Members",178843,178843,"tech",NA,NA,NA,NA,NA
+"40","madfemmepride: friendly, diverse, queer/femme community :)",1109633200000,"Boston","MA",5193,"all grrrls, bois, & femmes",197758,197758,"LGBT",NA,NA,NA,NA,NA
+"41","The Boston Plone Meetup Group",1125524281000,"Cambridge","MA",63,"Plonista",207992,207992,"tech",NA,NA,NA,NA,NA
+"42","The Boston MySQL Meetup Group",1130438871000,"Boston","MA",1512,"Boston-Metro MySQL Users",212864,212864,"tech",NA,NA,NA,NA,NA
+"43","Boston Karaoke Meetup",1130533178000,"Boston","MA",877,"Karaoke Singers",212993,212993,"music",NA,NA,NA,NA,NA
+"44","The Boston French Bulldog Meetup Group",1131144203000,"Boston","MA",675,"French Bulldog Owners & Lovers",213526,213526,"pets/animals",NA,NA,NA,NA,NA
+"45","Boston Futurology & Transhumanism",1134403069000,"Cambridge","MA",364,"Members",216208,216208,"education/learning",NA,NA,NA,NA,NA
+"46","Reading books by international writers",1135197087000,"Brookline","MA",458,"International Book Readers",216983,216983,"book clubs",NA,NA,NA,NA,NA
+"47","Boston Urban Exploration and Adventuring",1135897886000,"Boston","MA",498,"Explorers",217702,217702,"outdoors/adventure",NA,NA,NA,NA,NA
+"48","Boston Area Alternative Energy Supporters",1136861198000,"Boston","MA",517,"Alternative Energy Supporters",219161,219161,"community/environment",NA,NA,NA,NA,NA
+"49","The Cambridge Search Engine Optimization Meetup Group",1137185508000,"Arlington","MA",1645,"People Interested in SEO/SEM",219718,219718,"tech",NA,NA,NA,NA,NA
+"50","New England Aussies",1138828158000,"Boston","MA",5,"Characters",222356,222356,"language/ethnic identity",NA,NA,NA,NA,NA
+"51","Boston Movie Group",1140735210000,"Boston","MA",5887,"Movie Fans",225256,225256,"movies/film",NA,NA,NA,NA,NA
+"52","The Boston Hiking Meetup Group",1143140754000,"Cambridge","MA",8438,"Hikers",229835,229835,"outdoors/adventure",NA,NA,NA,NA,NA
+"53","Revolve Nation's Boston Entrepreneur Group",1144455692000,"Boston","MA",4095,"Entrepreneurs",232461,232461,"career/business",NA,NA,NA,NA,NA
+"54","The Boston Metal Meetup Group",1145846837000,"Waltham","MA",331,"Metalheads",235213,235213,"music",NA,NA,NA,NA,NA
+"55","The Boston Dungeons & Dragons Meetup Group",1147291541000,"Boston","MA",2254,"D&D Players",244439,244439,"games",NA,NA,NA,NA,NA
+"56","The Boston German Language Meetup Group",1148502477000,"Cambridge","MA",1762,"German Speakers",252130,252130,"language/ethnic identity",NA,NA,NA,NA,NA
+"57","The Boston Gay Professionals Meetup Group",1150598018000,"Boston","MA",3517,"Gay Professionals",266831,266831,"career/business",NA,NA,NA,NA,NA
+"58","Breakfast, Brunch, Lunch, & Dinner Meetup Group",1151547203000,"Boston","MA",2216,"Fellow Foodies",273555,273555,"food/drink",NA,NA,NA,NA,NA
+"59","The Boston & Cambridge Salsa Meetup Group",1152225932000,"Cambridge","MA",4828,"Salsa Fans",278345,278345,"dancing",NA,NA,NA,NA,NA
+"60","Boston Italian Language and Culture",1153577535000,"Boston","MA",203,"Members of this group",288923,288923,"language/ethnic identity",NA,NA,NA,NA,NA
+"61","Socializing for Justice",1154919590000,"Boston","MA",3116,"SoJusters",299655,299655,"community/environment",NA,NA,NA,NA,NA
+"62","Spirituality & Mysticism Meetup Group",1155267198000,"Cambridge","MA",905,"Mystics",302540,302540,"new age/spirituality",NA,NA,NA,NA,NA
+"63","Multifamily Apartment Investing - Subgroup Of Boston REIA",1155332792000,"Dedham","MA",865,"Boston RE Investors",302998,302998,"career/business",NA,NA,NA,NA,NA
+"64","The Boston Digital Arts Meetup Group",1155342275000,"Boston","MA",459,"Digital Artists",303063,303063,"photography",NA,NA,NA,NA,NA
+"65","The Brookline & Boston Abuse Survivors Meetup Group",1155563186000,"Brookline","MA",507,"Abuse Survivors",304528,304528,"support",NA,NA,NA,NA,NA
+"66","The Boston Little Yorkies Meetup Group",1155773240000,"Boston","MA",180,"Little Yorkie Lovers",306386,306386,"pets/animals",NA,NA,NA,NA,NA
+"67","Boston International/Arthouse Movie Meetup Group",1155954187000,"Boston","MA",227,"people",307808,307808,"movies/film",NA,NA,NA,NA,NA
+"68","Boston/Providence Single Parents",1156290834000,"Milton","MA",997,"Single Parents",310263,310263,"parents/family",NA,NA,NA,NA,NA
+"69","Eastern Massachusetts Motherless Daughters",1157505665000,"Boston","MA",321,"Motherless Daughters",319099,319099,"support",NA,NA,NA,NA,NA
+"70","New England Meetup Organizers",1157755116000,"Waltham","MA",107,"Organizers",321127,321127,"socializing",NA,NA,NA,NA,NA
+"71","The Boston Philosophy of Mind Group",1159109925000,"Boston","MA",531,"Philosophers",331299,331299,"education/learning",NA,NA,NA,NA,NA
+"72","App Devs + Entrepreneurs",1159201082000,"Boston","MA",3871,"App Devs + Entrepreneurs",331893,331893,"tech",NA,NA,NA,NA,NA
+"73","Jack Russell Terrier Boston Area Group",1160224073000,"Brookline","MA",241,"JRT OWNERS",339624,339624,"pets/animals",NA,NA,NA,NA,NA
+"74","Boston Walking Meetup Group",1160435228000,"Brookline","MA",3160,"social walkers",341292,341292,"outdoors/adventure","245322617","Weekly Multigroup Community Walk at Fresh Pond + dinner 11/26 3:30pm",11,42.378754,-71.147324
+"75","Conscious Movie Meetup!",1162174450000,"Cambridge","MA",265,"Consciousness movie members",355065,355065,"movies/film",NA,NA,NA,NA,NA
+"76","Real Estate Networking/Education Meeting in Boston",1162574529000,"Boston","MA",764,"Serious Real Estate Investors",358354,358354,"career/business",NA,NA,NA,NA,NA
+"77","Greater Boston Mental Health Professionals",1162764978000,"Newton","MA",361,"Mental health professionals",359624,359624,"health/wellbeing",NA,NA,NA,NA,NA
+"78","Tabletop Role Play Society of Boston",1162773814000,"Cambridge","MA",525,"Gamers",359705,359705,"games","244524413","Pathfinder Society Gaming at Knight Moves Cafe (Brookline)",3,42.34145,-71.125008
+"79","The Boston Law of Attraction Meetup Group",1163874375000,"Boston","MA",2586,"Law of Attraction Co-Creators",368525,368525,"new age/spirituality",NA,NA,NA,NA,NA
+"80","The Cambridge Moveable Feast",1164140077000,"Cambridge","MA",2684,"Citizens of the World",370532,370532,"socializing","243060147","African American Folktales ... (Henry Louis Gates, Jr.) ...",9,42.346428,-71.08993
+"81","Boston & Cambridge Ethnic Dining",1164213872000,"Cambridge","MA",3037,"Explorers of ethnic cuisines",371060,371060,"food/drink",NA,NA,NA,NA,NA
+"82","Wayland Cribbage!",1165379039000,"Waltham","MA",135,"Cribbage Players",378600,378600,"games",NA,NA,NA,NA,NA
+"83","Twisted Touring",1165466485000,"Cambridge","MA",35,"Twisted Tourists",379328,379328,"cars/motorcycles",NA,NA,NA,NA,NA
+"84","Tantra International",1166119868000,"Boston","MA",195,"Tantra Practitioners/Teachers",383662,383662,"new age/spirituality",NA,NA,NA,NA,NA
+"85","We Are Change Boston /Boston Alternative Media- Journalism",1166982635000,"Boston","MA",252,"""Members""",388713,388713,"movements/politics",NA,NA,NA,NA,NA
+"86","Boston Webmasters Meetup Group",1167366728000,"Boston","MA",205,"Web Professionals",391084,391084,"tech",NA,NA,NA,NA,NA
+"87","Ciné Club Francophone de Boston",1168523042000,"Brookline","MA",708,"Amis du ciné club",401467,401467,"movies/film",NA,NA,NA,NA,NA
+"88","Rock and Ice Climbing Boston",1169007687000,"Cambridge","MA",2993,"Climbers",406080,406080,"outdoors/adventure",NA,NA,NA,NA,NA
+"89","New England Artists/Models Group",1169241652000,"Boston","MA",1473,"Art Models and Artists",408475,408475,"fine arts/culture",NA,NA,NA,NA,NA
+"90","The Boston Beanstalks Tall Club",1169420697000,"Boston","MA",173,"Beanstalks and their Friends",410040,410040,"socializing",NA,NA,NA,NA,NA
+"91","The Boston Gay Women's Meetup Group",1169853140000,"Boston","MA",4269,"women",414342,414342,"LGBT",NA,NA,NA,NA,NA
+"92","The Greater Boston Wiccan  Meetup",1170001494000,"Cambridge","MA",496,"Wiccans",415488,415488,"religion/beliefs",NA,NA,NA,NA,NA
+"93","Mosaic Jewish Outdoor Club of Massachusetts",1170120332000,"Brookline","MA",751,"friends and members",416725,416725,"outdoors/adventure",NA,NA,NA,NA,NA
+"94","The Web Content Management Systems Meetup Group",1170726764000,"Cambridge","MA",549,"People interested in CMS",422397,422397,"tech",NA,NA,NA,NA,NA
+"95","Jewish Singles 55+  of Greater Boston",1171034192000,"Dedham","MA",160,"Members",425314,425314,"socializing",NA,NA,NA,NA,NA
+"96","The Boston Asian Professionals Meetup Group",1171747225000,"Boston","MA",3745,"Boston Asian Professionals",431528,431528,"language/ethnic identity",NA,NA,NA,NA,NA
+"97","The Somerville Tennis Meetup Group",1171911951000,"Somerville","MA",1514,"Tennis Players",432728,432728,"sports/recreation",NA,NA,NA,NA,NA
+"98","Boston Area Social Anxiety Meetup",1172161576000,"Cambridge","MA",1667,"People",435114,435114,"socializing",NA,NA,NA,NA,NA
+"99","Boston Live Music",1173143620000,"Boston","MA",10239,"Fans of Live Music",444171,444171,"music",NA,NA,NA,NA,NA
+"100","Boston Area Motorcycle Riders",1173286322000,"Boston","MA",110,"Motorcycle Riders",445524,445524,"cars/motorcycles",NA,NA,NA,NA,NA
+"101","The Boston/Cambridge Portuguese Language Meetup Group",1174263714000,"Cambridge","MA",1349,"Portuguese Speakers",454600,454600,"language/ethnic identity",NA,NA,NA,NA,NA
+"102","Date Me I'm Jewish",1175013203000,"Brookline","MA",341,"Members",461164,461164,"parents/family",NA,NA,NA,NA,NA
+"103","EuroBoston - The Boston European Social Network",1175643538000,"Boston","MA",713,"EuroB's",467296,467296,"language/ethnic identity",NA,NA,NA,NA,NA
+"104","The Boston Python User Group",1175867048000,"Cambridge","MA",7505,"Pythonistas",469457,469457,"tech",NA,NA,NA,NA,NA
+"105","The Cambridge Improv incubator",1176165209000,"Cambridge","MA",1189,"Improv & Performance Artists",472156,472156,"fine arts/culture",NA,NA,NA,NA,NA
+"106","Greater Boston Cycling/Outdoor Fitness Group",1177285765000,"Waltham","MA",2610,"Bicyclists",482869,482869,"fitness",NA,NA,NA,NA,NA
+"107","Random Group of Hikers",1178284310000,"Boston","MA",5769,"Randomites",492954,492954,"outdoors/adventure",NA,NA,NA,NA,NA
+"108","Boston Frisbee",1179175038000,"Boston","MA",4029,"Flatballers",501407,501407,"fitness","xmvlklywpbjc","Sunday Afternoon @ Russell Field",18,42.393736,-71.136597
+"109","The Arlington Martial Arts Meetup Group",1179251068000,"Arlington","MA",263,"Martial Artists",502152,502152,"sports/recreation",NA,NA,NA,NA,NA
+"110","Informal Running Club: Home of TMIRCE:BOS",1179282543000,"Boston","MA",3365,"Llama's",502534,502534,"fitness",NA,NA,NA,NA,NA
+"111","Election 2016 -  BLANK THE BALLOT!",1179414181000,"Boston","MA",371,"Blank The Ballot Supporters",504022,504022,"movements/politics",NA,NA,NA,NA,NA
+"112","Boston Happy Hour",1179512474000,"Boston","MA",5066,"Drinking Buddies",505098,505098,"socializing",NA,NA,NA,NA,NA
+"113","20ish & 30ish Boston Book Club",1179761947000,"Boston","MA",3319,"Book Readers",507213,507213,"book clubs",NA,NA,NA,NA,NA
+"114","Cavalier King Charles Spaniel Lovers of Massachusetts",1180017754000,"Boston","MA",477,"Cavalier Lovers",510192,510192,"pets/animals",NA,NA,NA,NA,NA
+"115","The Boston Healers Network",1180109374000,"Boston","MA",1809,"Members",511093,511093,"health/wellbeing","245264266","Truly Healthy Bones, More Than Just Calcium and Vitamin D",3,42.3577,-71.23988
+"116","Classic Books: A Book Club for Voracious Readers",1180966730000,"Cambridge","MA",1938,"Book Club Readers",518343,518343,"book clubs",NA,NA,NA,NA,NA
+"117","Beantown Gamers",1181222819000,"Cambridge","MA",2939,"Board Gamers",521103,521103,"games","cwbltlywpbmc","Weekly Game Night (Wednesday)",16,42.361622,-71.086624
+"118","Beantown Gamers",1181222819000,"Cambridge","MA",2939,"Board Gamers",521103,521103,"games","vkhrllywpbmc","Lighter Game Night (Wednesday)",8,42.362549,-71.087036
+"119","Boston Leisure Bicycling",1181849374000,"Waltham","MA",1849,"Leisure Bicyclists",527341,527341,"outdoors/adventure",NA,NA,NA,NA,NA
+"120","Voulez-vous français Meetup Group",1182965205000,"Boston","MA",3357,"Francophones",541017,541017,"language/ethnic identity",NA,NA,NA,NA,NA
+"121","The Boston Ex-Midwesterners Meetup Group",1183239087000,"Boston","MA",573,"Ex-Midwesterners",545362,545362,"socializing",NA,NA,NA,NA,NA
+"122","The Boston Area Real Estate Investors Association",1183570978000,"Boston","MA",963,"Boston Area Investors",551165,551165,"career/business",NA,NA,NA,NA,NA
+"123","Beantown and Beyond 25-40 Something Singles",1183689712000,"Boston","MA",3191,"Friends",553596,553596,"socializing","245085543","Profitable Networking Boston Event {Complimentary Appetizers}",35,0,0
+"124","The North-of-Boston Law of Attraction Meetup Group",1184359903000,"Wakefield","MA",870,"Conscious Creators",567480,567480,"new age/spirituality",NA,NA,NA,NA,NA
+"125","Boston Skating",1184445502000,"Boston","MA",423,"Inline / Roller / Ice Skaters",569309,569309,"outdoors/adventure",NA,NA,NA,NA,NA
+"126","Boston World Music Meetup Group",1184783172000,"Boston","MA",596,"World Music Fans",575464,575464,"socializing",NA,NA,NA,NA,NA
+"127","Massachusetts Plein Air Artists Group",1184850544000,"Winchester","MA",396,"Artists",576650,576650,"fine arts/culture",NA,NA,NA,NA,NA
+"128","The Boston Paddling Meetup Group",1185155436000,"Boston","MA",812,"Paddlers",582176,582176,"outdoors/adventure",NA,NA,NA,NA,NA
+"129","Boston Volleyball Group",1185306680000,"Cambridge","MA",3383,"Volleyball players",585043,585043,"sports/recreation","245308042","11/28 Intermediate+ Indoor Volleyball East Boston",12,NA,NA
+"130","Nonprofit Connector",1185669583000,"Boston","MA",1583,"Positive Changemakers",591859,591859,"community/environment",NA,NA,NA,NA,NA
+"131","The Boston Area Libertarian Meetup Group",1185761834000,"Boston","MA",505,"Libertarians",593245,593245,"movements/politics","244554323","Boston Area Libertarian Meetup",4,NA,NA
+"132","Boston Real Estate",1185930205000,"Boston","MA",697,"Real Estate Entrepreneurs",596743,596743,"career/business",NA,NA,NA,NA,NA
+"133","Indians in Boston",1186603332000,"Boston","MA",1379,"friends",610218,610218,"socializing",NA,NA,NA,NA,NA
+"134","Boston Co-Ed Flag Football",1187102777000,"Cambridge","MA",2084,"Flag Football Players",621930,621930,"sports/recreation",NA,NA,NA,NA,NA
+"135","Multi-Meetup Dance Parties",1187624311000,"Somerville","MA",3167,"Dancing Fools",635019,635019,"singles",NA,NA,NA,NA,NA
+"136","The Boston Green Business Networking Group",1188483217000,"Milton","MA",394,"Energy Entrepreneurs",654497,654497,"community/environment",NA,NA,NA,NA,NA
+"137","Nerd Fun - Boston",1188843684000,"Boston","MA",14262,"people",661701,661701,"socializing","243286644","Games at Player 1 Player 2",4,42.346989,-71.043579
+"138","Sistah Circle - Bookclub & Circle of Friends",1188935340000,"Boston","MA",102,"Sistah Friend",663460,663460,"language/ethnic identity",NA,NA,NA,NA,NA
+"139","Indie Rock Boston",1189618163000,"Brighton","MA",3411,"Fans of Live Music Shows",679091,679091,"music",NA,NA,NA,NA,NA
+"140","Ex-Southerners Meetup Group - Boston Region",1189630375000,"Boston","MA",318,"Ex-Southerners",679749,679749,"socializing",NA,NA,NA,NA,NA
+"141","Wedeln Ski and Outdoors Club",1189913538000,"Boston","MA",1155,"Wedelns",687583,687583,"outdoors/adventure",NA,NA,NA,NA,NA
+"142","The Boston Millionaire Total Empowerment Meetup Group",1190130604000,"Boston","MA",307,"Millionaires",692993,692993,"new age/spirituality",NA,NA,NA,NA,NA
+"143","Architects + Interior Designers",1190251756000,"Boston","MA",1071,"Professionals",696342,696342,"career/business",NA,NA,NA,NA,NA
+"144","Boston Queer Adventurers",1190595294000,"Somerville","MA",2457,"Adventurers",704086,704086,"outdoors/adventure",NA,NA,NA,NA,NA
+"145","Small Doggy PlayDates --for small breeds only",1191432114000,"Waltham","MA",887,"Small Dog Lovers",727218,727218,"pets/animals",NA,NA,NA,NA,NA
+"146","Boston N E Raw-food",1191615749000,"Cambridge","MA",1774,"RawⓋ&curious",733136,733136,"food/drink",NA,NA,NA,NA,NA
+"147","The Surfing Meetup Group",1191787298000,"Somerville","MA",1759,"Surfers",737305,737305,"outdoors/adventure",NA,NA,NA,NA,NA
+"148","Boston New Technology",1193170472000,"Boston","MA",16671,"New Technologists",771580,771580,"tech",NA,NA,NA,NA,NA
+"149","Boston Singles ~40 Plus",1193851326000,"Cambridge","MA",408,"Socialites",787760,787760,"singles",NA,NA,NA,NA,NA
+"150","Boston/North Shore Martial Arts Meetup Group",1194367224000,"Boston","MA",726,"Martial Artists",800996,800996,"career/business",NA,NA,NA,NA,NA
+"151","New England Tantric Meetup",1194493392000,"Boston","MA",2289,"Tantra Seekers",804252,804252,"new age/spirituality",NA,NA,NA,NA,NA
+"152","Boston Portrait Photographers",1195577460000,"Cambridge","MA",1035,"Photographers, Models & MUA",830833,830833,"photography",NA,NA,NA,NA,NA
+"153","Boston Airliner Spotters Meetup Group",1196802909000,"Boston","MA",374,"Plane Nuts",858146,858146,"career/business",NA,NA,NA,NA,NA
+"154","Open House",1196910627000,"Boston","MA",3218,"Members",860845,860845,"socializing",NA,NA,NA,NA,NA
+"155","Boston Electronic Dance Music",1196924921000,"Boston","MA",3211,"EDM Lovers",861021,861021,"music",NA,NA,NA,NA,NA
+"156","Evening Walkers",1197152036000,"Dedham","MA",877,"Walkers",865474,865474,"outdoors/adventure",NA,NA,NA,NA,NA
+"157","Election 2016-Blank The Ballot!",1197475541000,"Boston","MA",49,"Ron Paul Supporters",872268,872268,"movements/politics",NA,NA,NA,NA,NA
+"158","Boston ""Onyxbirds"" Travel Group",1197747806000,"Boston","MA",1218,"Onyxbirds",877771,877771,"socializing",NA,NA,NA,NA,NA
+"159","BostonJS",1198023423000,"Boston","MA",4028,"JavaScripters",884541,884541,"tech",NA,NA,NA,NA,NA
+"160","Boston Drum Circle",1198131993000,"Arlington","MA",1332,"Drummers",886763,886763,"music",NA,NA,NA,NA,NA
+"161","Boston Creative Photographers",1199386407000,"Boston","MA",386,"Creative People",919281,919281,"photography",NA,NA,NA,NA,NA
+"162","Social Fun",1200316050000,"Boston","MA",12741,"Members",950281,950281,"socializing",NA,NA,NA,NA,NA
+"163","Technology Job Seekers Greater Boston",1200594205000,"Boston","MA",2155,"Professionals",957397,957397,"tech",NA,NA,NA,NA,NA
+"164","Tools for Decluttering, Personal Change & Goal Attainment",1200806521000,"Cambridge","MA",276,"Accountability Buddies",963536,963536,"support",NA,NA,NA,NA,NA
+"165","MassMobile - Mobile Developers' Meetup",1200979008000,"Boston","MA",1035,"Software Developers",967348,967348,"tech",NA,NA,NA,NA,NA
+"166","Intriguing Lives",1201473774000,"Dedham","MA",432,"Explorers",979502,979502,"socializing",NA,NA,NA,NA,NA
+"167","Boston Traders Meetup to Teach/Learn Trading Strategies",1201548457000,"Boston","MA",992,"Traders",981165,981165,"career/business",NA,NA,NA,NA,NA
+"168","Interactive Marketing & Advertising",1201708588000,"Cambridge","MA",45,"Marketing Professionals",984032,984032,"career/business",NA,NA,NA,NA,NA
+"169","Fun Events with Alcohol!",1201787501000,"Cambridge","MA",3139,"Members",985138,985138,"socializing",NA,NA,NA,NA,NA
+"170","The Boston Dyke March",1202355912000,"Boston","MA",1587,"Friends of the Boston Dyke March",997856,997856,"LGBT",NA,NA,NA,NA,NA
+"171","Women in Business Network",1202357989000,"Boston","MA",327,"Professional Women",997886,997886,"career/business",NA,NA,NA,NA,NA
+"172","Suburban Naturalists",1202681156000,"Newton","MA",1146,"Subnats",1005141,1005141,"community/environment",NA,NA,NA,NA,NA
+"173","Meet, Mix and Mingle Boston..Make New Friends!",1204259064000,"Boston","MA",2270,"folks",1037548,1037548,"singles",NA,NA,NA,NA,NA
+"174","Cohousing New England:Boston to Burlington/MA,ME,VT,NH,CT,NY",1204941964000,"Cambridge","MA",435,"Cohousers & Community Seekers",1051028,1051028,"community/environment","bpvmklywpbjc","Tour Jamaica Plain Cohousing (Boston)",3,42.312492,-71.105194
+"175","Boston Couples",1205088847000,"Boston","MA",2099,"Couples",1053816,1053816,"socializing",NA,NA,NA,NA,NA
+"176","Vocal Revolution Men's Chorus",1205591261000,"Lexington","MA",137,"Singers",1064944,1064944,"music",NA,NA,NA,NA,NA
+"177","The New England Greek Meetup Group",1206325440000,"Boston","MA",422,"New England Greek Meetup Group",1076847,1076847,"language/ethnic identity",NA,NA,NA,NA,NA
+"178","The Science of Spirituality Meditation Meetup",1206635741000,"West Newton","MA",273,"Meditators",1082356,1082356,"food/drink",NA,NA,NA,NA,NA
+"179","The Cambridge and Boston Social Meetup",1207347332000,"Boston","MA",6757,"Socialites",1096649,1096649,"socializing",NA,NA,NA,NA,NA
+"180","Red Sox Natives",1207451446000,"Boston","MA",945,"Natives",1098392,1098392,"socializing",NA,NA,NA,NA,NA
+"181","Boston Opera Meetup",1207529155000,"Boston","MA",1511,"Opera Enthusiasts",1099634,1099634,"music",NA,NA,NA,NA,NA
+"182","20's & 30's Boston Women's Social 🌺🌷",1207683259000,"Boston","MA",3620,"Ladies",1102320,1102320,"socializing","244867051","Join an Indoor THURSDAY NIGHT Volleyball League! Starts 11/30!",7,42.351765,-71.11659
+"183","Boston Relationship Skills",1208282893000,"Watertown","MA",2948,"Members",1110801,1110801,"singles",NA,NA,NA,NA,NA
+"184","The Cambridge Single Parents Meetup",1208624277000,"Cambridge","MA",486,"Single Parents",1116052,1116052,"parents/family",NA,NA,NA,NA,NA
+"185","EntreTech",1209741734000,"Boston","MA",1360,"Technology Entrepreneurs",1133540,1133540,"tech",NA,NA,NA,NA,NA
+"186","Living Root Dragon Boat - Boston",1209911572000,"Boston","MA",1197,"Paddlers",1135553,1135553,"outdoors/adventure",NA,NA,NA,NA,NA
+"187","Boston Area Arabic & English Language Meetup",1210410566000,"Boston","MA",1031,"Arabs and Arabic Learners",1143990,1143990,"language/ethnic identity","245384987","Wednesday Arabic social - Central Square - subject to cancellation if few RSVPS",4,42.32666,-71.12225
+"188","French Southwest of Boston",1210817844000,"Needham","MA",435,"Francophones",1150221,1150221,"language/ethnic identity",NA,NA,NA,NA,NA
+"189","The Newton Hip Mama Meetup",1210853128000,"Newton","MA",304,"Newton Mamas",1150597,1150597,"parents/family",NA,NA,NA,NA,NA
+"190","Boston Area Mind-Body Therapies Meetup",1210973298000,"Newtonville","MA",282,"Alternative Health Practioners",1152400,1152400,"health/wellbeing",NA,NA,NA,NA,NA
+"191","Tantra USA",1211334522000,"Boston","MA",515,"Tantric Practitioners",1157501,1157501,"new age/spirituality",NA,NA,NA,NA,NA
+"192","Culture Vultures - Singles over 50",1211836130000,"Cambridge","MA",3373,"Culture Vultures",1165987,1165987,"fine arts/culture","245322612","Weekly Multigroup Community Walk at Fresh Pond + dinner 11/26 3:30pm",11,42.37875,-71.147438
+"193","Boston City Girls",1211836842000,"Boston","MA",3096,"Ladies",1166008,1166008,"socializing",NA,NA,NA,NA,NA
+"194","Indian Friends Meetup",1211982475000,"Boston","MA",3097,"Friends",1168585,1168585,"socializing",NA,NA,NA,NA,NA
+"195","The Boston Tantric Meetup",1212006083000,"Brighton","MA",792,"Tantra Adepts",1169211,1169211,"health/wellbeing",NA,NA,NA,NA,NA
+"196","Boston Israel Cleantech Alliance",1212409680000,"Boston","MA",483,"Entrepreneurs",1175193,1175193,"career/business",NA,NA,NA,NA,NA
+"197","Chicago Sports Club of New England",1214167631000,"Boston","MA",522,"Chicago Sports Fans",1195793,1195793,"games",NA,NA,NA,NA,NA
+"198","South Shore Special Education Meetup Group",1214603333000,"Hingham","MA",75,"Special Ed Parents and Teachers",1202287,1202287,"parents/family",NA,NA,NA,NA,NA
+"199","Cambridge/Somerville/Boston Jazz Meetup/Jam",1214663070000,"Somerville","MA",463,"Jazz Fans/Musicians",1202977,1202977,"music",NA,NA,NA,NA,NA
+"200","Single Mothers United",1215352743000,"Boston","MA",669,"Single Mothers",1213435,1213435,"parents/family",NA,NA,NA,NA,NA
+"201","Boston By Foot Meetup Group",1215434385000,"Boston","MA",1239,"Bostonians",1214263,1214263,"education/learning",NA,NA,NA,NA,NA
+"202","Boston Sportbike Riders",1215889764000,"Boston","MA",109,"Riders",1220836,1220836,"cars/motorcycles",NA,NA,NA,NA,NA
+"203","Cool Folks In the City -Young Adults - Get out the House!",1216553828000,"Cambridge","MA",3788,"Chill Young Thangs",1228505,1228505,"socializing",NA,NA,NA,NA,NA
+"204",NA,NA,NA,NA,NA,NA,NA,13523872,NA,"245161698","Thankful for our Corgis - November Meetup",89,42.325352,-71.208679
+"205",NA,NA,NA,NA,NA,NA,NA,12174542,NA,"244067502","Tesla Test Drive. Limited spots. Very popular. Don't miss!",15,42.348328,-71.082726
+"206",NA,NA,NA,NA,NA,NA,NA,1942221,NA,"jnzcxnywpbjc","Come and enjoy the wonderful food presentation",4,42.395687,-71.131248
+"207",NA,NA,NA,NA,NA,NA,NA,15612432,NA,"244641917","[CAMBRIDGE] Gojo - Ronin League!",6,42.400768,-71.130707
+"208",NA,NA,NA,NA,NA,NA,NA,1764229,NA,"245279892","Boston Badminton (Westboro) November 26",17,NA,NA
+"209",NA,NA,NA,NA,NA,NA,NA,1692353,NA,"243650624","Alfie Kohn: Thanks for Nothing! A Secularist's Reflections on Gratitude",17,42.373535,-71.119019
+"210",NA,NA,NA,NA,NA,NA,NA,10626002,NA,"244248523","Empire of the Planet of the Trains (November 18xx)",11,0,0
+"211",NA,NA,NA,NA,NA,NA,NA,25333979,NA,"244972899","Eleanor Steber, America's Most Neglected Diva Jack Jarzavek, speaker",9,42.367531,-71.186829
+"212",NA,NA,NA,NA,NA,NA,NA,1573013,NA,"pfrfvlywpbjc","STEPPIN SUNDAYS @ SAINT MARY,S",3,42.316277,-71.064308
+"213",NA,NA,NA,NA,NA,NA,NA,20270825,NA,"bfsvwlywpbjc","Monthly Climb at Rock Spot South Boston and Social at Dbar",3,42.336933,-71.056396
+"214",NA,NA,NA,NA,NA,NA,NA,26428348,NA,"245313957","Discuss & Plan Future Events",4,42.367592,-71.186798
+"215",NA,NA,NA,NA,NA,NA,NA,25631023,NA,"wpzkznywpbjc","Reiki Relaxation + Meditation. New or experienced. Don't be shy!",5,42.349899,-71.150177
+"216",NA,NA,NA,NA,NA,NA,NA,19277367,NA,"cvztnlywpbjc","Transformers Meetup at Comicazi - Every other Month!",4,42.396152,-71.121239
+"217",NA,NA,NA,NA,NA,NA,NA,1298565,NA,"zgmjbpywpbjc","ASL WEEKLY SOCIAL",13,42.372627,-71.119659
+"218",NA,NA,NA,NA,NA,NA,NA,26155213,NA,"fhwpvnywpbjc","Breathe, Meditate and Be Happy",5,42.262428,-71.020073
+"219",NA,NA,NA,NA,NA,NA,NA,25379102,NA,"245251130","Sunday Afternoon Game",10,0,0
+"220",NA,NA,NA,NA,NA,NA,NA,1552094,NA,"lqfdwnywpbjc","Gentle Yoga & Meditation - 90 minute class",4,42.261665,-70.992157
+"221",NA,NA,NA,NA,NA,NA,NA,1353849,NA,"vlqwtnywpbjc","Games Potluck",7,NA,NA
+"222",NA,NA,NA,NA,NA,NA,NA,26117301,NA,"244819420","Private Upscale Meet & Greet - 20's-40's Members",49,42.348487,-71.078006
+"223",NA,NA,NA,NA,NA,NA,NA,26382521,NA,"244851407","💋Private Meet & Greet for 20's ,30's and 40's Members",43,42.348487,-71.078006
+"224",NA,NA,NA,NA,NA,NA,NA,26682113,NA,"245341160","Meet & Greet at Minibar",27,42.348293,-71.078621
+"225",NA,NA,NA,NA,NA,NA,NA,1756610,NA,"lbrnmlywpbjc","Personal Mastery Workgroup",4,42.45077,-71.135561
+"226",NA,NA,NA,NA,NA,NA,NA,18750543,NA,"fphttmywpbjc","Greater Boston Men's Sangha - learn some mindfulness meditation & yoga 4 stress!",25,42.33266,-71.117253
+"227",NA,NA,NA,NA,NA,NA,NA,20369946,NA,"qvrtnmywpbzb","NamaStay Sober Community Conversation Series",17,NA,NA
+"228",NA,NA,NA,NA,NA,NA,NA,12156152,NA,"wcgmfnywpbjc","Intermediate Bluegrass Jam",6,42.248722,-71.157272
+"229",NA,NA,NA,NA,NA,NA,NA,2459002,NA,"245408288","Steelers v. Packers",5,NA,NA
+"230",NA,NA,NA,NA,NA,NA,NA,26222571,NA,"pfjtznywpbjc","Midway Or The Highway Comedy",5,42.306236,-71.107567
+"231",NA,NA,NA,NA,NA,NA,NA,14355492,NA,"244147839","AT&T Short Film Competition-$50K+ in Prizes-No Entry Fee!",10,NA,NA
+"232",NA,NA,NA,NA,NA,NA,NA,1643406,NA,"ktsfxnywpbkc","Autumn Mondays with Quite Write",4,NA,NA
+"233",NA,NA,NA,NA,NA,NA,NA,19712738,NA,"245383650","Join Us For A Brisk Walk at Breakheart Reservation Paved Loop ",3,NA,NA
+"234",NA,NA,NA,NA,NA,NA,NA,26676027,NA,"245320914","Kickstart Your Entrepeneur, Consultant, or Freelancer Voyage",3,42.414639,-71.150734
+"235",NA,NA,NA,NA,NA,NA,NA,25516794,NA,"nmzfbpywpbkc","Weekday morning meetup",3,NA,NA
+"236",NA,NA,NA,NA,NA,NA,NA,10587252,NA,"244837525","Open Play at Indoor Gym - Brookline",3,42.329697,-71.126282
+"237",NA,NA,NA,NA,NA,NA,NA,6107052,NA,"srnffnywpbkc","The Art of Listening - Communication and Leadership Workshop",18,42.357002,-71.057617
+"238",NA,NA,NA,NA,NA,NA,NA,19004840,NA,"fdbdfnywpbkc","The Art of Listening - Communication and Leadership Workshop",8,0,0
+"239",NA,NA,NA,NA,NA,NA,NA,26619650,NA,"245289267","New date: AMA with Rob May",3,42.352253,-71.067108
+"240",NA,NA,NA,NA,NA,NA,NA,1784009,NA,"dbcdqnywpbkc","Sivananda Yoga Cambridge",6,NA,NA
+"241",NA,NA,NA,NA,NA,NA,NA,20980456,NA,"245079495","Profitable Networking Boston Event {Complimentary Appetizers}",38,0,0
+"242",NA,NA,NA,NA,NA,NA,NA,8077542,NA,"hmgbznywpbkc","Pickup Game (Monday) at HODGKINS PARK DAVIS SQUARE ~ 10 RSVPS REQUIRED",10,42.399467,-71.124962
+"243",NA,NA,NA,NA,NA,NA,NA,14084362,NA,"245119298","GBRN Suggests:   Profitable Networking Event (Complimentary Apps)",17,42.356777,-71.051941
+"244",NA,NA,NA,NA,NA,NA,NA,22931090,NA,"ctkfznywpbkc","Spanish class - Basic level",3,42.350304,-71.0571
+"245",NA,NA,NA,NA,NA,NA,NA,26550336,NA,"fqvgznywpbkc","Monday Run Club @ New Balance Copley Sq",4,42.350418,-71.076767
+"246",NA,NA,NA,NA,NA,NA,NA,18979536,NA,"244792997","Community Servings",9,42.317921,-71.10202
+"247",NA,NA,NA,NA,NA,NA,NA,1467042,NA,"245086162","Profitable Networking Boston Event (Complimentary Appetizers/Multi Group)",37,0,0
+"248",NA,NA,NA,NA,NA,NA,NA,1463004,NA,"245083738","Profitable Networking Boston Event {Complimentary Appetizers}",36,0,0
+"249",NA,NA,NA,NA,NA,NA,NA,26155632,NA,"244510693","Sharkbait Men’s Team Boo Ha Ha) - Monday November 27th,2017",6,NA,NA
+"250",NA,NA,NA,NA,NA,NA,NA,16131512,NA,"dhfsqnywpbkc","Improv Games and Scenework",4,NA,NA
+"251",NA,NA,NA,NA,NA,NA,NA,20164432,NA,"wcgsvmywpbkc","Community Games and Beer!",7,42.381752,-71.105194
+"252",NA,NA,NA,NA,NA,NA,NA,3068172,NA,"rzsjdlywpbkc","Kitty Whist in Woburn @ Bickford's *",13,42.47905,-71.118927
+"253",NA,NA,NA,NA,NA,NA,NA,1610016,NA,"fmspsmywpbkc","Intermediate Armizare -- Swordplay, Dagger, Grappling",4,42.359623,-71.137863
+"254",NA,NA,NA,NA,NA,NA,NA,9913112,NA,"245233261","Ingmar Bergman's THE SEVENTH SEAL",8,42.34331,-71.12314
+"255",NA,NA,NA,NA,NA,NA,NA,25040069,NA,"243451952","Discussion of The Radium Girls (2017)",4,NA,NA
+"256",NA,NA,NA,NA,NA,NA,NA,18457932,NA,"244257186","Laser Cutter 101",8,42.36667,-71.18291
+"257",NA,NA,NA,NA,NA,NA,NA,18193559,NA,"245266155","November 27: See Elizabeth Gordon McKim Feature at Stone Soup",3,42.364544,-71.102196
+"258",NA,NA,NA,NA,NA,NA,NA,4376272,NA,"qtxwddywpbkc","Monthly Meeting",3,NA,NA
+"259",NA,NA,NA,NA,NA,NA,NA,1692353,NA,"bkgrmmywpbkc","Humanist Hub Discussion Group",4,42.373535,-71.119019
+"260",NA,NA,NA,NA,NA,NA,NA,1656436,NA,"jzhmcnywpbkc","Draw the figure at BFAC Studio",3,42.391178,-71.1017
+"261",NA,NA,NA,NA,NA,NA,NA,14304042,NA,"244182690","November GBC Meeting: The Nix",14,42.351471,-71.069305
+"262",NA,NA,NA,NA,NA,NA,NA,22274532,NA,"sdqgqnywpbkc","Crafty Monday at Caffè Nero",5,42.39322,-71.07898
+"263",NA,NA,NA,NA,NA,NA,NA,26393555,NA,"244967909","Practice speaking Mandarin Chinese",8,42.436039,-71.217148
+"264",NA,NA,NA,NA,NA,NA,NA,1716596,NA,"dnnzxnywpbkc","Open Awareness Meditation Group Meetup",4,42.375848,-71.127358
+"265",NA,NA,NA,NA,NA,NA,NA,1434288,NA,"242914257","November Newton Book Club",6,42.330719,-71.194885
+"266",NA,NA,NA,NA,NA,NA,NA,20369946,NA,"twrtnmywpblc","Wednesday Hot Power Vinyasa at Down Under",3,42.390247,-71.121506
+"267",NA,NA,NA,NA,NA,NA,NA,6589142,NA,"kntcpmywpblc","BNI Networking Group",9,42.37137,-71.2007
+"268",NA,NA,NA,NA,NA,NA,NA,3853202,NA,"clrgsnywpblc","Mah Jongg in chestnut hill",3,42.322075,-71.168892
+"269",NA,NA,NA,NA,NA,NA,NA,18896256,NA,"244971685","Startups: Investing In An IP Portfolio That Will Stand Up to Due Diligence",25,42.362625,-71.084366
+"270",NA,NA,NA,NA,NA,NA,NA,26626527,NA,"245262728","North American Family Office Conference",5,42.356243,-71.054573
+"271",NA,NA,NA,NA,NA,NA,NA,18602300,NA,"244604243","Need $6 Million? Fall Pitching + Free Capital Raising Workshop",5,42.349422,-71.075462
+"272",NA,NA,NA,NA,NA,NA,NA,1659128,NA,"245259362","Hollywood, The Press, The President: If We Can’t Hold Them Accountable Who Will?",5,42.337055,-71.086838
+"273",NA,NA,NA,NA,NA,NA,NA,1463004,NA,"244578934","Greater Boston Women's Networking (Complimentary Appetizers/Multi Group)",36,42.320084,-71.17591
+"274",NA,NA,NA,NA,NA,NA,NA,20270825,NA,"xrmxzlywpblc","QuICK Climb at MetroRock",3,42.407688,-71.067245
+"275",NA,NA,NA,NA,NA,NA,NA,25965147,NA,"244790367","Tue 11/28 How YOU can get NEW customers wanting to say YES to GUARANTEED!",16,NA,NA
+"276",NA,NA,NA,NA,NA,NA,NA,25965031,NA,"244791223","Tue 11/28 How YOU can get NEW customers wanting to say YES to GUARANTEED!",15,NA,NA
+"277",NA,NA,NA,NA,NA,NA,NA,21382645,NA,"244791158","Tue 11/28 How YOU can get NEW customers wanting to say YES to GUARANTEED!",21,NA,NA
+"278",NA,NA,NA,NA,NA,NA,NA,14084362,NA,"244665811","Greater Boston Women's Networking in Chestnut Hill Nov. 28th(complimentary apps)",5,42.318924,-71.17498
+"279",NA,NA,NA,NA,NA,NA,NA,25964925,NA,"244774773","Tue 11/28 How YOU can get NEW customers wanting to say YES to GUARANTEED!",18,NA,NA
+"280",NA,NA,NA,NA,NA,NA,NA,21383396,NA,"244791189","Tue 11/28 How YOU can get NEW customers wanting to say YES to GUARANTEED!",16,NA,NA
+"281",NA,NA,NA,NA,NA,NA,NA,18676636,NA,"244100346","Cognitive science + storytelling = Better study app ideas and pitches!",66,42.372517,-71.112587
+"282",NA,NA,NA,NA,NA,NA,NA,19054860,NA,"244512407","New Date: Meet a Spotify Quality Coach @ Spotify - Davis Square",48,42.396523,-71.120583
+"283",NA,NA,NA,NA,NA,NA,NA,1298565,NA,"gjzvxnywpblc","Downtown Boston ASL Meetup",3,42.350807,-71.074783
+"284",NA,NA,NA,NA,NA,NA,NA,21703515,NA,"244705435","Reality Mixer",9,42.363464,-71.08638
+"285",NA,NA,NA,NA,NA,NA,NA,26354587,NA,"245284911","Game Night (CashFlow, Monopoly, and More)",5,42.250034,-70.994156
+"286",NA,NA,NA,NA,NA,NA,NA,1643406,NA,"nlnnqlywpblc","Quite Write: Writing Night!",8,NA,NA
+"287",NA,NA,NA,NA,NA,NA,NA,7645982,NA,"svhdxmywpblc","Hackspace Project Night - Open to Everyone!",5,42.381321,-71.10244
+"288",NA,NA,NA,NA,NA,NA,NA,18457932,NA,"czdzznywpblc","Electronics for Music Drop-In",3,42.36667,-71.18291
+"289",NA,NA,NA,NA,NA,NA,NA,1460145,NA,"244420688","LET’S PLAY SPADES",5,NA,NA
+"290",NA,NA,NA,NA,NA,NA,NA,18470549,NA,"244146877","Meetup",5,42.36232,-71.080734
+"291",NA,NA,NA,NA,NA,NA,NA,1343564,NA,"xvwlmlywpblc","Bilingual Verbal Nerds - Mandarin and English",3,NA,NA
+"292",NA,NA,NA,NA,NA,NA,NA,19544325,NA,"244284009","Connecting Drupal & Square",19,42.342113,-71.065804
+"293",NA,NA,NA,NA,NA,NA,NA,1720042,NA,"fgxnwnywpblc","Mandarin Club Bilingual Chat in Harvard's Longwood Medical Area",7,42.360081,-71.058884
+"294",NA,NA,NA,NA,NA,NA,NA,1720042,NA,"245289596","Film Screening of ""Plastic China"" and Q&A with Director WANG Jiuliang",7,42.373569,-71.118965
+"295",NA,NA,NA,NA,NA,NA,NA,8100092,NA,"mkwvmlywpblc","Shoot the Shot Social Gathering",5,NA,NA
+"296",NA,NA,NA,NA,NA,NA,NA,5664542,NA,"244969259","No Plug-ins: Making Real Games & Interactives for HTML5 & Javascript Browsers",43,NA,NA
+"297",NA,NA,NA,NA,NA,NA,NA,17468372,NA,"245105390","Scaling frontend teams, Lightning Talks",180,42.370167,-71.076317
+"298",NA,NA,NA,NA,NA,NA,NA,1479223,NA,"rpfxrmywpblc","Bike path run- Varying Distances - Range of paces (7 - 11 min miles)",7,42.371986,-71.236771
+"299",NA,NA,NA,NA,NA,NA,NA,18667004,NA,"244899332","Soup & Stories",6,42.386692,-71.102409
+"300",NA,NA,NA,NA,NA,NA,NA,8454492,NA,"244866751","Join an Indoor THURSDAY NIGHT Volleyball League! Starts 11/30!",5,42.351765,-71.11659
+"301",NA,NA,NA,NA,NA,NA,NA,5210032,NA,"244866977","Join an Indoor THURSDAY NIGHT Volleyball League! Starts 11/30!",5,42.351765,-71.11659
+"302",NA,NA,NA,NA,NA,NA,NA,2133121,NA,"tcfwvnywpblc","Davis to Fresh pond and back, 5.7 mi/8.9 km",7,NA,NA
+"303",NA,NA,NA,NA,NA,NA,NA,3884322,NA,"tsdzfnywpblc","Green tech Entrepreneur Forum & Brainstorming.",3,42.36544,-71.10379
+"304",NA,NA,NA,NA,NA,NA,NA,17100002,NA,"xwwlrmywpblc","Armory Pub Sing - 4th Tuesday",4,42.389812,-71.105934
+"305",NA,NA,NA,NA,NA,NA,NA,26523731,NA,"244894349","Big Magic! A discussion of Elizabeth Gilbert's latest book",10,42.387066,-71.118988
+"306",NA,NA,NA,NA,NA,NA,NA,1710691,NA,"vgwpxlywpblc","Nondual Meditation",5,42.373535,-71.119019
+"307",NA,NA,NA,NA,NA,NA,NA,18750543,NA,"zhgbgnywpblc","Arlington Street Zen Center",13,42.351927,-71.070642
+"308",NA,NA,NA,NA,NA,NA,NA,20148820,NA,"245109138","Will Run for Beer!",28,NA,NA
+"309",NA,NA,NA,NA,NA,NA,NA,6858432,NA,"hvgmwnywpblc","Harvest the Harmony with us!  Tuesday's 7-10. Auditions year round!",4,42.420818,-71.227005
+"310",NA,NA,NA,NA,NA,NA,NA,10846882,NA,"235963543","HackerNest Boston November Tech Social",123,42.333099,-71.055641
+"311",NA,NA,NA,NA,NA,NA,NA,1692353,NA,"fbstclywpblc","Nondual Meditation",4,42.373535,-71.119019
+"312",NA,NA,NA,NA,NA,NA,NA,26061096,NA,"244324356","Go Bowling and Have Drinks",5,42.347065,-71.085648
+"313",NA,NA,NA,NA,NA,NA,NA,18807970,NA,"245267732","""MSFT vs AMZN"" and  “TAX FREE INCOME!!”",10,42.387295,-71.118393
+"314",NA,NA,NA,NA,NA,NA,NA,14596652,NA,"245359965",".25/.50 Cash Game (HOLD 'EM)",6,NA,NA
+"315",NA,NA,NA,NA,NA,NA,NA,7832132,NA,"wlngvmywpblc","Weekly Hack Night",28,42.362732,-71.083199
+"316",NA,NA,NA,NA,NA,NA,NA,1918051,NA,"khrprnywpblc","Trivia Night at British Beer Company in Danvers",5,0,0
+"317",NA,NA,NA,NA,NA,NA,NA,1561742,NA,"245259597","November Travel Meetup",33,42.3526,-71.130739
+"318",NA,NA,NA,NA,NA,NA,NA,1460346,NA,"xzlkhmywpblc","Healing the Loss of a Love - Attracting a Healthy and Loving Relationship",5,42.399172,-71.119963
+"319",NA,NA,NA,NA,NA,NA,NA,20483039,NA,"244549306","Comicazi Book Club: The Wicked and The Divine, Volume 1",9,42.396122,-71.121231
+"320",NA,NA,NA,NA,NA,NA,NA,20351039,NA,"240308941","Empire of Light: Edison, Tesla, Westinghouse and the race to electrify the world",3,42.410034,-71.085678
+"321",NA,NA,NA,NA,NA,NA,NA,18693077,NA,"tstqtmywpbcc","Awaken the Healing Power Within Your Body and Mind",6,42.399174,-71.120018
+"322",NA,NA,NA,NA,NA,NA,NA,12343102,NA,"qmvcdlywpblc","Public meditation and short talk on Buddhism: Free and open to all!",4,42.355831,-71.11113
+"323",NA,NA,NA,NA,NA,NA,NA,7072952,NA,"244512192","Help me figure out the topic we chose",7,NA,NA
+"324",NA,NA,NA,NA,NA,NA,NA,20369946,NA,"nwdvzmywpbmc","NamaStay Does November Project",3,42.364502,-71.128044
+"325",NA,NA,NA,NA,NA,NA,NA,19685412,NA,"wssxwnywpbmc","Professional Referral and Networking Group - Waltham, MA.",9,42.384502,-71.205276
+"326",NA,NA,NA,NA,NA,NA,NA,3853202,NA,"fzcwfnywpbmc","We Play Mah Jongg and have fun. Please check to see if enough players are RSVP.",3,42.330715,-71.194901
+"327",NA,NA,NA,NA,NA,NA,NA,26626527,NA,"qlqzznywpbmc","Seaport One Marina Park - Roundtable Investment Club Conference",3,42.3532,-71.04536
+"328",NA,NA,NA,NA,NA,NA,NA,19004840,NA,"245391875","Taking The Fear Out Of Making (And Asking For) Money!",5,42.357002,-71.057617
+"329",NA,NA,NA,NA,NA,NA,NA,1634379,NA,"243531921","Uke In The Afternoon, Special Edition #5! Strum-on-sight!",7,42.415653,-71.155083
+"330",NA,NA,NA,NA,NA,NA,NA,19152634,NA,"245327791","How To Plan Your Entire Year On One Sheet Of Paper",6,42.360081,-71.058884
+"331",NA,NA,NA,NA,NA,NA,NA,1720042,NA,"zqcxjlywpbmc","FREE night at the Museum of Fine Arts (each Wednesday after 4 pm)",3,42.339297,-71.094096
+"332",NA,NA,NA,NA,NA,NA,NA,1615681,NA,"244582362","Mind & the Power of Elevated Thoughts",3,42.370615,-71.113796
+"333",NA,NA,NA,NA,NA,NA,NA,1320747,NA,"twrcqywpbdc","Real Estate Investing",17,42.367175,-71.106623
+"334",NA,NA,NA,NA,NA,NA,NA,8077542,NA,"ftkwxmywpbmc","Pickup Game (Wednesday) at HODGKINS PARK DAVIS SQUARE ~ 10 RSVPS REQUIRED",5,42.383759,-71.103256
+"335",NA,NA,NA,NA,NA,NA,NA,25922816,NA,"244177101","CQRS-ES Talk (Recap of Build Stuff Conference and more)",30,42.359566,-71.060188
+"336",NA,NA,NA,NA,NA,NA,NA,1754518,NA,"244570892","SICILY TRIP- Meeting with GLOBUS REP - MEDFORD, MA",15,42.405064,-71.086357
+"337",NA,NA,NA,NA,NA,NA,NA,18527653,NA,"245217650","How to  build a Chatbot using www.chatbotforhealth­.com",8,42.362705,-71.083389
+"338",NA,NA,NA,NA,NA,NA,NA,24297259,NA,"243681112","Practitioner Panel",34,42.338936,-71.25267
+"339",NA,NA,NA,NA,NA,NA,NA,6107052,NA,"243290793","Holiday Business Networking & Social Event w/ Mass Prof Networking",28,42.347282,-71.095215
+"340",NA,NA,NA,NA,NA,NA,NA,2647542,NA,"245311591","November Meetup: Complexity Theory & DevOps",86,42.366604,-71.091187
+"341",NA,NA,NA,NA,NA,NA,NA,26214125,NA,"244940651","How To Lead Yourself To A Fulfilling Career",10,0,0
+"342",NA,NA,NA,NA,NA,NA,NA,25965031,NA,"244791359","Wed 11/29 How YOU can get NEW customers wanting to say YES to GUARANTEE",18,NA,NA
+"343",NA,NA,NA,NA,NA,NA,NA,23624848,NA,"244731334","Account-Based Everything Practitioner Panel (hosted by TechTarget)",6,42.338936,-71.25267
+"344",NA,NA,NA,NA,NA,NA,NA,21382645,NA,"244791293","Wed 11/29 How YOU can get NEW customers wanting to say YES to GUARANTEED!",16,NA,NA
+"345",NA,NA,NA,NA,NA,NA,NA,21383396,NA,"244791336","Wed 11/29 How YOU can get NEW customers wanting to say YES to GUARANTEED!",12,NA,NA
+"346",NA,NA,NA,NA,NA,NA,NA,19418728,NA,"qdgnkmywpbmc","Game Night at Common Ground in Arlington Center",9,42.41436,-71.150246
+"347",NA,NA,NA,NA,NA,NA,NA,26117301,NA,"244934045","🍮🍮Treats & Topics: Dessert Tasting",3,42.353088,-71.063469
+"348",NA,NA,NA,NA,NA,NA,NA,20470410,NA,"244784102","TAPpy Hour Networking @ The Brahmin",4,42.34845,-71.072983
+"349",NA,NA,NA,NA,NA,NA,NA,23726761,NA,"245312697","Q&A with Ash Egan and Kavita Gupta of ConsenSys Ventures",84,42.362831,-71.083916
+"350",NA,NA,NA,NA,NA,NA,NA,14619612,NA,"jvgfhlywpbmc","A Newton Center Bridge Party",4,NA,NA
+"351",NA,NA,NA,NA,NA,NA,NA,1634379,NA,"245312591","Strummerville #62",14,42.388107,-71.118423
+"352",NA,NA,NA,NA,NA,NA,NA,26550265,NA,"245297341","Night Shift Brewing",3,NA,NA
+"353",NA,NA,NA,NA,NA,NA,NA,26127997,NA,"244874726","New England Cannapreneurs Networking Event",8,42.348431,-71.073181
+"354",NA,NA,NA,NA,NA,NA,NA,17326992,NA,"244698230","Wed, Nov 29: Sparkle When You Speak",27,42.387295,-71.118393
+"355",NA,NA,NA,NA,NA,NA,NA,15295352,NA,"ptqktnywpbmc","SING!",8,NA,NA
+"356",NA,NA,NA,NA,NA,NA,NA,22864043,NA,"245062140","Mei Mei: Food Truck Goes Kitchen",8,42.347645,-71.105659
+"357",NA,NA,NA,NA,NA,NA,NA,21637829,NA,"jpzqxmywpbmc","Come together to Meditate: Weekly Open House",4,42.332848,-71.113358
+"358",NA,NA,NA,NA,NA,NA,NA,2340721,NA,"244885610","November Open Mic in Watertown",3,42.367207,-71.184158
+"359",NA,NA,NA,NA,NA,NA,NA,18457932,NA,"kfhxqnywpbmc","Mechatronics Open Projects Workshop",3,42.36667,-71.18291
+"360",NA,NA,NA,NA,NA,NA,NA,20603662,NA,"244672935","Family Game Knight!",3,42.403606,-71.127449
+"361",NA,NA,NA,NA,NA,NA,NA,5224182,NA,"245162273","Bernanke's False Depression Call",7,42.396786,-71.082199
+"362",NA,NA,NA,NA,NA,NA,NA,18488989,NA,"244816207","The Bell Jar by Sylvia Plath",19,42.312895,-71.114112
+"363",NA,NA,NA,NA,NA,NA,NA,25910768,NA,"245133823","Apres Skeeball Tournament 11/29",7,42.357281,-71.059695
+"364",NA,NA,NA,NA,NA,NA,NA,15073392,NA,"244250771","Drinks and Socializing - Saloon Davis Square",45,42.395523,-71.121887
+"365",NA,NA,NA,NA,NA,NA,NA,17488632,NA,"rcnptnywpbmc","Is Revolution really possible anymore?",3,42.394794,-71.099854
+"366",NA,NA,NA,NA,NA,NA,NA,18462054,NA,"mhbtwlywpbmc","Run & Chug! POST-THANKSGIVING Run",7,42.344795,-71.096321
+"367",NA,NA,NA,NA,NA,NA,NA,1704190,NA,"244488715","Race, Guns & the NRA (MAK: Maynard)",7,NA,NA
+"368",NA,NA,NA,NA,NA,NA,NA,7302312,NA,"244250772","Drinks and Socializing - Saloon Davis Square",11,42.395523,-71.121887
+"369",NA,NA,NA,NA,NA,NA,NA,1565230,NA,"ntlwslywpbmc","Dance Freedom DJ's 1st Nina &  2nd Rose,  Facilitator Jessica",10,42.37596,-71.120958
+"370",NA,NA,NA,NA,NA,NA,NA,23029315,NA,"245269842","Century of the Self: Part (1/4)",7,42.371273,-71.097328
+"371",NA,NA,NA,NA,NA,NA,NA,20302520,NA,"chchjnywpbnc","BNI Innovation - Weekly Meeting",3,42.352386,-71.045128
+"372",NA,NA,NA,NA,NA,NA,NA,1873311,NA,"245263606","Tree Care & Love",3,42.288101,-71.101204
+"373",NA,NA,NA,NA,NA,NA,NA,19339371,NA,"244516399","Life Drawing @ Turtle Studios",5,42.364758,-71.196846
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f

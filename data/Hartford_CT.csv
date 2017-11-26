@@ -1,6 +1,7 @@
 "","name.x","created","city","state","members","who","id.x","gid","category","id.y","name.y","yes_rsvp_count","lat","lon"
 "1","The Hartford Spanish Language Meetup Group",1046257069000,"Hartford","CT",1040,"Spanish Speakers",145906,145906,"language/ethnic identity","245392141","¡Festejemos las fiestas con conversación y comida (peruana!)",10,41.729337,-72.720123
 "2","The Hartford Investor's Business Daily Meetup Group",1066858789000,"Hartford","CT",173,"Subscribers to IBD and DGO",81234,81234,"career/business",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "3","Hartford Area Hiking™",1126887925000,"Hartford","CT",9841,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","bxtjmmywqbkb","First Thursday: Brooksvale Park in Hamden CT to Mt. Sanford",17,NA,NA
 "4","Hartford Area Hiking™",1126887925000,"Hartford","CT",9841,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245034776","HOLIDAY Game Night in Manchester CT - Dec.",45,NA,NA
 "5","Hartford Area Hiking™",1126887925000,"Hartford","CT",9841,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245133521","Walk Wood parcel Wethersfield",22,41.698328,-72.654332
@@ -14,6 +15,21 @@
 "13","Hartford Area Hiking™",1126887925000,"Hartford","CT",9841,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","244972963","Banff Mountain Film Fest - at the Bushnell",8,41.762657,-72.680923
 "14","Social Hourz Group",1127084069000,"South Windsor","CT",1510,"Friends",209400,209400,"food/drink",NA,NA,NA,NA,NA
 "15","~~~KAYAKING ADVENTURES~~~    CT-MA-RI",1146425853000,"Wethersfield","CT",1696,"River and Shore Kayak-r's of CT",238228,238228,"cars/motorcycles",NA,NA,NA,NA,NA
+=======
+"3","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","bxtjmmywqbkb","First Thursday: Brooksvale Park in Hamden CT to Mt. Sanford",17,NA,NA
+"4","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245034776","HOLIDAY Game Night in Manchester CT - Dec.",45,NA,NA
+"5","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245133521","Walk Wood parcel Wethersfield",22,41.698328,-72.654332
+"6","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245133588","Walk CT Audubon Center Glastonbury",35,41.681902,-72.599859
+"7","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245133613","Walk Town Hall Glastonbury",22,41.707462,-72.60815
+"8","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245133651","Walk Wolf Parcel, Wethersfield",18,41.724564,-72.664838
+"9","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245133685","Walk Goff Brook Lane, Rocky Hill",19,41.682996,-72.645128
+"10","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245133712","Walk Crow Point, Wethersfield",19,41.71361,-72.646161
+"11","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","244382481","Winter Valentine's Hike at Lovers Leap State Park in New Milford CT",18,NA,NA
+"12","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","245133736","Walk Hockanum Meadows, East Hartford",27,41.736423,-72.632759
+"13","Hartford Area Hiking™",1126887925000,"Hartford","CT",9840,"Hiking Enthusiasts",209210,209210,"outdoors/adventure","244972963","Banff Mountain Film Fest - at the Bushnell",8,41.762657,-72.680923
+"14","Social Hourz Group",1127084069000,"South Windsor","CT",1510,"Friends",209400,209400,"food/drink",NA,NA,NA,NA,NA
+"15","~~~KAYAKING ADVENTURES~~~    CT-MA-RI",1146425853000,"Wethersfield","CT",1695,"River and Shore Kayak-r's of CT",238228,238228,"cars/motorcycles",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "16","Hartford Heights Tall Club",1163341365000,"Hartford","CT",61,"Social Networkers",364032,364032,"socializing",NA,NA,NA,NA,NA
 "17","The West Hartford German Kaffeeklatsch",1172539875000,"West Hartford","CT",257,"Deutsch speakers",438488,438488,"language/ethnic identity","whzhtmywqbcc","West Hartford German Kaffeeklatsch - please RSVP!",3,41.785717,-72.74797
 "18","Energy Healing & Holistic Health",1173663280000,"West Hartford","CT",543,"energy healing members",449005,449005,"health/wellbeing",NA,NA,NA,NA,NA
@@ -36,22 +52,38 @@
 "35","Connecticut Valley Atheists Meetup Group",1218760941000,"Manchester","CT",645,"Atheists",1257409,1257409,"religion/beliefs","qjqqcfywqbrb","Connecticut Valley Atheists Meeting",5,41.809845,-72.490334
 "36","Connecticut Valley Atheists Meetup Group",1218760941000,"Manchester","CT",645,"Atheists",1257409,1257409,"religion/beliefs","rtxczlywqbcc","Third Thursday Pub Night",3,41.908035,-72.613068
 "37","Hartford Meditation Group",1223042329000,"West Hartford","CT",944,"Spiritual People",1294140,1294140,"health/wellbeing",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "38","New England Ski, SnowBoard, & Adventure Meetup Group",1224158956000,"Hartford","CT",944,"Alpine Addicts",1302521,1302521,"outdoors/adventure",NA,NA,NA,NA,NA
+=======
+"38","New England Ski, SnowBoard, & Adventure Meetup Group",1224158956000,"Hartford","CT",945,"Alpine Addicts",1302521,1302521,"outdoors/adventure",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "39","Geek Culture Group",1225935759000,"Newington","CT",595,"Geeks",1315309,1315309,"sci-fi/fantasy",NA,NA,NA,NA,NA
 "40","The Greater Hartford Area  Parents Meetup Group",1226098596000,"Manchester","CT",1196,"Families",1316784,1316784,"parents/family","243023381","M.M.M.M.M. (MusicMakers Monday Morning Music Meetup!)",10,41.826155,-72.571869
 "41","The Greater Hartford Area  Parents Meetup Group",1226098596000,"Manchester","CT",1196,"Families",1316784,1316784,"parents/family","243023481","M.M.M.M.M. (MusicMakers Monday Morning Music Meetup!)",7,41.826155,-72.571869
 "42","Be Fit",1230688951000,"South Windsor","CT",7,"Be Fit Gals",1346064,1346064,"fitness",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "43","The South Windsor Jaycees",1233069429000,"South Windsor","CT",302,"Members",1368385,1368385,"socializing","244520292","2018 Wapping Fair Meeting",11,41.828407,-72.554122
+=======
+"43","The South Windsor Jaycees",1233069429000,"South Windsor","CT",302,"Members",1368385,1368385,"socializing","244520292","2018 Wapping Fair Meeting",12,41.828407,-72.554122
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "44","The South Windsor Jaycees",1233069429000,"South Windsor","CT",302,"Members",1368385,1368385,"socializing","245164134","Membership Get Together",5,41.831062,-72.607887
 "45","The South Windsor Jaycees",1233069429000,"South Windsor","CT",302,"Members",1368385,1368385,"socializing","243834365","Pancake Breakfast with Santa",12,41.825428,-72.581421
 "46","The South Windsor Jaycees",1233069429000,"South Windsor","CT",302,"Members",1368385,1368385,"socializing","244869859","Dinner at Plaza Azteca",6,41.808565,-72.535475
 "47","The South Windsor Jaycees",1233069429000,"South Windsor","CT",302,"Members",1368385,1368385,"socializing","245163027","Wapping Fair Team Building/Planning Session",5,41.831066,-72.607887
+<<<<<<< HEAD
 "48","Connecticut Pickup Soccer",1253287808000,"Glastonbury","CT",2231,"Footballers",1525872,1525872,"sports/recreation",NA,NA,NA,NA,NA
+=======
+"48","Connecticut Pickup Soccer",1253287808000,"Glastonbury","CT",2230,"Footballers",1525872,1525872,"sports/recreation",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "49","Startup Cafe Hartford",1255503912000,"Hartford","CT",632,"Entrepreneurs",1540019,1540019,"career/business",NA,NA,NA,NA,NA
 "50","The Central Connecticut Spiritual Experiences Group",1257274952000,"Manchester","CT",699,"Spiritual People",1551111,1551111,"new age/spirituality",NA,NA,NA,NA,NA
 "51","The CT Widows and Widowers Meetup Group",1257865857000,"Simsbury","CT",187,"Widows & Widowers",1554695,1554695,"support",NA,NA,NA,NA,NA
 "52","Greater Hartford GNU Linux Users Group",1258426131000,"Hartford","CT",431,"Linux Users",1558007,1558007,"tech","qcrzckywqbqb","GHGLUG Social Night",3,41.730267,-72.725685
+<<<<<<< HEAD
 "53","MDOG Hikes!",1260923577000,"Manchester","CT",1390,"Hikers",1569894,1569894,"pets/animals",NA,NA,NA,NA,NA
+=======
+"53","MDOG Hikes!",1260923577000,"Manchester","CT",1391,"Hikers",1569894,1569894,"pets/animals",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "54","The Science of the Soul - Hartford, CT area",1266789139000,"Hartford","CT",107,"Souls",1602923,1602923,"new age/spirituality",NA,NA,NA,NA,NA
 "55","Sci-Fi/Fantasy Book Group",1269009231000,"Hartford","CT",328,"SFF Lovers",1617009,1617009,"sci-fi/fantasy","244030331","""Gerald's Game"" by Stephen King",8,41.721471,-72.62068
 "56","Sci-Fi/Fantasy Book Group",1269009231000,"Hartford","CT",328,"SFF Lovers",1617009,1617009,"sci-fi/fantasy","244178812","""Who Fears Death"" by Nnedi Okorafor",7,41.721471,-72.62068
@@ -71,10 +103,17 @@
 "70","Casual Bikers",1292259785000,"Simsbury","CT",4467,"Casual Bikers",1750023,1750023,"outdoors/adventure","243698501","**  Martha's Vineyard Island Escape  **  F U L L  **            (6/16 - 6/23/18)",12,NA,NA
 "71","Connecticut Java Users Group",1292589599000,"East Hartford","CT",238,"Members",1751634,1751634,"tech",NA,NA,NA,NA,NA
 "72","Tru Elements Meetup Group",1292961670000,"West Hartford","CT",170,"Members",1753195,1753195,"health/wellbeing",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "73","New England Social & Sports Adventurers (NESSA)",1293654255000,"West Hartford","CT",4627,"Social & Sport Enthusiasts",1755788,1755788,"outdoors/adventure",NA,NA,NA,NA,NA
 "74","West Hartford Tong Ren Healing Group",1294691667000,"West Hartford","CT",419,"Gunia Pigs",1763344,1763344,"health/wellbeing",NA,NA,NA,NA,NA
 "75","Hartford Underground Vintage Swing Dancing",1295204152000,"East Hartford","CT",1563,"Dancers",1766889,1766889,"dancing","qjtlckywpbnc","Throwdown Thursdays: Swing Dancing @ the Polish Home",5,41.759224,-72.671616
 "76","CreativeTech",1295978308000,"West Hartford","CT",246,"Techies",1772434,1772434,"tech",NA,NA,NA,NA,NA
+=======
+"73","New England Social & Sports Adventurers (NESSA)",1293654255000,"West Hartford","CT",4628,"Social & Sport Enthusiasts",1755788,1755788,"outdoors/adventure",NA,NA,NA,NA,NA
+"74","West Hartford Tong Ren Healing Group",1294691667000,"West Hartford","CT",419,"Gunia Pigs",1763344,1763344,"health/wellbeing",NA,NA,NA,NA,NA
+"75","Hartford Underground Vintage Swing Dancing",1295204152000,"East Hartford","CT",1563,"Dancers",1766889,1766889,"dancing","qjtlckywpbnc","Throwdown Thursdays: Swing Dancing @ the Polish Home",5,41.759224,-72.671616
+"76","CreativeTech",1295978308000,"West Hartford","CT",245,"Techies",1772434,1772434,"tech",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "77","Manchester Women's Singing Circle",1299077985000,"Manchester","CT",155,"Women who love to sing",1792081,1792081,"music",NA,NA,NA,NA,NA
 "78","Connecticut  Satanists and LHPers",1299338818000,"Windsor","CT",83,"Darkside Members",1793744,1793744,"new age/spirituality",NA,NA,NA,NA,NA
 "79","Free Sahaja Yoga Meditation Classes Manchester",1300312816000,"Manchester","CT",729,"Sahaja meditation practitioners",1799908,1799908,"health/wellbeing",NA,NA,NA,NA,NA
@@ -93,16 +132,28 @@
 "92","Hartford Chapter-American Singles Golf Association",1327684489000,"Hartford","CT",633,"Single Golfers",3179052,3179052,"socializing",NA,NA,NA,NA,NA
 "93","Turkish Cooking Class@Hartford",1329103561000,"Hartford","CT",355,"Members",3283992,3283992,"food/drink","245286528","Brunch",6,41.739445,-72.675697
 "94","L.L.Bean Evergreen Walk of South Windsor, CT",1331148256000,"South Windsor","CT",2497,"Adventurers",3434172,3434172,"outdoors/adventure","244846445","Coat Collection for Those in Need",4,41.809982,-72.557655
+<<<<<<< HEAD
 "95","L.L.Bean Evergreen Walk of South Windsor, CT",1331148256000,"South Windsor","CT",2497,"Adventurers",3434172,3434172,"outdoors/adventure","244703811","Hike at Talcott Mountain",9,41.83939,-72.792351
 "96","L.L.Bean Evergreen Walk of South Windsor, CT",1331148256000,"South Windsor","CT",2497,"Adventurers",3434172,3434172,"outdoors/adventure","245311563","Clinic: Snowshoeing Essentials",8,41.809982,-72.557655
 "97","L.L.Bean Evergreen Walk of South Windsor, CT",1331148256000,"South Windsor","CT",2497,"Adventurers",3434172,3434172,"outdoors/adventure","245311583","Clinic: Cross Country Skiing Essentials",3,41.809982,-72.557655
 "98","L.L.Bean Evergreen Walk of South Windsor, CT",1331148256000,"South Windsor","CT",2497,"Adventurers",3434172,3434172,"outdoors/adventure","245312495","Hike or Snowshoe Case Mountain",5,41.767506,-72.480103
 "99","The Greater Hartford Python Group",1331530206000,"Hartford","CT",784,"Pythonistas",3461742,3461742,"tech",NA,NA,NA,NA,NA
+=======
+"95","L.L.Bean Evergreen Walk of South Windsor, CT",1331148256000,"South Windsor","CT",2497,"Adventurers",3434172,3434172,"outdoors/adventure","244703811","Hike at Talcott Mountain",8,41.83939,-72.792351
+"96","L.L.Bean Evergreen Walk of South Windsor, CT",1331148256000,"South Windsor","CT",2497,"Adventurers",3434172,3434172,"outdoors/adventure","245311563","Clinic: Snowshoeing Essentials",8,41.809982,-72.557655
+"97","L.L.Bean Evergreen Walk of South Windsor, CT",1331148256000,"South Windsor","CT",2497,"Adventurers",3434172,3434172,"outdoors/adventure","245311583","Clinic: Cross Country Skiing Essentials",3,41.809982,-72.557655
+"98","L.L.Bean Evergreen Walk of South Windsor, CT",1331148256000,"South Windsor","CT",2497,"Adventurers",3434172,3434172,"outdoors/adventure","245312495","Hike or Snowshoe Case Mountain",5,41.767506,-72.480103
+"99","The Greater Hartford Python Group",1331530206000,"Hartford","CT",783,"Pythonistas",3461742,3461742,"tech",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "100","Sufi Meditation, Remembrance & Healing",1332191439000,"Simsbury","CT",241,"Dervishes",3508472,3508472,"new age/spirituality",NA,NA,NA,NA,NA
 "101","Bhakti Yoga, Kirtan Meditation, and Spiritual Philosophy",1332339030000,"East Hartford","CT",747,"Bhakti Yogis",3519392,3519392,"health/wellbeing",NA,NA,NA,NA,NA
 "102","Hartford Tech Meetup",1335446037000,"Hartford","CT",148,"Members",3745842,3745842,"tech",NA,NA,NA,NA,NA
 "103","Hai An Pagoda Meditation",1337090329000,"New Britain","CT",527,"Members",3869592,3869592,"religion/beliefs",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "104","Not Another 20s and 30s Group!",1337561269000,"Hartford","CT",980,"Distinguished City Clones",3904482,3904482,"socializing","245415782","Paint Nite at Tomato Joe's",3,41.813812,-72.510521
+=======
+"104","Not Another 20s and 30s Group!",1337561269000,"Hartford","CT",980,"Distinguished City Clones",3904482,3904482,"socializing",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "105","Women After Hours",1339099005000,"West Hartford","CT",1316,"Members",4027342,4027342,"LGBT",NA,NA,NA,NA,NA
 "106","Wine and Dine Social Group",1339964022000,"South Windsor","CT",1075,"Fun lovers",4104092,4104092,"socializing","245244894","New Year's Eve at Rich's house (Manchester)",8,41.78,-72.52
 "107","Community4Sight",1342303663000,"Hartford","CT",166,"Members",4307722,4307722,"community/environment",NA,NA,NA,NA,NA
@@ -110,8 +161,13 @@
 "109","Autism in Connecticut",1345661956000,"Hartford","CT",66,"Huge Hearts",4615582,4615582,"support",NA,NA,NA,NA,NA
 "110","""Shutter-Buds""",1346009612000,"Newington","CT",222,"Shutter-Buds",4644342,4644342,"photography",NA,NA,NA,NA,NA
 "111","Central CT New Parent Resources",1346612678000,"West Hartford","CT",34,"Loving Parents",4736422,4736422,"parents/family","245075181","Drinks & Dessert at The Cheesecake Factory",3,41.761448,-72.739639
+<<<<<<< HEAD
 "112","The Connecticut Hiking Alliance ...    No cakewalks for us!",1348626672000,"West Hartford","CT",2365,"Members",5110002,5110002,"outdoors/adventure","245219409","Hike Birch ""Mt"", Lookout ""Mt"" and Case ""Mt"" - plus Shenipsit Trail",22,41.766994,-72.480049
 "113","The Connecticut Hiking Alliance ...    No cakewalks for us!",1348626672000,"West Hartford","CT",2365,"Members",5110002,5110002,"outdoors/adventure","244404359","Random Acts of Kindness #59 - Caroling!  Then a holiday happy hour...",18,41.740524,-72.7444
+=======
+"112","The Connecticut Hiking Alliance ...    No cakewalks for us!",1348626672000,"West Hartford","CT",2365,"Members",5110002,5110002,"outdoors/adventure","245219409","Hike Birch ""Mt"", Lookout ""Mt"" and Case ""Mt"" - plus Shenipsit Trail",21,41.766994,-72.480049
+"113","The Connecticut Hiking Alliance ...    No cakewalks for us!",1348626672000,"West Hartford","CT",2365,"Members",5110002,5110002,"outdoors/adventure","244404359","Random Acts of Kindness #59 - Caroling!  Then a holiday happy hour...",17,41.740524,-72.7444
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "114","The Connecticut Hiking Alliance ...    No cakewalks for us!",1348626672000,"West Hartford","CT",2365,"Members",5110002,5110002,"outdoors/adventure","243711931","Christmas Act of Kindness #60: Volunteer at We Are The Children Christmas Party",3,41.778091,-72.68026
 "115","The Connecticut Hiking Alliance ...    No cakewalks for us!",1348626672000,"West Hartford","CT",2365,"Members",5110002,5110002,"outdoors/adventure","244971383","4th Annual Trek to Banff Mountain Film Fest - at the Bushnell",12,41.762409,-72.680611
 "116","The Connecticut Hiking Alliance ...    No cakewalks for us!",1348626672000,"West Hartford","CT",2365,"Members",5110002,5110002,"outdoors/adventure","245230059","Opening Gallery Reception for Solo Exhibit of Eugenia's Mosaic Art",35,41.830189,-72.764473
@@ -138,13 +194,21 @@
 "137","Common Ground Institute",1363790958000,"Hartford","CT",153,"Friends",7705672,7705672,"language/ethnic identity",NA,NA,NA,NA,NA
 "138","CFC AZUL V WESTERN MASS PIONEERS MAY 18th, 8pm at CCSU",1364048566000,"New Britain","CT",12,"""Azuligans""",7746712,7746712,"sports/recreation",NA,NA,NA,NA,NA
 "139","Greater Hartford/Springfield Young Black Professionals",1364064057000,"Hartford","CT",203,"Members",7749362,7749362,"career/business",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "140","Hartford Humanists",1364612556000,"Rocky Hill","CT",704,"Humanists",7841052,7841052,"religion/beliefs","vrhwflywpblc","Sense of Meaning and Happiness: Monthly Meeting",13,41.831398,-72.741783
+=======
+"140","Hartford Humanists",1364612556000,"Rocky Hill","CT",704,"Humanists",7841052,7841052,"religion/beliefs","vrhwflywpblc","Sense of Meaning and Happiness: Monthly Meeting",14,41.831398,-72.741783
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "141","Hartford Humanists",1364612556000,"Rocky Hill","CT",704,"Humanists",7841052,7841052,"religion/beliefs","243205759","Winter Solstice/HumanLight Celebration",22,NA,NA
 "142","Hartford Fun Group",1365172681000,"Windsor Locks","CT",2721,"Friends",7931472,7931472,"sports/recreation",NA,NA,NA,NA,NA
 "143","Axis901: Manchester's Coworking Space",1365378323000,"Manchester","CT",340,"Collaborators",7961142,7961142,"career/business",NA,NA,NA,NA,NA
 "144","Access Consciousness CT - East of the River",1366751807000,"Simsbury","CT",27,"Joyful Conscious Beings",8193722,8193722,"health/wellbeing",NA,NA,NA,NA,NA
 "145","The Art of Living in Hartford",1368591957000,"West Hartford","CT",616,"Yogis",8492632,8492632,"health/wellbeing",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "146","Greater Hartford Open Source Developers",1369328754000,"Manchester","CT",207,"Developers",8612292,8612292,"tech",NA,NA,NA,NA,NA
+=======
+"146","Greater Hartford Open Source Developers",1369328754000,"Manchester","CT",206,"Developers",8612292,8612292,"tech",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "147","WordPress Hartford",1370727441000,"Broad Brook","CT",178,"WordPressers",8841372,8841372,"tech",NA,NA,NA,NA,NA
 "148","Appalachian Mountain Club - Connecticut Chapter (CT AMC)",1370870359000,"Windsor","CT",2136,"Appies",8863462,8863462,"outdoors/adventure","243709824","INTRO TO WINTER CAMPING: BEARTOWN STATE FOREST ",12,NA,NA
 "149","Appalachian Mountain Club - Connecticut Chapter (CT AMC)",1370870359000,"Windsor","CT",2136,"Appies",8863462,8863462,"outdoors/adventure","243328992","Intro to Hiking 4,000 ft. Peaks in Winter ",11,NA,NA
@@ -157,7 +221,11 @@
 "156","reSET Hartford",1376671773000,"Hartford","CT",392,"reSET reSIDENTS",9836542,9836542,"career/business",NA,NA,NA,NA,NA
 "157","Farmington Valley Chorus Simsbury, CT",1376911451000,"West Simsbury","CT",53,"Singers",9871922,9871922,"music",NA,NA,NA,NA,NA
 "158","Scottish Country Dance",1383080011000,"Windsor","CT",63,"Dancers",10894952,10894952,"dancing",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "159","Rock It Out!   Classic Rock Music and Variety of Music's",1385781694000,"Hartford","CT",1265,"Rockers",11286822,11286822,"socializing","244234255","Valley Music Showcase- 2017 FINALS- The Best in Local Music!",11,0,0
+=======
+"159","Rock It Out!   Classic Rock Music and Variety of Music's",1385781694000,"Hartford","CT",1264,"Rockers",11286822,11286822,"socializing","244234255","Valley Music Showcase- 2017 FINALS- The Best in Local Music!",9,0,0
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "160","FREE TENNIS ROUND ROBIN AT BUENA VISTA ON THE WEEKEND",1385979955000,"West Hartford","CT",654,"Ballers",11309292,11309292,"fitness",NA,NA,NA,NA,NA
 "161","Connecticut SharePoint Users Group (CTSPUG)",1391631233000,"Hartford","CT",305,"SharePointers",12737282,12737282,"tech","245337863","CTSPUG 2017 Wrap-up Meetup",5,41.76627,-72.6754
 "162","Manchester Area Parents Network",1391716882000,"Manchester","CT",256,"Parents",12753972,12753972,"parents/family",NA,NA,NA,NA,NA
@@ -167,7 +235,11 @@
 "166","SBUSA - Networking for Small Business in Hartford",1396459689000,"West Hartford","CT",164,"Members",13691072,13691072,"career/business",NA,NA,NA,NA,NA
 "167","A Young Indian Professionals-Students (YIPS) Connecticut",1397518876000,"Hartford","CT",213,"Connecticut Indians",13915832,13915832,"socializing",NA,NA,NA,NA,NA
 "168","I gotta get some f***ing friends!",1398568103000,"Manchester","CT",549,"Friends",14127412,14127412,"socializing",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "169","Manchester Book Club",1398735493000,"Manchester","CT",768,"Readers",14165972,14165972,"book clubs","244580161","Discuss ""Small Great Things"" by Jodi Picoult",21,41.783032,-72.523063
+=======
+"169","Manchester Book Club",1398735493000,"Manchester","CT",768,"Readers",14165972,14165972,"book clubs","244580161","Discuss ""Small Great Things"" by Jodi Picoult",20,41.783032,-72.523063
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "170","Greater Hartford West Coast Swing and Latin Dance",1402591207000,"Hartford","CT",255,"Dancers",15045642,15045642,"dancing",NA,NA,NA,NA,NA
 "171","Connecticut FileMaker Developers Group (CFDG)",1402944168000,"New Britain","CT",148,"Developers",15124242,15124242,"tech",NA,NA,NA,NA,NA
 "172","Hartford Bitcoin Meetup",1403484056000,"Hartford","CT",49,"Bitcoin Enthusiasts",15250452,15250452,"career/business",NA,NA,NA,NA,NA
@@ -181,7 +253,11 @@
 "180","Six Degrees Glastonbury Business Networking",1405423942000,"Glastonbury","CT",117,"Business Professionals",15729402,15729402,"career/business","vkclwlywqbzb","Let's Meetup on Tuesday mornings.",3,41.713272,-72.603638
 "181","Six Degrees Glastonbury Business Networking",1405423942000,"Glastonbury","CT",117,"Business Professionals",15729402,15729402,"career/business","vkclwlywqbjc","Let's Meetup on Tuesday mornings.",3,41.713272,-72.603638
 "182","CT/MA Tiny House Meetup",1405771319000,"Windsor","CT",294,"Tiny House Lovers",15822302,15822302,"community/environment",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "183","Happy, Healthy Lifestyle",1407254753000,"Hartford","CT",3250,"Members",16204692,16204692,"socializing","245359418","Essential Oil of the Month: Pick Your Own Scent",2,41.790001,-72.669998
+=======
+"183","Happy, Healthy Lifestyle",1407254753000,"Hartford","CT",3251,"Members",16204692,16204692,"socializing","245359418","Essential Oil of the Month: Pick Your Own Scent",3,41.790001,-72.669998
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "184","A Spiritual Journey to Healing",1407287259000,"Rocky Hill","CT",564,"Spiritual Journey to Healing",16213682,16213682,"health/wellbeing",NA,NA,NA,NA,NA
 "185","Rosicrucians in Connecticut Meetup",1407886188000,"Hartford","CT",127,"Seekers",16353292,16353292,"new age/spirituality",NA,NA,NA,NA,NA
 "186","""SIMPLY WITH FRIENDS"" MEETUP GROUP",1409747576000,"Rocky Hill","CT",947,"fellow peeps",16768122,16768122,"socializing","244616107","Dining and setback  Dec 2.      Saturday.   7 pm",13,41.682152,-72.658241
@@ -193,7 +269,11 @@
 "192","Aquapioneers - CT Aquaponic Gardening Group",1413948551000,"South Glastonbury","CT",213,"Aquapioneers",17782862,17782862,"community/environment",NA,NA,NA,NA,NA
 "193","Simsbury Community Drum Circle: Stress Relief & Meditation",1415068468000,"Simsbury","CT",499,"Drummers",18054252,18054252,"music",NA,NA,NA,NA,NA
 "194","TOTSS New England Study Group CT",1415583591000,"Hartford","CT",11,"Thelemites",18177184,18177184,"new age/spirituality",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "195","Learn Italian and Travel to Italy Together",1415724033000,"Glastonbury","CT",151,"Italian language learner",18181575,18181575,"language/ethnic identity","245415469","Let’s meet to plan our next 2018 trip to Italy!",3,41.7136,-72.608215
+=======
+"195","Learn Italian and Travel to Italy Together",1415724033000,"Glastonbury","CT",151,"Italian language learner",18181575,18181575,"language/ethnic identity",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "196","Kizomba Connecticut: Kizomba Dance in Connecticut",1415844992000,"Hartford","CT",89,"Kizombieros",18185339,18185339,"dancing",NA,NA,NA,NA,NA
 "197","Kizomba Hartford Development Group",1416340953000,"Hartford","CT",191,"Kizombieros or Kizombers",18198914,18198914,"dancing",NA,NA,NA,NA,NA
 "198","Young Adult Connection Community (NAMI CT)",1418778832000,"Newington","CT",349,"awesome young adults",18257860,18257860,"support",NA,NA,NA,NA,NA
@@ -219,6 +299,7 @@
 "218","South Windsor Self-Defense",1430526249000,"South Windsor","CT",434,"Warriors",18572563,18572563,"sports/recreation",NA,NA,NA,NA,NA
 "219","Connecticut Autism Connections",1430748113000,"Plainville","CT",178,"Members",18575653,18575653,"support",NA,NA,NA,NA,NA
 "220","Greater Hartford Couples 50+ Meetup Group",1430879168000,"West Hartford","CT",59,"Fun loving couples",18578284,18578284,"socializing",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "221","Meteor Hartford",1433593728000,"West Hartford","CT",108,"Meteorites",18652968,18652968,"tech","tmpmtlywpbfc","Discuss & Demo all things Meteor",3,41.785713,-72.745338
 "222","Flawless Victory - CT Video Gaming Club",1433614459000,"Hartford","CT",252,"Gamers",18653535,18653535,"games","244210209","Star Wars: The Last Jedi",4,41.801041,-72.547752
 "223","Flawless Victory - CT Video Gaming Club",1433614459000,"Hartford","CT",252,"Gamers",18653535,18653535,"games","240796527","Tomb Raider",3,41.801041,-72.547752
@@ -232,6 +313,21 @@
 "231","Happy Hours and Then Some",1436795623000,"Newington","CT",48,"Members",18738350,18738350,"singles","244882283","Brio's Happy Hour",5,NA,NA
 "232","Happy Hours and Then Some",1436795623000,"Newington","CT",48,"Members",18738350,18738350,"singles","244752155","The Back Nine Tavern at Stanley Golf Hours Happy Hour",3,NA,NA
 "233","Happy Hours and Then Some",1436795623000,"Newington","CT",48,"Members",18738350,18738350,"singles","sdnmznyxdbvb","Indian Hill Country Club Cafe Louise Happy Hour",4,NA,NA
+=======
+"221","Meteor Hartford",1433593728000,"West Hartford","CT",107,"Meteorites",18652968,18652968,"tech","tmpmtlywpbfc","Discuss & Demo all things Meteor",3,41.785713,-72.745338
+"222","Flawless Victory - CT Video Gaming Club",1433614459000,"Hartford","CT",252,"Gamers",18653535,18653535,"games","244210209","Star Wars: The Last Jedi",4,41.801041,-72.547752
+"223","Flawless Victory - CT Video Gaming Club",1433614459000,"Hartford","CT",252,"Gamers",18653535,18653535,"games","240796527","Tomb Raider",3,41.801041,-72.547752
+"224","Vegan Health & Wellness",1435074351000,"Hartford","CT",1263,"Members",18693411,18693411,"health/wellbeing","245243093","Vegan Book Club",4,NA,NA
+"225","West Hartford Area Golf Meetup",1436106957000,"West Hartford","CT",50,"Members",18720051,18720051,"sports/recreation",NA,NA,NA,NA,NA
+"226","Happy Hours and Then Some",1436795623000,"Newington","CT",47,"Members",18738350,18738350,"singles","243806557","Tavern On The Trax Happy Hour",7,NA,NA
+"227","Happy Hours and Then Some",1436795623000,"Newington","CT",47,"Members",18738350,18738350,"singles","243827720","Wood N Tap Newington",7,NA,NA
+"228","Happy Hours and Then Some",1436795623000,"Newington","CT",47,"Members",18738350,18738350,"singles","243402849","Holiday Party at Gwynne's",15,0,0
+"229","Happy Hours and Then Some",1436795623000,"Newington","CT",47,"Members",18738350,18738350,"singles","243827755","Dakota Steakhouse Happy Hour",6,NA,NA
+"230","Happy Hours and Then Some",1436795623000,"Newington","CT",47,"Members",18738350,18738350,"singles","243827905","Tavern at the Exchange Happy Hour",8,NA,NA
+"231","Happy Hours and Then Some",1436795623000,"Newington","CT",47,"Members",18738350,18738350,"singles","244882283","Brio's Happy Hour",5,NA,NA
+"232","Happy Hours and Then Some",1436795623000,"Newington","CT",47,"Members",18738350,18738350,"singles","244752155","The Back Nine Tavern at Stanley Golf Hours Happy Hour",3,NA,NA
+"233","Happy Hours and Then Some",1436795623000,"Newington","CT",47,"Members",18738350,18738350,"singles","sdnmznyxdbvb","Indian Hill Country Club Cafe Louise Happy Hour",4,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "234","Pragmatic Personal and Professional Development",1438124163000,"Farmington","CT",64,"Members",18780843,18780843,"health/wellbeing",NA,NA,NA,NA,NA
 "235","Anti-Bullying Meetup - South Windsor, CT",1438550986000,"South Windsor","CT",13,"Members",18795277,18795277,"support",NA,NA,NA,NA,NA
 "236","Connecticut Big Data #CTBigData",1438605030000,"Hartford","CT",444,"Members",18797258,18797258,"tech",NA,NA,NA,NA,NA
@@ -240,7 +336,11 @@
 "239","Northwest Park Meetup",1441995980000,"Windsor","CT",900,"Friends of Northwest Park",18921811,18921811,"parents/family","245193257","Natural Wreath Making Workshop",3,NA,NA
 "240","LGBT Moveable Senior Center",1444328358000,"Hartford","CT",283,"LGBT Elders, Adults and Allies",19008575,19008575,"LGBT",NA,NA,NA,NA,NA
 "241","Gemstone Therapy Institute Meetup Group",1444412340000,"Manchester","CT",240,"Members",19011464,19011464,"new age/spirituality",NA,NA,NA,NA,NA
+<<<<<<< HEAD
 "242","Hartford AWS Meetup",1444918788000,"Hartford","CT",191,"Members",19029934,19029934,"tech",NA,NA,NA,NA,NA
+=======
+"242","Hartford AWS Meetup",1444918788000,"Hartford","CT",190,"Members",19029934,19029934,"tech",NA,NA,NA,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
 "243","Meditative Drawing & Art For Adults",1445194954000,"Simsbury","CT",259,"Members",19038869,19038869,"fine arts/culture",NA,NA,NA,NA,NA
 "244","Simsbury Group Guitar For Beginners",1445361087000,"Simsbury","CT",193,"Guitarists",19045245,19045245,"music",NA,NA,NA,NA,NA
 "245","Simsbury Guided Meditation Meet-Up",1445362039000,"Simsbury","CT",196,"Meditators",19045292,19045292,"health/wellbeing",NA,NA,NA,NA,NA
@@ -250,6 +350,7 @@
 "249","Simsbury Self-Defense Meetup",1446601811000,"Simsbury","CT",69,"Members",19088457,19088457,"sports/recreation",NA,NA,NA,NA,NA
 "250","Life and Leisure Events at CCSU",1446737442000,"New Britain","CT",487,"Members",19093236,19093236,"socializing",NA,NA,NA,NA,NA
 "251","Hartford Startup Founder 101",1447165716000,"Hartford","CT",882,"Aspiring Founders",19108406,19108406,"tech","245319889","Veteran's Online Demo Day: Watch veteran founders pitch top investors",4,41.76371,-72.685097
+<<<<<<< HEAD
 "252",NA,NA,NA,NA,NA,NA,NA,22685146,NA,"245160244","Hands On: Interpreting Machine Learning Models",89,NA,NA
 "253",NA,NA,NA,NA,NA,NA,NA,19881144,NA,"244762072","Organizational Cultural Change",14,41.766846,-72.67643
 "254",NA,NA,NA,NA,NA,NA,NA,21548397,NA,"245372624","The Power of Raw Foods",5,0,0
@@ -290,3 +391,46 @@
 "289",NA,NA,NA,NA,NA,NA,NA,19874857,NA,"245140638","Murder Mystery/ Adams Mill",14,41.79086,-72.550606
 "290",NA,NA,NA,NA,NA,NA,NA,10867022,NA,"242290702","Love Never Dies ~ After the Phantom of the Opera Sequel",17,41.762356,-72.680634
 "291",NA,NA,NA,NA,NA,NA,NA,25605226,NA,"243639677","An Adventure Weekend in Vermont",5,NA,NA
+=======
+"252",NA,NA,NA,NA,NA,NA,NA,22685146,NA,"245160244","Hands On: Interpreting Machine Learning Models",88,NA,NA
+"253",NA,NA,NA,NA,NA,NA,NA,19881144,NA,"244762072","Organizational Cultural Change",14,41.766846,-72.67643
+"254",NA,NA,NA,NA,NA,NA,NA,9165502,NA,"245097770","Hall's Archery Indoors Manchester CT on Monday, beginners welcome. Free PIZZA!",3,41.781132,-72.537605
+"255",NA,NA,NA,NA,NA,NA,NA,21548397,NA,"245372624","The Power of Raw Foods",4,0,0
+"256",NA,NA,NA,NA,NA,NA,NA,19890128,NA,"xqkpxnywpbmc","Networking Lunch",3,41.696999,-72.723045
+"257",NA,NA,NA,NA,NA,NA,NA,25280724,NA,"245177782","Basic Italian conversation ",6,41.785686,-72.748199
+"258",NA,NA,NA,NA,NA,NA,NA,22739863,NA,"zpjpxmyxhbnc","November Pinterest Craft Meet Up !",4,41.679539,-72.71286
+"259",NA,NA,NA,NA,NA,NA,NA,23833931,NA,"vztswnywqbcb","First Friday Happy Hour!",20,41.742832,-72.650848
+"260",NA,NA,NA,NA,NA,NA,NA,22293838,NA,"mljwzmywqbcb","Come ready to bump, set, spike, have fun, laugh, and meet new people!",13,41.874058,-72.692917
+"261",NA,NA,NA,NA,NA,NA,NA,26454827,NA,"jfspxnywqbcb","Poetry Bistro Night at the Storyteller's Cottage",3,41.874123,-72.801292
+"262",NA,NA,NA,NA,NA,NA,NA,19146057,NA,"245360365","Coffeehouse/Open Mic in Manchester",11,41.809845,-72.490334
+"263",NA,NA,NA,NA,NA,NA,NA,20629675,NA,"245083871","Bear's BBQ and Uconn Coach's Show",3,41.762634,-72.671371
+"264",NA,NA,NA,NA,NA,NA,NA,19580235,NA,"245083854","Bear's BBQ and Uconn Coach's Show",4,41.762634,-72.671371
+"265",NA,NA,NA,NA,NA,NA,NA,19881144,NA,"245195369","Organizing Organizers & Volunteers for DevOpsDays Hartford 2018!",9,41.768105,-72.673065
+"266",NA,NA,NA,NA,NA,NA,NA,20387198,NA,"244952625","Heartspace- making time to take time for you",3,41.716911,-72.608093
+"267",NA,NA,NA,NA,NA,NA,NA,25365751,NA,"245123365","Update! Building Creative Teams Using Agile, hosted by Eliassen",10,41.767826,-72.673035
+"268",NA,NA,NA,NA,NA,NA,NA,22293838,NA,"mljwzmywqblb","Come ready to bump, set, spike, have fun, laugh, and meet new people!",10,41.874058,-72.692917
+"269",NA,NA,NA,NA,NA,NA,NA,21638055,NA,"245221093","InsurTech Business Plan Hackathon",8,41.768932,-72.673355
+"270",NA,NA,NA,NA,NA,NA,NA,23766786,NA,"244238048","[Hartford] Agave Grille",5,41.768482,-72.67897
+"271",NA,NA,NA,NA,NA,NA,NA,19919738,NA,"frltbnywqbsb","Comedy Improv!",3,41.81842,-72.829185
+"272",NA,NA,NA,NA,NA,NA,NA,26526094,NA,"245284726","The Destiny Cards Explored, lecture with Mary Anne Costerella",5,41.711357,-72.652489
+"273",NA,NA,NA,NA,NA,NA,NA,22293838,NA,"mljwzmywqbtb","Come ready to bump, set, spike, have fun, laugh, and meet new people!",1,41.874058,-72.692917
+"274",NA,NA,NA,NA,NA,NA,NA,24535603,NA,"245053099","Peter Clines 14",3,41.664001,-72.720215
+"275",NA,NA,NA,NA,NA,NA,NA,25625930,NA,"245392359","Lock In Rescheduled ",4,41.84657,-72.511215
+"276",NA,NA,NA,NA,NA,NA,NA,26318780,NA,"244382244","Kick-off; introductions",3,NA,NA
+"277",NA,NA,NA,NA,NA,NA,NA,20352529,NA,"244501065","December Meetup: ""Under the Blood-Red Sun"" by Graham Salisbury",10,41.761112,-72.739685
+"278",NA,NA,NA,NA,NA,NA,NA,19770357,NA,"vdzfqnywqbbc","Hackster.io - Monthly Hardware Meetup",3,41.760391,-72.702957
+"279",NA,NA,NA,NA,NA,NA,NA,19874857,NA,"243291082","Effie's Place New Years Day Brunch",22,41.75732,-72.718842
+"280",NA,NA,NA,NA,NA,NA,NA,25605226,NA,"242786223","Busting Through Fears And Limiting Beliefs While Enjoying A Taste Of Spain",20,41.731472,-72.66974
+"281",NA,NA,NA,NA,NA,NA,NA,10867022,NA,"245242171","The Savage Brothers ~ January Birthday celebrations",22,41.875401,-72.801605
+"282",NA,NA,NA,NA,NA,NA,NA,25122196,NA,"244966062","Placeholder for a January Event",7,NA,NA
+"283",NA,NA,NA,NA,NA,NA,NA,25121952,NA,"244966106","Placeholder for a January Event",3,NA,NA
+"284",NA,NA,NA,NA,NA,NA,NA,22881934,NA,"245167340","Nomads 3 hours of fun 1/12/18",11,41.829956,-72.609245
+"285",NA,NA,NA,NA,NA,NA,NA,10867022,NA,"243926990","Chris Botti in Concert ~ The Bushnell",7,41.762356,-72.680634
+"286",NA,NA,NA,NA,NA,NA,NA,24982308,NA,"244557405","Mohegan Sun Casino Trip",10,41.795322,-72.666794
+"287",NA,NA,NA,NA,NA,NA,NA,19874857,NA,"244127245","Let's Play Setback/ Max is 32",28,41.825344,-72.49614
+"288",NA,NA,NA,NA,NA,NA,NA,22881934,NA,"243862351","Wolf Pack Game cancelled",6,41.778091,-72.68026
+"289",NA,NA,NA,NA,NA,NA,NA,19874857,NA,"245133892","Komo ",13,41.785191,-72.74791
+"290",NA,NA,NA,NA,NA,NA,NA,19874857,NA,"245140638","Murder Mystery/ Adams Mill",14,41.79086,-72.550606
+"291",NA,NA,NA,NA,NA,NA,NA,10867022,NA,"242290702","Love Never Dies ~ After the Phantom of the Opera Sequel",17,41.762356,-72.680634
+"292",NA,NA,NA,NA,NA,NA,NA,25605226,NA,"243639677","An Adventure Weekend in Vermont",5,NA,NA
+>>>>>>> cc2e5a8272960703d65760d31fc8fb510d83753f
