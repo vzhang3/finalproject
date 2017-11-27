@@ -11,6 +11,11 @@ require(devtools)
 require(jsonlite)
 require(dplyr)
 require(readr)
+library(shiny)
+library(shinyjs)
+library(leaflet)
+library(maps)
+
 
 ny <- read_csv("~/Data Science (231)/final project/meetup_groupsNYlocation.csv",  col_names = FALSE)
 
@@ -81,22 +86,38 @@ smallNC <- na.omit(smallNC)
 ```
 
 #Shiny Time
+
 ```{r}
-library(shiny)
-library(shinyjs)
-library(leaflet)
+#Template
+Aukland <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+Aukland  # Print the map
 ```
 
 ```{r}
-# map of hartford which "social" events as category
-Hartford  <- leaflet() %>%
+#Map of the the Northeast, with event markers for social, language, sports, and tech in New York
+mapStates = map("state", region = c('new york', 'new jersey', 'penn'),fill = TRUE, plot = FALSE)
+leaflet(data = mapStates) %>% addTiles() %>%
+  addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE) %>% 
+  addMarkers(data=socializing, popup="social") %>% 
+  addMarkers(data=language, popup="language") %>% 
+  addMarkers(data=sports, popup="sports") %>% 
+  addMarkers(data=tech, popup="tech") %>% 
+  addMarkers(data=tech, popup="tech")
+```
+
+
+```{r}
+# map of NY with events as category
+NY  <- leaflet() %>%
   addTiles() %>%  
   #markers(Hartford)# Add default OpenStreetMap map tiles
   addMarkers(data=socializing, popup="social") %>% 
   addMarkers(data=language, popup="language") %>% 
   addMarkers(data=sports, popup="sports") %>% 
   addMarkers(data=tech, popup="tech")
-
+NY
 ```
 
 ```{r}
@@ -118,8 +139,6 @@ shinyServer(function(input, output, session){
     })
 })
 
-
-addMarkers(data = coffee_shops, group = "Food & Drink")
 ```
 
 
