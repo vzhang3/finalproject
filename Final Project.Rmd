@@ -17,7 +17,7 @@ library(leaflet)
 library(maps)
 
 
-ny <- read_csv("~/Data Science (231)/final project/meetup_groupsNYlocation.csv",  col_names = FALSE)
+ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
 
 #Renaming columns
 colnames(ny)[1] <- "city"
