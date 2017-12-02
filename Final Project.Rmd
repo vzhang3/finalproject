@@ -18,7 +18,25 @@ library(maps)
 
 
 ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
+bo <- read_csv("data/Boston_MA.csv", col_names= TRUE)
+ch <- read_csv("data/Charlotte_NC.csv", col_names=TRUE)
+ha <- read_csv("data/Hartford_CT.csv", col_names=TRUE)
 
+#top categories based on members
+top10 <- function(data) {
+  data %>%
+    group_by(category) %>%
+    summarize(members_tot = sum(members))  %>%
+    arrange(desc(members_tot)) %>%
+    head(10) %>% 
+    
+}
+dplyr::do(top10, data= .)
+
+ top10(data=ch)
+ top10(data=ha)
+top10(data=bo)
+top10(data=ny) 
 #Renaming columns
 colnames(ny)[1] <- "city"
 colnames(ny)[2] <- "group_name"
