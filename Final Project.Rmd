@@ -21,6 +21,14 @@ ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
 bo <- read_csv("data/Boston_MA.csv", col_names= TRUE)
 ch <- read_csv("data/Charlotte_NC.csv", col_names=TRUE)
 ha <- read_csv("data/Hartford_CT.csv", col_names=TRUE)
+colnames(ny)[1] <- "city"
+colnames(ny)[2] <- "name"
+colnames(ny)[3] <- "created"
+colnames(ny)[4] <- "category"
+colnames(ny)[5] <- "members"
+colnames(ny)[6] <- "details"
+colnames(ny)[7] <- "lat"
+colnames(ny)[8] <- "long"
 
 #top categories based on members
 top10 <- function(data) {
@@ -28,16 +36,25 @@ top10 <- function(data) {
     group_by(category) %>%
     summarize(members_tot = sum(members))  %>%
     arrange(desc(members_tot)) %>%
-    head(10) %>% 
-    
+    head(10)
 }
-dplyr::do(top10, data= .)
 
- top10(data=ch)
- top10(data=ha)
-top10(data=bo)
-top10(data=ny) 
-#Renaming columns
+ chtop10<-top10(data=ch)
+ hatop10<-top10(data=ha)
+botop10<-top10(data=bo)
+nytop10<-top10(data=ny) 
+
+ggplot(data=chtop10, aes(x=category, y=members_tot))+geom_bar(stat="identity") + labs(title = "Charlotte top categories by membership") 
+ggplot(data=botop10, aes(x=category, y=members_tot))+geom_bar(stat="identity") + labs(title = "Boston top categories by membership") 
+ggplot(data=hatop10, aes(x=category, y=members_tot))+geom_bar(stat="identity") + labs(title = "Hartford top categories by membership") 
+ggplot(data=nytop10, aes(x=category, y=members_tot))+geom_bar(stat="identity") + labs(title = "New York top categories by membership") 
+#Renaming columns and cleaning up 
+Boston_MA<-bo[c(2, 4:7, 9:10, 13:15)]
+Charlotte_NC<-ch[c(2, 4:7, 9:10, 13:15)]
+Hartford_CT<-ha[c(2, 4:7, 9:10, 13:15)]
+
+
+
 colnames(ny)[1] <- "city"
 colnames(ny)[2] <- "group_name"
 colnames(ny)[3] <- "created"
@@ -50,12 +67,24 @@ colnames(ny)[8] <- "long"
 
 
 ```{r}
-#creates df topics with number of groups per topic
+#creates df topics with number of groups per topic (fix this)
+mostgroups<- function(data){
+  topics <-data %>% 
+  group_by(category) %>% 
+  summarise(count = n()) %>% 
+  arrange(desc(count));topics
+}
+
+mostgroups(ch)
+mostgroups(ny)
+mostgroups(bo)
+View(bo)
 topics <- ny %>% 
   select(category, members) %>% 
   group_by(category) %>% 
-  summarise(count = n(), total_members= sum(members)) %>% 
+  summarise(count = n()) %>% 
   arrange(desc(count));topics
+View(ny)
 
 topics10 <- topics %>% 
   head(10)
@@ -87,13 +116,13 @@ As you can see, the category with the most groups is "socializing". Given how at
 
 ```{r}
 smallCT <- Hartford_CT %>% 
-  select(category, lat, lon)
+  select(category, lat, lon, yes_rsvp_count)
 smallCT <- na.omit(smallCT)
 ```
 
 ```{r}
 smallMA <- Boston_MA %>% 
-  select(category, lat, lon)
+  select(category, lat, lon, yes_rsvp_count)
 smallMA <- na.omit(smallMA)
 ```
 
