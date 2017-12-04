@@ -18,17 +18,26 @@ library(maps)
 
 
 ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
-bo <- read_csv("data/Boston_MA.csv", col_names= TRUE)
-ch <- read_csv("data/Charlotte_NC.csv", col_names=TRUE)
-ha <- read_csv("data/Hartford_CT.csv", col_names=TRUE)
-colnames(ny)[1] <- "city"
-colnames(ny)[2] <- "name"
-colnames(ny)[3] <- "created"
-colnames(ny)[4] <- "category"
-colnames(ny)[5] <- "members"
-colnames(ny)[6] <- "details"
-colnames(ny)[7] <- "lat"
-colnames(ny)[8] <- "long"
+bo <- read_csv("data/MA.csv", col_names= FALSE)
+ch <- read_csv("data/NC.csv", col_names=FALSE)
+ha <- read_csv("data/CT.csv", col_names=FALSE)
+
+#Function to rename columns for each dataset
+column_rename <- function(x) {
+colnames(x)[1] <- "city"
+colnames(x)[2] <- "group_name"
+colnames(x)[3] <- "created"
+colnames(x)[4] <- "category"
+colnames(x)[5] <- "members"
+colnames(x)[6] <- "details"
+colnames(x)[7] <- "lat"
+colnames(x)[8] <- "long"
+}
+
+column_rename(x = ny)
+column_rename(x = bo)
+column_rename(x = ch)
+column_rename(x = ha)
 
 #top categories based on members
 top10 <- function(data) {
@@ -55,14 +64,7 @@ Hartford_CT<-ha[c(2, 4:7, 9:10, 13:15)]
 
 
 
-colnames(ny)[1] <- "city"
-colnames(ny)[2] <- "group_name"
-colnames(ny)[3] <- "created"
-colnames(ny)[4] <- "category"
-colnames(ny)[5] <- "members"
-colnames(ny)[6] <- "details"
-colnames(ny)[7] <- "lat"
-colnames(ny)[8] <- "long"
+
 ```
 
 
@@ -97,16 +99,97 @@ ggplot( data = topics, aes(x = count)) + geom_density(adjust = 0.29) + labs(titl
 ```
 
 ```{r}
-socializing <- ny %>% 
+colnames(ny)[1] <- "city"
+colnames(ny)[2] <- "group_name"
+colnames(ny)[3] <- "created"
+colnames(ny)[4] <- "category"
+colnames(ny)[5] <- "members"
+colnames(ny)[6] <- "details"
+colnames(ny)[7] <- "lat"
+colnames(ny)[8] <- "long"
+
+nysocializing <- ny %>% 
   filter(category == "socializing")
 
-language <- ny %>% 
+nylanguage <- ny %>% 
   filter(category == "language/ethnic identity")
 
-tech <- ny %>% 
+nytech <- ny %>% 
   filter(category == "tech")
 
-sports <- ny %>% 
+nysports <- ny %>% 
+  filter(category == "sports/recreation")
+```
+
+```{r}
+#Hartford
+colnames(ha)[1] <- "city"
+colnames(ha)[2] <- "group_name"
+colnames(ha)[3] <- "created"
+colnames(ha)[4] <- "category"
+colnames(ha)[5] <- "members"
+colnames(ha)[6] <- "details"
+colnames(ha)[7] <- "lat"
+colnames(ha)[8] <- "long"
+
+ctsocializing <- ha %>% 
+  filter(category == "socializing")
+
+ctlanguage <- ha %>% 
+  filter(category == "language/ethnic identity")
+
+cttech <- ha %>% 
+  filter(category == "tech")
+
+ctsports <- ha %>% 
+  filter(category == "sports/recreation")
+```
+
+```{r}
+#Boston
+colnames(bo)[1] <- "city"
+colnames(bo)[2] <- "group_name"
+colnames(bo)[3] <- "created"
+colnames(bo)[4] <- "category"
+colnames(bo)[5] <- "members"
+colnames(bo)[6] <- "details"
+colnames(bo)[7] <- "lat"
+colnames(bo)[8] <- "long"
+
+bosocializing <- bo %>% 
+  filter(category == "socializing")
+
+bolanguage <- bo %>% 
+  filter(category == "language/ethnic identity")
+
+botech <- bo %>% 
+  filter(category == "tech")
+
+bosports <- bo %>% 
+  filter(category == "sports/recreation")
+```
+
+```{r}
+#Charlotte
+colnames(ch)[1] <- "city"
+colnames(ch)[2] <- "group_name"
+colnames(ch)[3] <- "created"
+colnames(ch)[4] <- "category"
+colnames(ch)[5] <- "members"
+colnames(ch)[6] <- "details"
+colnames(ch)[7] <- "lat"
+colnames(ch)[8] <- "long"
+
+chsocializing <- ch %>% 
+  filter(category == "socializing")
+
+chlanguage <- ch %>% 
+  filter(category == "language/ethnic identity")
+
+chtech <- ch %>% 
+  filter(category == "tech")
+
+chsports <- ch %>% 
   filter(category == "sports/recreation")
 ```
 
@@ -143,52 +226,72 @@ Aukland  # Print the map
 ```
 
 ```{r}
-#Map of the the Northeast, with event markers for social, language, sports, and tech in New York
-mapStates = map("state", region = c('new york', 'new jersey', 'penn'),fill = TRUE, plot = FALSE)
-leaflet(data = mapStates) %>% addTiles() %>%
-  addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE) %>% 
-  addMarkers(data=socializing, popup="social") %>% 
-  addMarkers(data=language, popup="language") %>% 
-  addMarkers(data=sports, popup="sports") %>% 
-  addMarkers(data=tech, popup="tech") %>% 
-  addMarkers(data=tech, popup="tech")
+#Icons
+greenIcon <- makeIcon(
+  iconUrl = "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
+  iconWidth = 25, iconHeight = 41,
+  iconAnchorX = 12, iconAnchorY = 41
+)
+
+redIcon <- makeIcon(
+  iconUrl = "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
+  iconWidth = 25, iconHeight = 41,
+  iconAnchorX = 12, iconAnchorY = 41
+)
+
+orangeIcon <- makeIcon(
+  iconUrl = "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
+  iconWidth = 25, iconHeight = 41,
+  iconAnchorX = 12, iconAnchorY = 41
+)
 ```
 
 
 ```{r}
 # map of NY with events as category
+
 NY  <- leaflet() %>%
   addTiles() %>%  
   #markers(Hartford)# Add default OpenStreetMap map tiles
-  addMarkers(data=socializing, popup="social") %>% 
-  addMarkers(data=language, popup="language") %>% 
-  addMarkers(data=sports, popup="sports") %>% 
-  addMarkers(data=tech, popup="tech")
+  addMarkers(data=nysocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=nylanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=nysports, popup="sports",icon=redIcon) %>% 
+  addMarkers(data=nytech, popup="tech")
 NY
 ```
 
 ```{r}
-ui <- fluidPage()
-
-server <- function(input, ouput) {}
-
-ShinyApp(ui=ui, server=server)
+# map of Hartford
+hartfordmap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=ctsocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=ctlanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=ctsports, popup="sports",icon=redIcon) %>% 
+  addMarkers(data=cttech, popup="tech")
+hartfordmap
 ```
-
 
 ```{r}
-shinyServer(function(input, output, session){
-    output$mymap <- renderLeaflet({
-      leaflet() %>% 
-        addTiles() %>% 
-        setView(lng =-72.6851, lat =41.7637) %>% 
-        addMarkers(data = socializing, lat =, group = "socializing")
-    })
-})
-
+# map of Boston
+bostonmap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=bosocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=bolanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=bosports, popup="sports",icon=redIcon)%>% 
+  addMarkers(data=botech, popup="tech")
+bostonmap
 ```
 
-
-
-
-
+```{r}
+# map of Charlotte
+charlottemap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=chsocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=chlanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=chsports, popup="sports",icon=redIcon) %>% 
+  addMarkers(data=chtech, popup="tech")
+charlottemap
+```
