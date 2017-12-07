@@ -15,7 +15,7 @@ library(shiny)
 library(shinyjs)
 library(leaflet)
 library(maps)
-
+require(ggmap)
 
 ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
 bo <- read_csv("data/MA.csv", col_names= FALSE)
@@ -256,8 +256,13 @@ NY  <- leaflet() %>%
   addMarkers(data=nysocializing, popup="social",icon=orangeIcon) %>% 
   addMarkers(data=nylanguage, popup="language",icon=greenIcon) %>% 
   addMarkers(data=nysports, popup="sports",icon=redIcon) %>% 
-  addMarkers(data=nytech, popup="tech")
+  addMarkers(data=nytech, popup="tech",)
 NY
+
+map <-  get_map(location="newyork",zoom=12,source="google")
+
+ggmap(map) + geom_point(data=ny, aes(x=lat, y=long), alpha=-.3, show.legend = FALSE)
+ggmap(map)
 ```
 
 ```{r}
@@ -292,6 +297,6 @@ charlottemap  <- leaflet() %>%
   addMarkers(data=chsocializing, popup="social",icon=orangeIcon) %>% 
   addMarkers(data=chlanguage, popup="language",icon=greenIcon) %>% 
   addMarkers(data=chsports, popup="sports",icon=redIcon) %>% 
-  addMarkers(data=chtech, popup="tech")
+  addMarkers(data=chtech, popup="tech", clusterOptions = markerClusterOptions())
 charlottemap
 ```
