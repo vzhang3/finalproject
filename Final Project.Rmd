@@ -17,7 +17,8 @@ library(leaflet)
 library(maps)
 require(ggmap)
 
-ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE, col_types = list(col_character(),col_character(),col_integer(),col_character(),col_integer(),col_character(),col_character(),col_character()))
+#ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE, col_types = list(col_character(),col_character(),col_integer(),col_character(),col_integer(),col_character(),col_character(),col_character()))
+ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
 ny$lat
 ny$lat<-as.numeric(ny$lat)
 #Still truncates the number!!!
