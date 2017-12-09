@@ -17,8 +17,11 @@ library(leaflet)
 library(maps)
 require(ggmap)
 
-ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
-bo <- read_csv("data/MA.csv", col_names= FALSE)
+ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE, col_types = list(col_character(),col_character(),col_integer(),col_character(),col_integer(),col_character(),col_character(),col_character()))
+ny$lat
+ny$lat<-as.numeric(ny$lat)
+#Still truncates the number!!!
+bo <- read_csv("data/MA.csv", col_names= FALSE,numerals=)
 ch <- read_csv("data/NC.csv", col_names=FALSE)
 ha <- read_csv("data/CT.csv", col_names=FALSE)
 
@@ -34,36 +37,31 @@ colnames(x)[7] <- "lat"
 colnames(x)[8] <- "long"
 }
 
-column_rename(x = ny)
+column_rename(ny)
 column_rename(x = bo)
 column_rename(x = ch)
 column_rename(x = ha)
-
-#top categories based on members
+#doesn't work but I'll look at that later
+#top categories based on membership count
 top10 <- function(data) {
   data %>%
-    group_by(category) %>%
-    summarize(members_tot = sum(members))  %>%
+    group_by(category, city) %>%
+    summarize(members_tot = sum(members), topgroup=max(members))  %>%
     arrange(desc(members_tot)) %>%
     head(10)
 }
-
  chtop10<-top10(data=ch)
  hatop10<-top10(data=ha)
 botop10<-top10(data=bo)
 nytop10<-top10(data=ny) 
-
-ggplot(data=chtop10, aes(x=category, y=members_tot))+geom_bar(stat="identity") + labs(title = "Charlotte top categories by membership") 
-ggplot(data=botop10, aes(x=category, y=members_tot))+geom_bar(stat="identity") + labs(title = "Boston top categories by membership") 
-ggplot(data=hatop10, aes(x=category, y=members_tot))+geom_bar(stat="identity") + labs(title = "Hartford top categories by membership") 
-ggplot(data=nytop10, aes(x=category, y=members_tot))+geom_bar(stat="identity") + labs(title = "New York top categories by membership") 
-#Renaming columns and cleaning up 
-Boston_MA<-bo[c(2, 4:7, 9:10, 13:15)]
-Charlotte_NC<-ch[c(2, 4:7, 9:10, 13:15)]
-Hartford_CT<-ha[c(2, 4:7, 9:10, 13:15)]
-
-
-
+alltop10<-cbind(chtop10, hatop10, botop10, nytop10)
+topcatbymember(alltop10)+facet_wrap(~city)
+topcatbymember<-function(x){ggplot(data=x, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
+}
+topcatbymember(chtop10)+ labs(title = "Charlotte top categories by membership")
+topcatbymember(botop10)+labs(title = "Boston top categories by membership")
+topcatbymember(hatop10)+labs(title = "Hartford top categories by membership")
+topcatbymember(nytop10)+labs(title = "NY top categories by membership")
 
 ```
 
@@ -73,28 +71,23 @@ Hartford_CT<-ha[c(2, 4:7, 9:10, 13:15)]
 mostgroups<- function(data){
   topics <-data %>% 
   group_by(category) %>% 
-  summarise(count = n()) %>% 
-  arrange(desc(count));topics
+  summarise(group_tot = n()) %>% 
+  arrange(desc(group_tot));topics %>% 
+    head(10)
 }
 
-mostgroups(ch)
-mostgroups(ny)
-mostgroups(bo)
-View(bo)
-topics <- ny %>% 
-  select(category, members) %>% 
-  group_by(category) %>% 
-  summarise(count = n()) %>% 
-  arrange(desc(count));topics
-View(ny)
+chgroups<-mostgroups(ch)
+nygroups<-mostgroups(ny)
+bogroups<-mostgroups(bo)
+hagroups<-mostgroups(ha)
 
-topics10 <- topics %>% 
-  head(10)
-  
-#graph of densities of topics
-ggplot( data = topics, aes(x = count)) + geom_density(adjust = 0.29) + labs(title = "") 
+topcatbygroup<-function(x){ggplot(data=x, aes(x=reorder(category, group_tot), y=group_tot))+geom_bar(stat="identity", aes(fill=group_tot)) +coord_flip()+ylab("Total groups")+xlab("Category")+scale_fill_continuous(name="top groups per category")
+}
+topcatbygroup(chgroups)+ labs(title = "Charlotte top categories by group number")
+topcatbygroup(bogroups)+labs(title = "Boston top categories by group number")
+topcatbygroup(hagroups)+labs(title = "Hartford top categories by group number")
+topcatbygroup(nygroups)+labs(title = "NY top categories by group number")
 
-#graph of number of members in top 10 topics (stacked bargraph)
 
 ```
 
@@ -194,26 +187,7 @@ chsports <- ch %>%
 ```
 
 
-As you can see, the category with the most groups is "socializing". Given how at it's core meetup is designed to bring people together over shared interests, it is no wonder that socializing has the highest volume of meetup groups. The majority of topics (approxiamately 30%) have between 5 and 25 dedicated groups.
-
-
-```{r}
-smallCT <- Hartford_CT %>% 
-  select(category, lat, lon, yes_rsvp_count)
-smallCT <- na.omit(smallCT)
-```
-
-```{r}
-smallMA <- Boston_MA %>% 
-  select(category, lat, lon, yes_rsvp_count)
-smallMA <- na.omit(smallMA)
-```
-
-```{r}
-smallNC <- Charlotte_NC %>% 
-  select(category, lat, lon)
-smallNC <- na.omit(smallNC)
-```
+As you can see, the category with the most membership is normally "socializing" in big cities like Charlotte, Boston and New York. Given how at it's core meetup is designed to bring people together over shared interests, it is no wonder that socializing has the highest volume of membership. However, in group total, the cities vary as to what types of groups are most frequently made. In Boston, the majority of the meetups are based around tech, fitting for the startup vibe. In Charlotte and Hartford, the majority of the groups are interestingly about career or business, and in New York, the majority of the meetup groups are socializing groups. The majority of topics have less than 40 dedicated groups. We also wanted to look at where the majority of these groups were located and if there were certain "hubs" for technology. We investigate this question with Shiny. 
 
 #Shiny Time
 
