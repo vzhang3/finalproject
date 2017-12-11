@@ -22,27 +22,47 @@ ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
 ny$lat
 ny$lat<-as.numeric(ny$lat)
 #Still truncates the number!!!
-bo <- read_csv("data/MA.csv", col_names= FALSE,numerals=)
+bo <- read_csv("data/MA.csv", col_names= FALSE)
 ch <- read_csv("data/NC.csv", col_names=FALSE)
 ha <- read_csv("data/CT.csv", col_names=FALSE)
 
 #Function to rename columns for each dataset
-column_rename <- function(x) {
-colnames(x)[1] <- "city"
-colnames(x)[2] <- "group_name"
-colnames(x)[3] <- "created"
-colnames(x)[4] <- "category"
-colnames(x)[5] <- "members"
-colnames(x)[6] <- "details"
-colnames(x)[7] <- "lat"
-colnames(x)[8] <- "long"
-}
+colnames(ny)[1] <- "city"
+colnames(ny)[2] <- "group_name"
+colnames(ny)[3] <- "created"
+colnames(ny)[4] <- "category"
+colnames(ny)[5] <- "members"
+colnames(ny)[6] <- "details"
+colnames(ny)[7] <- "lat"
+colnames(ny)[8] <- "long"
 
-column_rename(ny)
-column_rename(x = bo)
-column_rename(x = ch)
-column_rename(x = ha)
-#doesn't work but I'll look at that later
+colnames(bo)[1] <- "city"
+colnames(bo)[2] <- "group_name"
+colnames(bo)[3] <- "created"
+colnames(bo)[4] <- "category"
+colnames(bo)[5] <- "members"
+colnames(bo)[6] <- "details"
+colnames(bo)[7] <- "lat"
+colnames(bo)[8] <- "long"
+
+colnames(ha)[1] <- "city"
+colnames(ha)[2] <- "group_name"
+colnames(ha)[3] <- "created"
+colnames(ha)[4] <- "category"
+colnames(ha)[5] <- "members"
+colnames(ha)[6] <- "details"
+colnames(ha)[7] <- "lat"
+colnames(ha)[8] <- "long"
+
+colnames(ch)[1] <- "city"
+colnames(ch)[2] <- "group_name"
+colnames(ch)[3] <- "created"
+colnames(ch)[4] <- "category"
+colnames(ch)[5] <- "members"
+colnames(ch)[6] <- "details"
+colnames(ch)[7] <- "lat"
+colnames(ch)[8] <- "long"
+
 #top categories based on membership count
 top10 <- function(data) {
   data %>%
@@ -59,6 +79,10 @@ alltop10<-cbind(chtop10, hatop10, botop10, nytop10)
 topcatbymember(alltop10)+facet_wrap(~city)
 topcatbymember<-function(x){ggplot(data=x, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
 }
+
+ggplot(data=chtop10, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
+
+unique(ch$category)                                                                                                 
 topcatbymember(chtop10)+ labs(title = "Charlotte top categories by membership")
 topcatbymember(botop10)+labs(title = "Boston top categories by membership")
 topcatbymember(hatop10)+labs(title = "Hartford top categories by membership")
@@ -82,7 +106,7 @@ nygroups<-mostgroups(ny)
 bogroups<-mostgroups(bo)
 hagroups<-mostgroups(ha)
 
-topcatbygroup<-function(x){ggplot(data=x, aes(x=reorder(category, group_tot), y=group_tot))+geom_bar(stat="identity", aes(fill=group_tot)) +coord_flip()+ylab("Total groups")+xlab("Category")+scale_fill_continuous(name="top groups per category")
+topcatbygroup<-function(x){ggplot(data=x, aes(x=reorder(category, group_tot), y=group_tot))+geom_bar(stat="identity", aes(fill=group_tot)) +coord_flip()+ylab("Total groups")+xlab("Category")+scale_fill_continuous(name="total groups per category")
 }
 topcatbygroup(chgroups)+ labs(title = "Charlotte top categories by group number")
 topcatbygroup(bogroups)+labs(title = "Boston top categories by group number")
@@ -93,14 +117,7 @@ topcatbygroup(nygroups)+labs(title = "NY top categories by group number")
 ```
 
 ```{r}
-colnames(ny)[1] <- "city"
-colnames(ny)[2] <- "group_name"
-colnames(ny)[3] <- "created"
-colnames(ny)[4] <- "category"
-colnames(ny)[5] <- "members"
-colnames(ny)[6] <- "details"
-colnames(ny)[7] <- "lat"
-colnames(ny)[8] <- "long"
+
 
 nysocializing <- ny %>% 
   filter(category == "socializing")
@@ -117,14 +134,7 @@ nysports <- ny %>%
 
 ```{r}
 #Hartford
-colnames(ha)[1] <- "city"
-colnames(ha)[2] <- "group_name"
-colnames(ha)[3] <- "created"
-colnames(ha)[4] <- "category"
-colnames(ha)[5] <- "members"
-colnames(ha)[6] <- "details"
-colnames(ha)[7] <- "lat"
-colnames(ha)[8] <- "long"
+
 
 ctsocializing <- ha %>% 
   filter(category == "socializing")
@@ -141,14 +151,6 @@ ctsports <- ha %>%
 
 ```{r}
 #Boston
-colnames(bo)[1] <- "city"
-colnames(bo)[2] <- "group_name"
-colnames(bo)[3] <- "created"
-colnames(bo)[4] <- "category"
-colnames(bo)[5] <- "members"
-colnames(bo)[6] <- "details"
-colnames(bo)[7] <- "lat"
-colnames(bo)[8] <- "long"
 
 bosocializing <- bo %>% 
   filter(category == "socializing")
@@ -165,14 +167,7 @@ bosports <- bo %>%
 
 ```{r}
 #Charlotte
-colnames(ch)[1] <- "city"
-colnames(ch)[2] <- "group_name"
-colnames(ch)[3] <- "created"
-colnames(ch)[4] <- "category"
-colnames(ch)[5] <- "members"
-colnames(ch)[6] <- "details"
-colnames(ch)[7] <- "lat"
-colnames(ch)[8] <- "long"
+
 
 chsocializing <- ch %>% 
   filter(category == "socializing")
