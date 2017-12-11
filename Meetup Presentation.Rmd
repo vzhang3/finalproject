@@ -7,6 +7,7 @@ output: slidy_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
 require(tidyverse)
 require(jsonlite)
 require(httr)
@@ -142,7 +143,28 @@ chsports <- ch %>%
   filter(category == "sports/recreation")
 ```
 
+```{r}
+#creates df topics with number of groups per topic (fix this)
+mostgroups<- function(data){
+  topics <-data %>% 
+  group_by(category) %>% 
+  summarise(group_tot = n()) %>% 
+  arrange(desc(group_tot));topics %>% 
+    head(10)
+}
 
+chgroups<-mostgroups(ch)
+nygroups<-mostgroups(ny)
+bogroups<-mostgroups(bo)
+hagroups<-mostgroups(ha)
+
+topcatbygroup<-function(x){ggplot(data=x, aes(x=reorder(category, group_tot), y=group_tot))+geom_bar(stat="identity", aes(fill=group_tot)) +coord_flip()+ylab("Total groups")+xlab("Category")+scale_fill_continuous(name="total groups per category")
+}
+
+
+
+
+```
 
 ## Scenario
 
@@ -155,8 +177,8 @@ How can we measure category popularity?
 ## Methods
 
 - Scraped live group and event data from a Meetup API
-  - Cities: Boston, Charlotte, Hartford, and New York
-  - Radius 10 miles 
+- Cities: Boston, Charlotte, Hartford, and New York
+- Radius 10 miles 
 - Python and R
 - Converted html data to csv
 - Ran summary statistics on groups and membership
@@ -166,28 +188,62 @@ How can we measure category popularity?
 
 
 ## Categories
-
-
-
-## Results Boston and New York
-
-## Results Charlotte and Hartford
-
-
-
-## Map of New York
-
-
 ```{r}
-# map of NY with events as category
+unique(ch$category)
+```
 
+##New York
+```{r}
+topcatbygroup(nygroups)+labs(title = "NY top categories by group number")
+# map of NY with events as category
 NY  <- leaflet() %>%
   addTiles() %>%  
   #markers(Hartford)# Add default OpenStreetMap map tiles
   addMarkers(data=nysocializing, popup="social",icon=orangeIcon) %>% 
   addMarkers(data=nylanguage, popup="language",icon=greenIcon) %>% 
   addMarkers(data=nysports, popup="sports",icon=redIcon) %>% 
-  addMarkers(data=nytech, popup="tech",)
+  addMarkers(data=nytech, popup="tech")
 NY
 ```
 
+## Hartford
+```{r}
+topcatbygroup(hagroups)+labs(title = "Hartford top categories by group number")
+# map of Hartford
+hartfordmap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=ctsocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=ctlanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=ctsports, popup="sports",icon=redIcon) %>% 
+  addMarkers(data=cttech, popup="tech")
+hartfordmap
+```
+
+## Boston
+```{r}
+topcatbygroup(bogroups)+labs(title = "Boston top categories by group number")
+# map of Boston
+bostonmap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=bosocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=bolanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=bosports, popup="sports",icon=redIcon)%>% 
+  addMarkers(data=botech, popup="tech")
+bostonmap
+```
+
+## Charlotte
+```{r}
+topcatbygroup(chgroups)+ labs(title = "Charlotte top categories by group number")
+# map of Charlotte
+charlottemap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=chsocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=chlanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=chsports, popup="sports",icon=redIcon) %>% 
+  addMarkers(data=chtech, popup="tech")
+charlottemap
+```
