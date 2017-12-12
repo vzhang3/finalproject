@@ -192,7 +192,7 @@ topcatbymember<-function(x){ggplot(data=x, aes(x=reorder(category, members_tot),
 - Cities: Boston, Charlotte, Hartford, and New York
 - Radius 10 miles 
 - Python and R
-- Converted html data to csv
+- Converted JSON data to csv
 - Ran summary statistics on groups and membership
 - Determined the most popular categories per city based on each criteria
 - Made a map to see if any patterns appeared with regards to location
@@ -263,3 +263,11 @@ charlottemap  <- leaflet() %>%
   addMarkers(data=chtech, popup="tech")
 charlottemap
 ```
+
+## Conclusions
+- New york is great for socializing, career/business, language/ethnic identity, and tech meetups
+- Most NY meetup groups originated in Manhattan
+- Boston is great for tech, career/business, socializing, and health/wellbeing meetups
+- Boston meetup groups originated in Cambridge and the financial district
+
+-Limitations: groups, not events
