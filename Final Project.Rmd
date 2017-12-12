@@ -17,11 +17,8 @@ library(leaflet)
 library(maps)
 require(ggmap)
 
-#ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE, col_types = list(col_character(),col_character(),col_integer(),col_character(),col_integer(),col_character(),col_character(),col_character()))
+#read in the data sets
 ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
-ny$lat
-ny$lat<-as.numeric(ny$lat)
-#Still truncates the number!!!
 bo <- read_csv("data/MA.csv", col_names= FALSE)
 ch <- read_csv("data/NC.csv", col_names=FALSE)
 ha <- read_csv("data/CT.csv", col_names=FALSE)
@@ -62,6 +59,7 @@ colnames(ch)[5] <- "members"
 colnames(ch)[6] <- "details"
 colnames(ch)[7] <- "lat"
 colnames(ch)[8] <- "long"
+
 
 #top categories based on membership count
 top10 <- function(data) {

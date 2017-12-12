@@ -1,8 +1,11 @@
+
 ---
 title: "Let's Meetup!"
 author: "Victoria and Ian"
 date: "12/11/2017"
-output: slidy_presentation
+output:
+  slidy_presentation:
+    incremental: true
 ---
 
 ```{r setup, include=FALSE}
@@ -152,7 +155,13 @@ mostgroups<- function(data){
   arrange(desc(group_tot));topics %>% 
     head(10)
 }
-
+top10 <- function(data) {
+  data %>%
+    group_by(category, city) %>%
+    summarize(members_tot = sum(members), topgroup=max(members))  %>%
+    arrange(desc(members_tot)) %>%
+    head(10)
+}
 chgroups<-mostgroups(ch)
 nygroups<-mostgroups(ny)
 bogroups<-mostgroups(bo)
@@ -161,7 +170,12 @@ hagroups<-mostgroups(ha)
 topcatbygroup<-function(x){ggplot(data=x, aes(x=reorder(category, group_tot), y=group_tot))+geom_bar(stat="identity", aes(fill=group_tot)) +coord_flip()+ylab("Total groups")+xlab("Category")+scale_fill_continuous(name="total groups per category")
 }
 
-
+chtop10<-top10(data=ch)
+hatop10<-top10(data=ha)
+botop10<-top10(data=bo)
+nytop10<-top10(data=ny) 
+topcatbymember<-function(x){ggplot(data=x, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
+}
 
 
 ```
@@ -170,9 +184,7 @@ topcatbygroup<-function(x){ggplot(data=x, aes(x=reorder(category, group_tot), y=
 
 - Just moved into a new town, looking to meet new people!
 - What are some of the popular events in the area?
-- Bullet 3
-
-How can we measure category popularity? 
+- How can we measure category popularity? 
 
 ## Methods
 
@@ -195,6 +207,7 @@ unique(ch$category)
 ##New York
 ```{r}
 topcatbygroup(nygroups)+labs(title = "NY top categories by group number")
+topcatbymember(nytop10)+labs(title = "NY top categories by membership")
 # map of NY with events as category
 NY  <- leaflet() %>%
   addTiles() %>%  
@@ -209,6 +222,7 @@ NY
 ## Hartford
 ```{r}
 topcatbygroup(hagroups)+labs(title = "Hartford top categories by group number")
+topcatbymember(hatop10)+labs(title = "Hartford top categories by membership")
 # map of Hartford
 hartfordmap  <- leaflet() %>%
   addTiles() %>%  
@@ -223,6 +237,7 @@ hartfordmap
 ## Boston
 ```{r}
 topcatbygroup(bogroups)+labs(title = "Boston top categories by group number")
+topcatbymember(botop10)+labs(title = "Boston top categories by membership")
 # map of Boston
 bostonmap  <- leaflet() %>%
   addTiles() %>%  
@@ -237,6 +252,7 @@ bostonmap
 ## Charlotte
 ```{r}
 topcatbygroup(chgroups)+ labs(title = "Charlotte top categories by group number")
+topcatbymember(chtop10)+ labs(title = "Charlotte top categories by membership")
 # map of Charlotte
 charlottemap  <- leaflet() %>%
   addTiles() %>%  
