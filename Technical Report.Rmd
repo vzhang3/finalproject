@@ -5,6 +5,123 @@ date: "12/14/2017"
 output: pdf_document
 ---
 
+```{r}
+require(tidyverse)
+require(jsonlite)
+require(httr)
+require(devtools)
+require(jsonlite)
+require(dplyr)
+require(readr)
+library(shiny)
+library(shinyjs)
+library(leaflet)
+library(maps)
+require(ggmap)
+require(mosaic)
+
+#read in the data sets
+ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
+bo <- read_csv("data/MA.csv", col_names= FALSE)
+ch <- read_csv("data/NC.csv", col_names=FALSE)
+ha <- read_csv("data/CT.csv", col_names=FALSE)
+
+#Function to rename columns for each dataset
+colnames(ny)[1] <- "city"
+colnames(ny)[2] <- "group_name"
+colnames(ny)[3] <- "created"
+colnames(ny)[4] <- "category"
+colnames(ny)[5] <- "members"
+colnames(ny)[6] <- "details"
+colnames(ny)[7] <- "lat"
+colnames(ny)[8] <- "long"
+
+colnames(bo)[1] <- "city"
+colnames(bo)[2] <- "group_name"
+colnames(bo)[3] <- "created"
+colnames(bo)[4] <- "category"
+colnames(bo)[5] <- "members"
+colnames(bo)[6] <- "details"
+colnames(bo)[7] <- "lat"
+colnames(bo)[8] <- "long"
+
+colnames(ha)[1] <- "city"
+colnames(ha)[2] <- "group_name"
+colnames(ha)[3] <- "created"
+colnames(ha)[4] <- "category"
+colnames(ha)[5] <- "members"
+colnames(ha)[6] <- "details"
+colnames(ha)[7] <- "lat"
+colnames(ha)[8] <- "long"
+
+colnames(ch)[1] <- "city"
+colnames(ch)[2] <- "group_name"
+colnames(ch)[3] <- "created"
+colnames(ch)[4] <- "category"
+colnames(ch)[5] <- "members"
+colnames(ch)[6] <- "details"
+colnames(ch)[7] <- "lat"
+colnames(ch)[8] <- "long"
+
+
+#top categories based on membership count
+top10 <- function(data) {
+  data %>%
+    group_by(category, city) %>%
+    summarize(members_tot = sum(members), topgroup=max(members))  %>%
+    arrange(desc(members_tot)) %>%
+    head(10)
+}
+ chtop10<-top10(data=ch)
+ hatop10<-top10(data=ha)
+botop10<-top10(data=bo)
+nytop10<-top10(data=ny) 
+alltop10<-cbind(chtop10, hatop10, botop10, nytop10)
+
+
+#Graphic of top 10 categories (by membership count) across all 4 cities
+topcatbymember(alltop10)+facet_wrap(~city)
+
+
+topcatbymember<-function(x){ggplot(data=x, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
+}
+
+ggplot(data=chtop10, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
+
+unique(ch$category)                                                                                                 
+#topcatbymember(chtop10)+ labs(title = "Charlotte top categories by membership")
+#topcatbymember(botop10)+labs(title = "Boston top categories by membership")
+#topcatbymember(hatop10)+labs(title = "Hartford top categories by membership")
+#topcatbymember(nytop10)+labs(title = "NY top categories by membership")
+
+```
+
+
+```{r}
+#creates df topics with number of groups per topic (fix this)
+mostgroups<- function(data){
+  topics <-data %>% 
+  group_by(category) %>% 
+  summarise(group_tot = n()) %>% 
+  arrange(desc(group_tot));topics %>% 
+    head(10)
+}
+
+chgroups<-mostgroups(ch)
+nygroups<-mostgroups(ny)
+bogroups<-mostgroups(bo)
+hagroups<-mostgroups(ha)
+
+#topcatbygroup<-function(x){ggplot(data=x, aes(x=reorder(category, group_tot), y=group_tot))+geom_bar(stat="identity", aes(fill=group_tot)) +coord_flip()+ylab("Total groups")+xlab("Category")+scale_fill_continuous(name="total groups per category")
+}
+#topcatbygroup(chgroups)+ labs(title = "Charlotte top categories by group number")
+#topcatbygroup(bogroups)+labs(title = "Boston top categories by group number")
+#topcatbygroup(hagroups)+labs(title = "Hartford top categories by group number")
+#topcatbygroup(nygroups)+labs(title = "NY top categories by group number")
+
+
+```
+
 Evaluation Criteria:
 
  Information From Data: Did we learn anything meaningful from this project? Has the original question been answered? Are the chosen analyses appropriate for the variables/relationships under investigation, and are the assumptions underlying these analyses met? Are the analyses carried out correctly? Did the group make appropriate conclusions from the analyses, and are these conclusions justified?
@@ -27,25 +144,18 @@ Required for A) Self-Learning: Were any elements from outside the coursework nec
 
 **what code should we use..?**
 
+**we also need to build like a story like flow: abstract, 4 screenshots of the maps, intro etc.**
+
 
 > Abstract: a short, one paragraph explanation of your project. The abstract should be no more than six sentences. It should summarize what you studied and what you found. It need only convey a general sense of what you actually did (not all of the steps and iterations). The purpose of the abstract is to give a prospective reader enough information to decide if they want to read the full paper. A draft of this component of the report will be submitted (see Project summary in Timeline).
 
 
-This report is an analysis of MeetUp groups in 4 cities along the coast of the United States. Using data generated from Meetup group creations, we mapped the top 4 categories for New York (n=`r tally(ny) `), Hartford (n=`r tally(ha) `), Boston (n=`r tally(bo) `), and Charlotte (n=`r tally(ch) `). Our findings indicated that tech, and career business were the two most consistent meetup up categories within these cities. 
+This report is an analysis of MeetUp groups in 4 cities along the coast of the United States. Using data generated from Meetup group creations, we mapped the top 4 categories for New York (n=`r tally(ny) `), Hartford (n=`r tally(ha) `), Boston (n=`r tally(bo) `), and Charlotte (n=`r tally(ch) `). Our findings indicated that socializing, tech, and career business were the three most consistent meetup up categories within these cities. 
 
 
 > Introduction: an overview of your project. In a few paragraphs, you should explain clearly and precisely what your research question is, why it is interesting, and what contribution you have made towards answering that question. You should give an overview of the specifics of your model, but not the full details. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper!
 
-Today, seven-in-ten Americans use social media as a tool for engaging with their surrounding communities. The increased use of _____, has created a **vault**/**trove** of data that can be use in the analysis of social trends and habits. 
-
-**Research Question:** What are the most popular Meet Up events in various cities along the east coast?
-
-**Why its interesting:** It is important to understand the social climate of an area when deciding to move to a new city. This is especially important if you have no prior knowledge of **events**, **an area**, **its culture**. 
-
-
-
-
-Overview of our model: First we scraped live group data from MeetUp's API for 4 cities and saved them on a csv. After merging latitude and longitude data from events and running summary analysis, we imposed groups on a map using the Leaflet package in R.
+Today, seven-in-ten Americans use social media as a tool for engaging with their surrounding communities. The increased use of _____, has created a **vault**/**trove** of data that can be use in the analysis of social trends and habits. To help give a better idea of this informations potential use, let us imagine a situation: Victoria is a recent graduate who has been offered jobs in several cities. In deciding where to move, she **would like a better sense the social habits and trends** of each's respective communities. Unbeknownst to many, she is a talented ultimate frisbee player and would like to move to a city that has several teams available. When deciding to move to a new city, it is important to understand the social climate of an area. This is especially important if you have no prior knowledge of **events**, **an area**, **its culture**. Meetup is an app someone like Victoria would likely use in search of her future little friends. However one shortcoming of Meetup is that there is little to no summary statistics presented on groups within an area. **Research Question:** The goal of our project was to create graphics that displayed the most popular Meetup events in various cities along the east coast.**Overview of our model:** First we scraped live group data from MeetUp's API for 4 cities and saved them on a csv. After merging latitude and longitude data from events and running summary analysis, we imposed groups on a map using the Leaflet package in R.
 
 > Data: a brief description of your data set. What variables are included? Where did they come from? What are units of measurement? What is the population that was sampled? How was the sample collected? You should also include some basic univariate analysis. Here is where you should read in the data, derive new variables, and fit models.
 
@@ -61,9 +171,14 @@ Our data sets are composed of geographical and summary information for each of t
 * **long**: longitude of **events**
 
 
-Our population is meetup events being created at the time we ran our api call for each city.
+Our population is meetup events being created at the time we ran our api call for each city. 
 
 Given the variance in group creation
+
+A list of categories has been provided below.
+```{r}
+unique(ch$category) 
+```
 
 
 
