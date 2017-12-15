@@ -23,22 +23,27 @@ Required for A) Self-Learning: Were any elements from outside the coursework nec
 
 ** we need to establish that when we say events we mean group base location. Also that when a group is created and a hometown is chosen, the latitudes and longitudes are as user specified. Ex) saying your group is in queens along with 100 other people means there will be 101 groups at the same latitude and longitude. That is why our markers overlap!!** In the limitations maybe?
 
+** I have been using words like group, event, and category interchangeaably and really poorly**.
+
+**what code should we use..?**
 
 
 > Abstract: a short, one paragraph explanation of your project. The abstract should be no more than six sentences. It should summarize what you studied and what you found. It need only convey a general sense of what you actually did (not all of the steps and iterations). The purpose of the abstract is to give a prospective reader enough information to decide if they want to read the full paper. A draft of this component of the report will be submitted (see Project summary in Timeline).
 
-Today, seven-in-ten Americans use social media as a tool for engaging with their surrounding communities. The increased use of _____, has created a **vault**/**trove** of data that can be use in the analysis of social trends and habits. This report is an analysis of MeetUp groups in 4 cities along the coast of the United States. Our findings indicate they top events in New York, Charlotte, Boston, and Hartford, and generate a map of these events in each city. 
+
+This report is an analysis of MeetUp groups in 4 cities along the coast of the United States. Using data generated from Meetup group creations, we mapped the top 4 categories for New York (n=`r tally(ny) `), Hartford (n=`r tally(ha) `), Boston (n=`r tally(bo) `), and Charlotte (n=`r tally(ch) `). Our findings indicated that tech, and career business were the two most consistent meetup up categories within these cities. 
 
 
 > Introduction: an overview of your project. In a few paragraphs, you should explain clearly and precisely what your research question is, why it is interesting, and what contribution you have made towards answering that question. You should give an overview of the specifics of your model, but not the full details. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper!
 
-Research Question: What are the most popular Meet Up events in various cities along the east coast?
+Today, seven-in-ten Americans use social media as a tool for engaging with their surrounding communities. The increased use of _____, has created a **vault**/**trove** of data that can be use in the analysis of social trends and habits. 
 
-Why its interesting: It is important to understand the social climate of an area when deciding to move to a new city. This is especially important if you have no prior knowledge of **events**, **an area**, **its culture**. 
+**Research Question:** What are the most popular Meet Up events in various cities along the east coast?
+
+**Why its interesting:** It is important to understand the social climate of an area when deciding to move to a new city. This is especially important if you have no prior knowledge of **events**, **an area**, **its culture**. 
 
 
 
-Our aspirations were sadly cut short due to a several errors with code translation.
 
 Overview of our model: First we scraped live group data from MeetUp's API for 4 cities and saved them on a csv. After merging latitude and longitude data from events and running summary analysis, we imposed groups on a map using the Leaflet package in R.
 
@@ -66,6 +71,26 @@ Given the variance in group creation
 
 > Diagnostics: a full diagnostic analysis of your model, with interpretation of Figures that you provide.
 
+The first step was specifying a python api call.  
+
+* sublime phython text then what it does (victoria steals the show)
+  * how we added latitude and longitude of group locations (hometown)
+* mapped with Leaflet
+
 > Conclusion: a summary of your findings and a discussion of their limitations. First, remind the reader of the question that you originally set out to answer, and summarize your findings. Second, discuss the limitations of your model, and what could be done to improve it. You might also want to do the same for your data. This is your last opportunity to clarify the scope of your findings before a journalist misinterprets them and makes wild extrapolations! Protect yourself by being clear about what is not implied by your research.
 
-Limitations: Our initial goal was to create a Shiny map that displayed the top events in each city. We intended to have a live pull of Meet Up reservation pull our data from Meet Up's api. 
+In New York, the top categories were socializing, career, language, and tech. 
+
+In Hartford, the top categories were career, tech, health, and socializing.
+
+In Boston, the top categories were tech, career, socializing, and health.
+
+In Charlotte, the top categories were career, tech, socializing, and health. 
+
+In the two smaller cities (Hartford and Charlotte) career/business groups were most prevalent. This was unlike New York and Boston where socializing and tech were the respective **dominants**. 
+
+Overall, it is quite intuitive why tech, career, and socializing were the most prevalent groups amongst these cities. Meetup's platform targets **those dealing in these industries**, and it is logical to conclude users are on a tech/socializing app to tech and socialize.
+
+Limitations: Our initial goal was to create a Shiny map that displayed the top **events** in each city. We intended to have a live pull of reservations from Meet Up's api. We had to settle for groups hometown locations however because our R script did not run consistently enough for us to us it in our analysis. Additionally the plotting of groups provided and source of frustration during our project. We noticed that several markers overlapped. We though this was because they were hosted in the same locations. **Maybe leaflet with cluster effect showing all tech groups at one location**. When we remembered that these were group creations being made at the time of the call, we were slightly more suspicious as to why so many overlapped. **Maybe a leaflet showing a red marker on a point, and a green marker on the same point**. After hours deliberating before our presentation, we concluded this was a result of MeetUp's location services. When making a group, users are asked for a 'hometown'. The latitude and longitude are only as precise as one specifies. Imagine 10 groups being created in washingston heights (different categories) all getting mapped to the same location. Thus overlapping markers made the graphic a somewhat inaccurate representation of top categories. 
+
+Our aspirations were sadly cut short due to a several errors with code translation.
