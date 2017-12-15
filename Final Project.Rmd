@@ -115,7 +115,7 @@ topcatbygroup(nygroups)+labs(title = "NY top categories by group number")
 ```
 
 ```{r}
-
+#ny
 
 nysocializing <- ny %>% 
   filter(category == "socializing")
@@ -149,6 +149,10 @@ ctsports <- ha %>%
 
 ```{r}
 #Boston
+
+bosports <- Boston_MA %>% 
+  filter(category == "sports/recreation")
+
 
 bosocializing <- bo %>% 
   filter(category == "socializing")
