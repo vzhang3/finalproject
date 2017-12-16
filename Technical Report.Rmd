@@ -5,7 +5,7 @@ date: "12/14/2017"
 output: pdf_document
 ---
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 require(tidyverse)
 require(jsonlite)
 require(httr)
@@ -79,26 +79,22 @@ nytop10<-top10(data=ny)
 alltop10<-cbind(chtop10, hatop10, botop10, nytop10)
 
 
-#Graphic of top 10 categories (by membership count) across all 4 cities
-topcatbymember(alltop10)+facet_wrap(~city)
+
 
 
 topcatbymember<-function(x){ggplot(data=x, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
 }
 
+#Graphic of top 10 categories (by membership count) across all 4 cities<-this isn't working
+topcatbymember(alltop10)+facet_wrap(~city)
 ggplot(data=chtop10, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
 
-unique(ch$category)                                                                                                 
-#topcatbymember(chtop10)+ labs(title = "Charlotte top categories by membership")
-#topcatbymember(botop10)+labs(title = "Boston top categories by membership")
-#topcatbymember(hatop10)+labs(title = "Hartford top categories by membership")
-#topcatbymember(nytop10)+labs(title = "NY top categories by membership")
 
 ```
 
 
 ```{r}
-#creates df topics with number of groups per topic (fix this)
+#creates df topics with number of groups per topic 
 mostgroups<- function(data){
   topics <-data %>% 
   group_by(category) %>% 
@@ -112,12 +108,6 @@ nygroups<-mostgroups(ny)
 bogroups<-mostgroups(bo)
 hagroups<-mostgroups(ha)
 
-#topcatbygroup<-function(x){ggplot(data=x, aes(x=reorder(category, group_tot), y=group_tot))+geom_bar(stat="identity", aes(fill=group_tot)) +coord_flip()+ylab("Total groups")+xlab("Category")+scale_fill_continuous(name="total groups per category")
-}
-#topcatbygroup(chgroups)+ labs(title = "Charlotte top categories by group number")
-#topcatbygroup(bogroups)+labs(title = "Boston top categories by group number")
-#topcatbygroup(hagroups)+labs(title = "Hartford top categories by group number")
-#topcatbygroup(nygroups)+labs(title = "NY top categories by group number")
 
 
 ```
@@ -155,7 +145,7 @@ This report is an analysis of MeetUp groups in 4 cities along the coast of the U
 
 > Introduction: an overview of your project. In a few paragraphs, you should explain clearly and precisely what your research question is, why it is interesting, and what contribution you have made towards answering that question. You should give an overview of the specifics of your model, but not the full details. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper!
 
-Today, seven-in-ten Americans use social media as a tool for engaging with their surrounding communities. The increased use of _____, has created a **vault**/**trove** of data that can be use in the analysis of social trends and habits. To help give a better idea of this informations potential use, let us imagine a situation: Victoria is a recent graduate who has been offered jobs in several cities. In deciding where to move, she **would like a better sense the social habits and trends** of each's respective communities. Unbeknownst to many, she is a talented ultimate frisbee player and would like to move to a city that has several teams available. When deciding to move to a new city, it is important to understand the social climate of an area. This is especially important if you have no prior knowledge of **events**, **an area**, **its culture**. Meetup is an app someone like Victoria would likely use in search of her future little friends. However one shortcoming of Meetup is that there is little to no summary statistics presented on groups within an area. **Research Question:** The goal of our project was to create graphics that displayed the most popular Meetup events in various cities along the east coast.**Overview of our model:** First we scraped live group data from MeetUp's API for 4 cities and saved them on a csv. After merging latitude and longitude data from events and running summary analysis, we imposed groups on a map using the Leaflet package in R.
+Today, seven-in-ten Americans use social media as a tool for engaging with their surrounding communities. The increased use of social networks, has created a **vault**/**trove** of data that can be use in the analysis of social trends and habits. To help give a better idea of this informations potential use, let us imagine a situation: Victoria is a recent graduate who has been offered jobs in several cities. In deciding where to move, she **would like a better sense the social habits and trends** of each respective communities. Unbeknownst to many, she is a talented latin dancer and would like to move to a city that has multiple meetups where she would be able to meet new people to dance with. When deciding to move to a new city, it is important to understand the social climate of an area. This is especially important if you have no prior knowledge of **events**, **an area**, **its culture**. Meetup is an app someone like Victoria would likely use in search of her future  friends. However one shortcoming of Meetup is that there are no summary statistics presented on groups or categories within an area. **Research Question:** The goal of our project was to create graphics that displayed the most popular Meetup events in various cities along the east coast. We were also hoping to additionally map the events to give better geospacial data of where certain types of events would probably be located. **Overview of our model:** First we scraped live group data from MeetUp's API for 4 cities and saved them as csv with python code. We group the data based on group category and count membership and group total in each of the four cities. We also merged latitude and longitude data from the groups, and we imposed groups on a map using the Leaflet package in R.
 
 > Data: a brief description of your data set. What variables are included? Where did they come from? What are units of measurement? What is the population that was sampled? How was the sample collected? You should also include some basic univariate analysis. Here is where you should read in the data, derive new variables, and fit models.
 
@@ -163,7 +153,7 @@ Our data sets are composed of geographical and summary information for each of t
 
 * **city**: the name of the city 
 * **group_name**: the name of the group 
-* **created**: time the group was created
+* **created**: time the group was created in milliseconds 
 * **category**: umbrella category groups fall into (dancing, tech)
 * **members**: total number of members
 * **details**: focus of the group (salsa dancing, robot battling)
@@ -189,18 +179,43 @@ unique(ch$category)
 The first step was specifying a python api call.  
 
 * sublime phython text then what it does (victoria steals the show)
-  * how we added latitude and longitude of group locations (hometown)
+* how we added latitude and longitude of group locations (hometown)
 * mapped with Leaflet
 
 > Conclusion: a summary of your findings and a discussion of their limitations. First, remind the reader of the question that you originally set out to answer, and summarize your findings. Second, discuss the limitations of your model, and what could be done to improve it. You might also want to do the same for your data. This is your last opportunity to clarify the scope of your findings before a journalist misinterprets them and makes wild extrapolations! Protect yourself by being clear about what is not implied by your research.
 
-In New York, the top categories were socializing, career, language, and tech. 
+In New York, the top categories by membership count were socializing, tech, career, and outdoors/adventure. There were significant differences between the total amount of people who were in socializing groups than the total amount of people in tech groups, as evidenced by the significant difference in proportions of people in socializing groups versus in tech groups.  
+```{r}
+topcatbymember(nytop10)+labs(title = "NY top categories by membership")
+ny %>% summarise(totalgroupmembership=sum(members))
+is_socializing<-c(318613,219107)
+totalny<-c(1835516, 1835516)
+prop.test(is_socializing,totalny)
+
+#trying to make a vector to figure out if there are differences between all the groups
+ny_vector<-nytop10 %>% summarise(totalgroupmembership=sum(members_tot), failures=1835516-totalgroupmembership) %>% arrange(desc(totalgroupmembership))
+nyproptest<-ny_vector %>% select(totalgroupmembership, failures)
+nyproptest<-data.matrix(nyproptest, rownames.force = NA)
+stats::prop.test(nyproptest)
+```
 
 In Hartford, the top categories were career, tech, health, and socializing.
+```{r}
+topcatbymember(hatop10)+labs(title = "Hartford top categories by membership")
+
+```
 
 In Boston, the top categories were tech, career, socializing, and health.
+```{r}
+topcatbymember(botop10)+labs(title = "Boston top categories by membership")
+
+```
 
 In Charlotte, the top categories were career, tech, socializing, and health. 
+```{r}
+topcatbymember(chtop10)+ labs(title = "Charlotte top categories by membership")
+
+```
 
 In the two smaller cities (Hartford and Charlotte) career/business groups were most prevalent. This was unlike New York and Boston where socializing and tech were the respective **dominants**. 
 

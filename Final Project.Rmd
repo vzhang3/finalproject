@@ -74,9 +74,12 @@ top10 <- function(data) {
 botop10<-top10(data=bo)
 nytop10<-top10(data=ny) 
 alltop10<-cbind(chtop10, hatop10, botop10, nytop10)
-topcatbymember(alltop10)+facet_wrap(~city)
+
 topcatbymember<-function(x){ggplot(data=x, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
 }
+
+topcatbymember(alltop10)+facet_wrap(~city)
+
 
 ggplot(data=chtop10, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
 
@@ -150,8 +153,6 @@ ctsports <- ha %>%
 ```{r}
 #Boston
 
-bosports <- Boston_MA %>% 
-  filter(category == "sports/recreation")
 
 
 bosocializing <- bo %>% 
@@ -231,10 +232,6 @@ NY  <- leaflet() %>%
   addMarkers(data=nytech, popup="tech",)
 NY
 
-map <-  get_map(location="newyork",zoom=12,source="google")
-
-ggmap(map) + geom_point(data=ny, aes(x=lat, y=long), alpha=-.3, show.legend = FALSE)
-ggmap(map)
 ```
 
 ```{r}
