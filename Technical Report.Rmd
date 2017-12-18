@@ -194,7 +194,7 @@ Evaluation Criteria:
 
 ## Abstract
 
-This report is an analysis of MeetUp groups in 4 cities along the coast of the United States. Using data generated from Meetup group creations, we mapped the top 4 categories for New York (n=`r tally(ny) `), Hartford (n=`r tally(ha) `), Boston (n=`r tally(bo) `), and Charlotte (n=`r tally(ch) `). Our findings indicated that socializing, tech, and career business were the three most consistent top meetup up categories within these cities. We ran X-squared tests for proportions of people in socializing, tech, and dance groups. We found that Boston had the greatest number of people in socializing and tech gruops, while Charlotte had the greatest proportion of people in dancing groups. 
+This report is an analysis of MeetUp groups in 4 cities along the coast of the United States. Using data generated from Meetup group creations, we mapped the top 4 categories for New York (n=`r tally(ny) `), Hartford (n=`r tally(ha) `), Boston (n=`r tally(bo) `), and Charlotte (n=`r tally(ch) `). Our findings indicated that socializing, tech, and career business were the three most consistent top meetup up categories within these cities. We ran X-squared tests for proportions of people in socializing, tech, and dance groups. We found significant differences between the groups and that Boston had the greatest number of people in socializing and tech gruops, while Charlotte had the greatest proportion of people in dancing groups. 
 
 
 ## Introduction

@@ -16,7 +16,7 @@ for(i in i:length(cities)){
   city <- cities[i]
   state <- states[i]
 # pull event data
-events_url <- sprintf('https://api.meetup.com/2/open_events?key=62c15445c44f4e5473e7e3e164d7f&country=us&offset=0&city=%s&state=%s&radius=10.0&sign=true', 
+events_url <- sprintf('https://api.meetup.com/2/open_events?key="insertkeyhere"&country=us&offset=0&city=%s&state=%s&radius=10.0&sign=true', 
                       city, state)
 x <- GET(events_url)
 y <- fromJSON(as.character(x))
@@ -47,7 +47,7 @@ events_df <-  events_df_by_group %>%
 # group_url <- 'https://api.meetup.com/2/groups?country=us&offset=0&city=Hartford&format=json&lon=-72.6699981689&photo-host=public&state=ct&page=20&radius=10.0&fields=&lat=41.7900009155&order=id&desc=false&sig_id=189051097&sig=a352c27062e37a18215697e5a612194d7de67dba'
 
 
-groups_url <- sprintf('https://api.meetup.com/2/groups?key=62c15445c44f4e5473e7e3e164d7f&country=us&offset=0&city=%s&state=%s&radius=10.0&sign=true', 
+groups_url <- sprintf('https://api.meetup.com/2/groups?key="insertkeyhere"&country=us&offset=0&city=%s&state=%s&radius=10.0&sign=true', 
                       city, state)
 
 
@@ -92,7 +92,6 @@ write.csv(finalCity, filepath)
   
 }
 
-finalHartford
 
 
 
