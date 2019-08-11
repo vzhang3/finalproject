@@ -1,0 +1,419 @@
+---
+title: "Techincal Report - Meetup"
+author: "Victoria and Ian"
+date: "12/14/2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r, include=FALSE, echo=FALSE}
+require(tidyverse)
+require(jsonlite)
+require(httr)
+require(devtools)
+require(jsonlite)
+require(dplyr) 
+require(readr)
+library(shiny)
+library(shinyjs)
+library(leaflet)
+library(maps)
+require(ggmap)
+require(mosaic)
+
+#read in the data sets
+ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
+bo <- read_csv("data/MA.csv", col_names= FALSE)
+ch <- read_csv("data/NC.csv", col_names=FALSE)
+ha <- read_csv("data/CT.csv", col_names=FALSE)
+
+#Function to rename columns for each dataset
+colnames(ny)[1] <- "city"
+colnames(ny)[2] <- "group_name"
+colnames(ny)[3] <- "created"
+colnames(ny)[4] <- "category"
+colnames(ny)[5] <- "members"
+colnames(ny)[6] <- "details"
+colnames(ny)[7] <- "lat"
+colnames(ny)[8] <- "long"
+
+colnames(bo)[1] <- "city"
+colnames(bo)[2] <- "group_name"
+colnames(bo)[3] <- "created"
+colnames(bo)[4] <- "category"
+colnames(bo)[5] <- "members"
+colnames(bo)[6] <- "details"
+colnames(bo)[7] <- "lat"
+colnames(bo)[8] <- "long"
+
+colnames(ha)[1] <- "city"
+colnames(ha)[2] <- "group_name"
+colnames(ha)[3] <- "created"
+colnames(ha)[4] <- "category"
+colnames(ha)[5] <- "members"
+colnames(ha)[6] <- "details"
+colnames(ha)[7] <- "lat"
+colnames(ha)[8] <- "long"
+
+colnames(ch)[1] <- "city"
+colnames(ch)[2] <- "group_name"
+colnames(ch)[3] <- "created"
+colnames(ch)[4] <- "category"
+colnames(ch)[5] <- "members"
+colnames(ch)[6] <- "details"
+colnames(ch)[7] <- "lat"
+colnames(ch)[8] <- "long"
+
+#top categories based on membership count
+top10 <- function(data) {
+  data %>%
+    group_by(category, city) %>%
+    summarize(members_tot = sum(members), topgroup=max(members))  %>%
+    arrange(desc(members_tot)) %>%
+    head(10)
+}
+chtop10<-top10(data=ch)
+hatop10<-top10(data=ha)
+botop10<-top10(data=bo)
+nytop10<-top10(data=ny) 
+alltop10<-cbind(chtop10, hatop10, botop10, nytop10)
+
+
+#Function that creates bar graph for categories with the most members
+topcatbymember<-function(x){ggplot(data=x, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
+}
+
+#creates df topics with number of groups per topic 
+mostgroups<- function(data){
+  topics <-data %>% 
+  group_by(category) %>% 
+  summarise(group_tot = n()) %>% 
+  arrange(desc(group_tot));topics %>% 
+    head(10)
+}
+
+chgroups<-mostgroups(ch)
+nygroups<-mostgroups(ny)
+bogroups<-mostgroups(bo)
+hagroups<-mostgroups(ha)
+
+#Leaflet Map Icons
+greenIcon <- makeIcon(
+  iconUrl = "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
+  iconWidth = 25, iconHeight = 41,
+  iconAnchorX = 12, iconAnchorY = 41
+)
+
+redIcon <- makeIcon(
+  iconUrl = "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
+  iconWidth = 25, iconHeight = 41,
+  iconAnchorX = 12, iconAnchorY = 41
+)
+
+orangeIcon <- makeIcon(
+  iconUrl = "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
+  iconWidth = 25, iconHeight = 41,
+  iconAnchorX = 12, iconAnchorY = 41
+)
+
+
+#NY markers
+
+nysocializing <- ny %>% 
+  filter(category == "socializing")
+
+nylanguage <- ny %>% 
+  filter(category == "language/ethnic identity")
+
+nytech <- ny %>% 
+  filter(category == "tech")
+
+nysports <- ny %>% 
+  filter(category == "sports/recreation")
+
+
+#Hartford markers
+
+ctsocializing <- ha %>% 
+  filter(category == "socializing")
+
+ctlanguage <- ha %>% 
+  filter(category == "language/ethnic identity")
+
+cttech <- ha %>% 
+  filter(category == "tech")
+
+ctsports <- ha %>% 
+  filter(category == "sports/recreation")
+
+
+#Boston markers
+
+bosocializing <- bo %>% 
+  filter(category == "socializing")
+
+bolanguage <- bo %>% 
+  filter(category == "language/ethnic identity")
+
+botech <- bo %>% 
+  filter(category == "tech")
+
+bosports <- bo %>% 
+  filter(category == "sports/recreation")
+
+
+#Charlotte markers
+
+chsocializing <- ch %>% 
+  filter(category == "socializing")
+
+chlanguage <- ch %>% 
+  filter(category == "language/ethnic identity")
+
+chtech <- ch %>% 
+  filter(category == "tech")
+
+chsports <- ch %>% 
+  filter(category == "sports/recreation")
+
+```
+
+
+```{r, echo=FALSE, include=FALSE}
+
+#Graphic of top 10 categories (by membership count) across all 4 cities<-this isn't working
+topcatbymember(alltop10)+facet_wrap(~city)
+ggplot(data=chtop10, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
+```
+
+Evaluation Criteria:
+
+
+> Abstract: a short, one paragraph explanation of your project. The abstract should be no more than six sentences. It should summarize what you studied and what you found. It need only convey a general sense of what you actually did (not all of the steps and iterations). The purpose of the abstract is to give a prospective reader enough information to decide if they want to read the full paper. A draft of this component of the report will be submitted (see Project summary in Timeline).
+
+## Abstract
+
+This report is an analysis of MeetUp groups in 4 cities along the coast of the United States. Using data generated from Meetup group creations, we mapped the top 4 categories for New York (n=`r tally(ny) `), Hartford (n=`r tally(ha) `), Boston (n=`r tally(bo) `), and Charlotte (n=`r tally(ch) `). Our findings indicated that socializing, tech, and career business were the three most consistent top meetup up categories within these cities. We ran X-squared tests for proportions of people in socializing, tech, and dance groups. We found significant differences between the groups and that Boston had the greatest number of people in socializing and tech gruops, while Charlotte had the greatest proportion of people in dancing groups. 
+
+
+## Introduction
+
+> Introduction: an overview of your project. In a few paragraphs, you should explain clearly and precisely what your research question is, why it is interesting, and what contribution you have made towards answering that question. You should give an overview of the specifics of your model, but not the full details. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper!
+
+Today, seven-in-ten Americans use social media as a tool for engaging with their surrounding communities. The increased use of social networks, has created an abundance of data that can be used in the analysis of social trends and habits. To help give a better idea of this information's potential use, let us imagine a scenario: Victoria is a recent graduate who has been offered jobs in several cities. Unbeknownst to many, she is a talented latin dancer and would like to move to a city that has multiple meetups where she would be able to meet new people to dance with. When deciding to move to a new city, it is important to understand the social climate of an area. Meetup is an app someone like Victoria would likely use in search of her future friends. However one shortcoming of Meetup is that there are no summary statistics presented on groups or categories within an area. The goal of our project was to create graphics that displayed the most popular categories of Meetup events in various cities along the east coast, and plot the events on a map. First we scraped live group data from MeetUp's API for 4 cities and saved them as csv with a python and an R call. We then grouped the data based on group category and membership count within each category and group number in each category in each of the four cities. Lastly, we merged latitude and longitude data from the groups, and imposed groups on a map using the Leaflet package in R.
+
+
+
+## Data
+
+> Data: a brief description of your data set. What variables are included? Where did they come from? What are units of measurement? What is the population that was sampled? How was the sample collected? You should also include some basic univariate analysis. Here is where you should read in the data, derive new variables, and fit models.
+
+Our data sets are composed of geographical and summary information for each of the 4 cities. Complete definitions of our variables are as follows:
+
+* **city**: the name of the city 
+* **group_name**: the name of the group 
+* **created**: time the group was created in milliseconds since the epoch
+* **category**: umbrella category groups fall into (dancing, tech)
+* **members**: total number of members
+* **details**: focus of the group (salsa dancing, robot battling)
+* **lat**: latitude of **groups** (group creation)
+* **long**: longitude of **groups** (group creation)
+
+Our population is meetup groups created at the time we ran our api call for each city. 
+
+A list of categories has been provided below.
+```{r, echo=FALSE}
+unique(ch$category) 
+```
+
+## Results
+
+> Results: an explanation of what your model tells me about the research question. You should interpret coefficients in context and explain their relevance. What does your model tell me that I didn’t already know before? You may want to include negative results, but be careful about how you interpret them. For example, you may want to say something along the lines of: “we found no evidence that explanatory variable x is associated with response variable y”, or “explanatory variable x did not provide any additional explanatory power above what was already conveyed by explanatory variable z.” On other hand, you probably shouldn’t claim: “there is no relationship between x and y.”
+
+```{r, echo=FALSE}
+topcatbymember(nytop10)+labs(title = "NY top categories by membership")
+
+```
+
+In New York, the top categories by membership count were socializing, tech, career, and outdoors/adventure. There were significant differences between the total amount of people who were in socializing groups than the total amount of people in tech groups, as evidenced by the significant difference in proportions of people in socializing groups versus in tech groups. When we ran a t test for difference in proportions we found that there were at least one significant difference in proportions.  
+
+```{r, warning=FALSE, message=FALSE}
+# map of NY with events as category
+
+NY  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=nysocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=nylanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=nysports, popup="sports",icon=redIcon) %>% 
+  addMarkers(data=nytech, popup="tech")
+NY
+```
+
+
+```{r, echo=FALSE}
+topcatbymember(hatop10)+labs(title = "Hartford top categories by membership")
+```
+
+In Hartford, the top categories were outdoors/adventure, socializing, and health/wellbeing. From the coloring of the categories, we can tell that the outdoors/adventure category has the largest group, and the rest of the groups largest membership is smaller. This means that there is one large group for outdoors/adventure versus many smaller groups for socializing.
+
+```{r, warning=FALSE, message=FALSE}
+# map of Hartford
+hartfordmap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=ctsocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=ctlanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=ctsports, popup="sports",icon=redIcon) %>% 
+  addMarkers(data=cttech, popup="tech")
+
+hartfordmap
+```
+
+
+```{r, echo=FALSE}
+topcatbymember(botop10)+labs(title = "Boston top categories by membership")
+
+```
+
+In Boston, the top categories were socializing, tech, outdoors/adventure, and career/business.Interestingly, the biggest tech group is bigger than the biggest socializing group, suggesting a bigger tech meetup and relatively smaller socializing meetups.  
+
+```{r, warning=FALSE, message=FALSE}
+# map of Boston
+bostonmap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=bosocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=bolanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=bosports, popup="sports",icon=redIcon)%>% 
+  addMarkers(data=botech, popup="tech")
+bostonmap
+```
+
+```{r, echo=FALSE}
+topcatbymember(chtop10)+ labs(title = "Charlotte top categories by membership")
+```
+
+In Charlotte, the top categories were socializing, career/business, tech, and outdoors/adventure. The biggest group is the in the category of food and drink, which is interesting because it suggests that most of the food groups meet under one group. The top four categories in Charlotte are all made of many smaller groups.
+
+```{r, warning=FALSE, message=FALSE}
+# map of Charlotte
+charlottemap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=chsocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=chlanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=chsports, popup="sports",icon=redIcon) %>% 
+  addMarkers(data=chtech, popup="tech")
+
+charlottemap
+
+```
+
+## X-squared test
+
+```{r, echo=FALSE, include=FALSE}
+#trying to make a vector to figure out if there are differences between all the groups
+#ny_vector<-nytop10 %>% summarise(totalgroupmembership=sum(members_tot), failures=1835516-totalgroupmembership) %>% arrange(desc(totalgroupmembership))
+#nyproptest<-ny_vector %>% select(totalgroupmembership, failures)
+#nyproptest<-data.matrix(nyproptest, rownames.force = NA)
+#stats::prop.test(nyproptest)
+```
+
+```{r, include=FALSE}
+#new york socializing 
+ny %>% summarise(totalgroupmembership=sum(members)) #new york has total membership of 1835516 people
+ha %>% summarise(totalgroupmembership=sum(members)) #total is 96239
+ch %>% filter(!is.na(members)) %>%  summarise(totalgroupmembership=sum(members)) #total is 460062
+bo %>% filter(!is.na(members))%>% summarise(totalgroupmembership=sum(members)) #total is 462942
+hatop10
+botop10
+```
+
+```{r}
+is_socializing<-c(318613,89906,74401,10145)#new york, boston, charlotte, and hartford socializing total members respectively
+is_tech<-c(219107,77412,55143,4941)
+
+total<-c(1835516, 462942,460062, 96239)
+prop.test(is_socializing,total)
+prop.test(is_tech, total)
+```
+
+
+From these results, we know that there are significant differences in proportion of meetup members in socializing groups between at least two of the cities. Because the p-value is less than 2.2e-16, we reject the null hypothesis that there are no significant differences in meetup membership. Based on the highest proportion of people who are in socializing groups in Boston, we conclude that Boston is actually the best place to go and socialize with 19% of its total membership in socializing groups. We ran the same test for tech groups, and also found that Boston has the greatest proportion of total membership in tech groups (16%). We also discovered significant differences between at least two of the cities (p-value < 2.2e-16). We can therefore say, if you are interested in those particular catagories, Boston is a great place to go. But for other categories, other places may be great to go. My original question was about dancing, so let's see what places would be good for dancing. 
+
+```{r}
+#dancing numbers
+top20 <- function(data) {
+  data %>%
+    group_by(category, city) %>%
+    summarize(members_tot = sum(members), topgroup=max(members))  %>%
+    arrange(desc(members_tot)) %>%
+    head(20)
+}
+#top20(bo) used to discover number of people in dancing groups in Boston
+#top20(ny) used to discover number of people in dancing groups in NY
+is_dance<-c(41019,7789,18417,2805)
+prop.test(is_dance,total)
+```
+
+There are significant difference between at least two of the groups (p-value < 2.2e-16) and Charlotte seems like it's the best place to go if I want to dance! Interesting.
+
+
+
+## Diagnostics
+
+> Diagnostics: a full diagnostic analysis of your model, with interpretation of Figures that you provide.
+
+The first step was creating an api call to get the variables for different events or groups. We made an API call through python and R code. It used an html request to obtain JSON data.We got the JSON in two ways. First we did this by running python in our bash terminal, but this API call was not set to pull specific open events. The other method we used was through creating a function in R that pulled open events. However, when we got the events information, none of the events had latitude and longitude data associated, so we could not map the events. Because we thought the groups would be a better summary of what types of events are popular in a city, and because we obtained more data with the python groups call, we elected to use the python code to run our analyses. We have both calls in this repo.
+
+After we got the data, we grouped the different data by category and arranged the top 10 categories through a barplot. We also used the gradient of color to describe what the biggest groups in each membership category are. Another way we visualized this was with a plot of number of groups, where we tallied group amount.  
+
+
+
+## Conclusion
+
+> Conclusion: a summary of your findings and a discussion of their limitations. First, remind the reader of the question that you originally set out to answer, and summarize your findings. Second, discuss the limitations of your model, and what could be done to improve it. You might also want to do the same for your data. This is your last opportunity to clarify the scope of your findings before a journalist misinterprets them and makes wild extrapolations! Protect yourself by being clear about what is not implied by your research.
+
+
+The goal of this study was to discover which categories were the most popular in major cities along the East Coast. In the two smaller cities (Hartford and Charlotte) career/business groups were most prevalent. This was unlike New York and Boston where socializing and tech were the respective **top groups**. Once that was concluded, we created an graphic to reflect theses differences and  ran a chi squared test to determine which city had the greatest proportion of members in socializing groups. This helps us determine how cities compare to each other because they standardize the results based on total membership. Overall, it is quite intuitive why tech, career, and socializing were the most prevalent groups amongst these cities. The fact that Meetup's API is so well documented suggests that a large base of users in meetups are tech. It is also understandable that bigger cities have bigger tech scenes. 
+
+Limitations: Our initial goal was to create a Shiny map that displayed the top events in each city. We intended to have a live pull of reservations from Meet Up's API. We had to settle for group's hometown because our api call did not supply us with the latitude and longitude for different events. 
+
+Additionally the plotting of groups provided and source of frustration during our project. We noticed that several markers overlapped. We originally though this was because they were hosted in the same locations. **Click on the cluster to to zoom in.**
+```{r, echo=FALSE, message=FALSE}
+#test dataframe of groups
+supersmall <- nysocializing %>% 
+  head(6)
+supersmall <- supersmall %>% 
+  filter(group_name == "The New York City Expat Canadian Meetup Group")
+supersmall2 <- nytech %>% 
+  head(6)
+supersmall2 <- supersmall2[-6,]
+supersmall3 <- supersmall2 %>% 
+  filter(group_name == "NYC Web Design Meetup")
+
+NY1  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=supersmall2, popup="tech",, clusterOptions = markerClusterOptions())
+NY1
+```
+
+When we remembered that these were group locations in which the groups were created, we were slightly more suspicious as to why so many overlapped. We tallied the unique latitudes and longitudes using group_by, summarize calls, and found there were many overlapping markers. After double checking the meetup group creation website, we concluded this was a result of MeetUp's location services. When making a group, users are asked for a 'hometown' or place where the group was created. The latitude and longitude are only as precise as one specifies. For example: If 10 groups were created in Washington heights for different categories, they would all get mapped to the same location. **Thus overlapping markers made the graphic a somewhat inaccurate representation of top categories.** 
+```{r, echo=FALSE, message=FALSE}
+NY2  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=supersmall3, popup="tech")
+NY2
+
+NY3  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=supersmall, popup="social",icon=greenIcon)
+NY3
+```
+
+However, because of the work we've done with the API call and getting open events and groups, it would be nice if some one could continue our work through making an R package that pulls this data, like TwittR but MeetupR. Right now, the only packages that exist pull the events from a group that you are part of (see meetupladiesr), rather than summary stats from groups and all the events. We would also be interested in making an application where typing in a key word would search through the groups in specific cities that had that word (like "salsa dancing") in their group topic. Then we could compile statistics that show what proportion of people are involved in groups for each specific topic for each city. This would give us a much better user experience for an app that could tell someone who has the opportunity to go to multiple cities what types of events are popular there.  

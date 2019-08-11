@@ -1,0 +1,273 @@
+
+---
+title: "Let's Meetup!"
+author: "Victoria and Ian"
+date: "12/11/2017"
+output:
+  slidy_presentation:
+    incremental: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+require(tidyverse)
+require(jsonlite)
+require(httr)
+require(devtools)
+require(jsonlite)
+require(dplyr)
+require(readr)
+library(shiny)
+library(shinyjs)
+library(leaflet)
+library(maps)
+require(ggmap)
+
+ny <- read_csv("data/meetup_groupsNYlocation.csv",  col_names = FALSE)
+
+bo <- read_csv("data/MA.csv", col_names= FALSE)
+ch <- read_csv("data/NC.csv", col_names=FALSE)
+ha <- read_csv("data/CT.csv", col_names=FALSE)
+
+#Function to rename columns for each dataset
+colnames(ny)[1] <- "city"
+colnames(ny)[2] <- "group_name"
+colnames(ny)[3] <- "created"
+colnames(ny)[4] <- "category"
+colnames(ny)[5] <- "members"
+colnames(ny)[6] <- "details"
+colnames(ny)[7] <- "lat"
+colnames(ny)[8] <- "long"
+
+colnames(bo)[1] <- "city"
+colnames(bo)[2] <- "group_name"
+colnames(bo)[3] <- "created"
+colnames(bo)[4] <- "category"
+colnames(bo)[5] <- "members"
+colnames(bo)[6] <- "details"
+colnames(bo)[7] <- "lat"
+colnames(bo)[8] <- "long"
+
+colnames(ha)[1] <- "city"
+colnames(ha)[2] <- "group_name"
+colnames(ha)[3] <- "created"
+colnames(ha)[4] <- "category"
+colnames(ha)[5] <- "members"
+colnames(ha)[6] <- "details"
+colnames(ha)[7] <- "lat"
+colnames(ha)[8] <- "long"
+
+colnames(ch)[1] <- "city"
+colnames(ch)[2] <- "group_name"
+colnames(ch)[3] <- "created"
+colnames(ch)[4] <- "category"
+colnames(ch)[5] <- "members"
+colnames(ch)[6] <- "details"
+colnames(ch)[7] <- "lat"
+colnames(ch)[8] <- "long"
+
+#Icons
+greenIcon <- makeIcon(
+  iconUrl = "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
+  iconWidth = 25, iconHeight = 41,
+  iconAnchorX = 12, iconAnchorY = 41
+)
+
+redIcon <- makeIcon(
+  iconUrl = "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
+  iconWidth = 25, iconHeight = 41,
+  iconAnchorX = 12, iconAnchorY = 41
+)
+
+orangeIcon <- makeIcon(
+  iconUrl = "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
+  iconWidth = 25, iconHeight = 41,
+  iconAnchorX = 12, iconAnchorY = 41
+)
+```
+
+```{r}
+nysocializing <- ny %>% 
+  filter(category == "socializing")
+
+nylanguage <- ny %>% 
+  filter(category == "language/ethnic identity")
+
+nytech <- ny %>% 
+  filter(category == "tech")
+
+nysports <- ny %>% 
+  filter(category == "career/business")
+```
+
+```{r}
+#Hartford
+ctsocializing <- ha %>% 
+  filter(category == "socializing")
+
+ctlanguage <- ha %>% 
+  filter(category == "language/ethnic identity")
+
+cttech <- ha %>% 
+  filter(category == "tech")
+
+ctsports <- ha %>% 
+  filter(category == "career/business")
+```
+
+```{r}
+#Boston
+bosocializing <- bo %>% 
+  filter(category == "socializing")
+
+bolanguage <- bo %>% 
+  filter(category == "language/ethnic identity")
+
+botech <- bo %>% 
+  filter(category == "tech")
+
+bosports <- bo %>% 
+  filter(category == "career/business")
+```
+
+```{r}
+#Charlotte
+chsocializing <- ch %>% 
+  filter(category == "socializing")
+
+chlanguage <- ch %>% 
+  filter(category == "language/ethnic identity")
+
+chtech <- ch %>% 
+  filter(category == "tech")
+
+chsports <- ch %>% 
+  filter(category == "career/business")
+```
+
+```{r}
+#creates df topics with number of groups per topic (fix this)
+mostgroups<- function(data){
+  topics <-data %>% 
+  group_by(category) %>% 
+  summarise(group_tot = n()) %>% 
+  arrange(desc(group_tot));topics %>% 
+    head(10)
+}
+top10 <- function(data) {
+  data %>%
+    group_by(category, city) %>%
+    summarize(members_tot = sum(members), topgroup=max(members))  %>%
+    arrange(desc(members_tot)) %>%
+    head(10)
+}
+chgroups<-mostgroups(ch)
+nygroups<-mostgroups(ny)
+bogroups<-mostgroups(bo)
+hagroups<-mostgroups(ha)
+
+topcatbygroup<-function(x){ggplot(data=x, aes(x=reorder(category, group_tot), y=group_tot))+geom_bar(stat="identity", aes(fill=group_tot)) +coord_flip()+ylab("Total groups")+xlab("Category")+scale_fill_continuous(name="total groups per category")
+}
+
+chtop10<-top10(data=ch)
+hatop10<-top10(data=ha)
+botop10<-top10(data=bo)
+nytop10<-top10(data=ny) 
+topcatbymember<-function(x){ggplot(data=x, aes(x=reorder(category, members_tot), y=members_tot))+geom_bar(stat="identity", aes(fill=topgroup)) +coord_flip()+ylab("Total Members")+xlab("Category")+scale_fill_continuous(name="top group membership")
+}
+
+
+```
+
+## Scenario
+
+- Just moved into a new town, looking to meet new people!
+- What are some of the popular types of events in the area?
+- We created an api call that answers just that!
+
+## Methods
+
+- Scraped live group and event data from a Meetup API
+- Cities: Boston, Charlotte, Hartford, and New York
+- Radius 10 miles 
+- Python and R
+- Converted JSON data to csv
+- Ran summary statistics on groups and membership
+- Determined the most popular categories per city based on each criteria
+- Made a map to see if any patterns appeared with regards to location
+
+
+
+## Categories
+```{r}
+unique(ch$category)
+```
+
+##New York
+```{r}
+topcatbygroup(nygroups)+labs(title = "NY top categories by group number")
+topcatbymember(nytop10)+labs(title = "NY top categories by membership")
+# map of NY with events as category
+NY  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=nysocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=nylanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=nysports, popup="sports",icon=redIcon) %>% 
+  addMarkers(data=nytech, popup="tech")
+NY
+```
+
+## Hartford
+```{r}
+topcatbygroup(hagroups)+labs(title = "Hartford top categories by group number")
+topcatbymember(hatop10)+labs(title = "Hartford top categories by membership")
+# map of Hartford
+hartfordmap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=ctsocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=ctlanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=ctsports, popup="career/business",icon=redIcon) %>% 
+  addMarkers(data=cttech, popup="tech")
+hartfordmap
+```
+
+## Boston
+```{r}
+topcatbygroup(bogroups)+labs(title = "Boston top categories by group number")
+topcatbymember(botop10)+labs(title = "Boston top categories by membership")
+# map of Boston
+bostonmap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=bosocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=bolanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=bosports, popup="career/business",icon=redIcon)%>% 
+  addMarkers(data=botech, popup="tech")
+bostonmap
+```
+
+## Charlotte
+```{r}
+topcatbygroup(chgroups)+ labs(title = "Charlotte top categories by group number")
+topcatbymember(chtop10)+ labs(title = "Charlotte top categories by membership")
+# map of Charlotte
+charlottemap  <- leaflet() %>%
+  addTiles() %>%  
+  #markers(Hartford)# Add default OpenStreetMap map tiles
+  addMarkers(data=chsocializing, popup="social",icon=orangeIcon) %>% 
+  addMarkers(data=chlanguage, popup="language",icon=greenIcon) %>% 
+  addMarkers(data=chsports, popup="career/business",icon=redIcon) %>% 
+  addMarkers(data=chtech, popup="tech")
+charlottemap
+```
+
+## Conclusions
+- New york is great for socializing, career/business, language/ethnic identity, and tech meetups
+- Most NY meetup groups originated in Manhattan
+- Boston is great for tech, career/business, socializing, and health/wellbeing meetups
+- Boston meetup groups originated in Cambridge and the financial district
+
+-Limitations: groups, not events
